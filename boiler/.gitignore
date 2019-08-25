@@ -1,0 +1,4 @@
+.idea
+userfiles/
+api/selection/*.html
+.DS_Store

@@ -1,0 +1,206 @@
+2018-05-28 13:34:02 select count(1) as ct from boiler_category where 1=1  and category_parentid = 6 
+2018-05-28 13:34:02 select * from boiler_category where 1=1  and category_parentid = 6  order by category_id desc
+2018-05-28 13:34:02 select * from boiler_category where 1=1  and category_parentid = 0  order by category_id desc
+2018-05-28 13:36:58 select count(1) as ct from boiler_category where 1=1  and category_parentid = 6 
+2018-05-28 13:36:58 1
+2018-05-28 13:36:58 select * from boiler_category where 1=1  and category_parentid = 6  order by category_id desc
+2018-05-28 13:36:58 2
+2018-05-28 13:36:58 select * from boiler_category where 1=1  and category_parentid = 0  order by category_id desc
+2018-05-28 13:38:07 select count(1) as ct from boiler_category where 1=1  and category_parentid = 6 
+2018-05-28 13:38:07 1
+2018-05-28 13:38:07 select * from boiler_category where 1=1  and category_parentid = 6  order by category_id desc
+2018-05-28 13:38:07 2
+2018-05-28 13:38:07 select * from boiler_category where 1=1  and category_parentid = 0  order by category_id desc
+2018-05-28 13:40:17 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 13:40:17 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 13:41:01 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 13:41:01 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 13:41:08 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 13:41:08 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 13:43:01 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 13:43:01 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 13:43:44 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 13:43:44 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 13:44:17 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 13:44:17 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 13:45:04 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 13:45:04 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 13:45:51 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 13:45:51 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 13:45:53 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 13:45:53 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 13:49:55 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 13:49:55 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 13:49:57 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 13:49:57 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 13:50:00 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 13:50:00 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 13:50:03 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 13:50:03 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 13:50:04 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 13:50:04 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 21:44:51 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 21:44:51 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 21:45:57 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 21:45:57 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 21:45:59 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:45:59 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:46:01 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:46:01 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:46:05 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:46:05 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:46:07 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 21:46:07 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 21:46:08 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:46:08 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:46:10 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:46:10 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:47:01 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:47:01 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:47:03 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 21:47:03 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 21:47:04 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:47:04 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:47:15 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:47:15 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:47:16 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:47:16 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:47:17 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:47:17 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:47:18 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:47:18 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:47:22 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 21:47:22 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 21:47:25 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:47:25 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:47:26 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:47:26 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:47:28 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:47:28 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:47:31 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 21:47:31 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 21:47:32 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:47:32 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:48:11 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:48:11 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:48:13 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 21:48:13 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 21:48:15 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:48:15 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:48:17 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:48:17 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:04 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:04 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:15 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:15 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:16 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:16 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:16 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:16 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:18 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:18 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:19 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:19 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:19 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:19 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:51 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:51 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:51 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:51 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:52 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:52 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:53 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:53 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:53 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:53 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:54 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 21:59:54 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 21:59:55 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 21:59:55 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 22:01:09 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:01:09 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:01:10 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:01:10 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:01:11 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0 
+2018-05-28 22:01:11 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 0  order by dict_id desc
+2018-05-28 22:06:21 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:06:21 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:07:25 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:07:25 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:07:30 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:07:30 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:07:34 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:07:34 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:07:35 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:07:35 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:07:37 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:07:37 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:07:38 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:07:38 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:07:42 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:07:42 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:11:34 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:11:34 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:19:33 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:19:33 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:19:35 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:19:35 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:19:37 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:19:37 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:19:41 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:19:41 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:19:42 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:19:42 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:19:43 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:19:43 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:19:47 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:19:47 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:21:52 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:21:52 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:21:54 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:21:54 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:23:28 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:23:28 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:23:30 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:23:30 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:23:33 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:23:33 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:24:33 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:24:33 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:24:34 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:24:34 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:24:35 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:24:35 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:24:37 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:24:37 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:24:40 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:24:40 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:24:41 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:24:41 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:32:53 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:32:53 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:32:54 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:32:54 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:42:24 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:42:24 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:42:27 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:42:27 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:43:14 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:43:14 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:44:00 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:44:00 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:45:07 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:45:07 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:50:40 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:50:40 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:50:51 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:50:51 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:50:59 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:50:59 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:51:17 select count(1) as ct from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1 
+2018-05-28 22:51:17 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id desc
+2018-05-28 22:58:30 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  order by dict_id asc
+2018-05-28 22:59:07 select * from boiler_dict where 1=1  and dict_parent = 0  and dict_status = 1  and dict_model = 18  order by dict_id asc
+2018-06-06 23:36:53 select *   from boiler_products left join boiler_burner_attr on products_id = burner_proid where 1 = 1 and products_modelid = 2  order by products_id asc
+2018-06-06 23:36:57 select *   from boiler_products left join boiler_burner_attr on products_id = burner_proid  and burner_vender = 20 where 1 = 1 and products_modelid = 2  order by products_id asc
+2018-06-10 13:19:30 select *   from boiler_products right join boiler_pipeline_attr on products_id = pipeline_proid where 1 = 1 and products_modelid = 4  order by products_id asc

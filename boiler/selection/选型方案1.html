@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/nav.css" />
+		<link rel="stylesheet" href="css/GLXX1.css" />
+		<script type="text/javascript" src="js/nav.js" ></script>
+		<script type="text/javascript" src="js/2.0.0/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/laydate.js" ></script>
+		<style>
+			
+			.inputing{
+	background-image:url('images/未选中按钮.png');
+	-webkit-appearance: none;
+	background-size:16px 16px;
+	display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat:no-repeat;
+    position: relative;
+    top: 2px;
+    left: -5px;
+    outline: none;
+			}
+.inputing:checked{
+    background:url('images/选中按钮.png');
+    background-repeat:no-repeat;
+}
+		
+.checkbox{
+	background-image:url('images/未选中按钮.png');
+	-webkit-appearance: none;
+	background-size:16px 16px;
+	display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat:no-repeat;
+    position: relative;
+    outline: none;
+			}
+.checkbox:checked{
+    background:url('images/选中按钮.png');
+    background-repeat:no-repeat;
+}
+		</style>
+	</head>
+	<body>
+		
+			<div class="nav">
+				<div class="img1">
+					<img src="images/mdpi/logoios.png"/>
+				</div>
+				<ul>
+					<li class="index1" onmouseenter="change1()" onmouseleave="change2()">
+				<a href="#">
+				<div id="index1_unchecked">
+					<img src="images/锅炉选型-常态.png" id="unchecked1"/>
+				</div>
+				<div id="index1_checked">
+					<img src="images/guolu_check.png" id="checked1"/>
+				</div>
+					<span class="p0" id="xuanxing">锅炉选型</span>
+				  </a >
+					</li>
+					<li class="index2" onmouseenter="change3()" onmouseleave="change4()">
+						<a href="#">
+				<div id="index2_unchecked">
+					<img src="images/选型历史-常态 .png"  id="unchecked2"/>
+				</div>
+				<div id="index2_checked">
+					<img src="images/xuanx_check.png" id="checked2"/>
+				</div>
+					<span class="p0">选型历史</span>
+				</a>
+					</li>
+					<li class="index3" onmouseenter="change5()" onmouseleave="change6()">
+						<a href="#">
+				<div id="index3_unchecked">
+					<img src="images/chapin.png" id="unchecked3"/>
+				</div>
+				<div id="index3_checked">
+					<img  src="images/chapin_check.png" id="checked3"/>
+				</div >
+					<span class="p0">方案池</span>
+				</a>
+					</li>
+				</ul>
+				<div class="title_r">
+					<p>薛渊博，欢迎您！</p>
+				</div>
+				<div class="img2">
+					<img src="images/站内信.png"/>
+				</div>
+				<div class="img3">
+					<img src="images/退出登录.png" />
+				</div>
+			</div><!--导航栏-->
+		 <div class="location">
+		 	<div class="location1">
+		 	<p>当前位置：锅炉选型<span>&gt;选型方案</span></p>
+		 	</div>
+		 </div>
+		 	
+		 <!--当地位置-->
+		 
+		 <div class="GLXX1_main1">
+			<p class="p2">请选择推荐价格的有效时间</p>
+			<input  id="sttime"  value="2017.10.18" />
+			<p class="p3">—</p>
+			<input  id="endtime"  value="2018.10.18" />
+			<input  id="search" type="button"  value="查询"/>
+		</div>
+			<script>
+				laydate.render({ 
+            elem: '#sttime'
+           ,value: '2017-10-18' //必须遵循format参数设定的格式
+          
+            });
+              laydate.render({ 
+            elem: '#endtime'
+           ,value: '2018-10-18' //必须遵循format参数设定的格式
+         });
+			</script>
+		<!--时间插件-->
+		<div class="GLXX1_main2">
+			<p class="GL">锅炉</p>
+		    <table>
+		    	<tr style="background-color: #E5F6FE;">
+					<td>厂家</td>
+					<td style="width: 242px;">型号</td>
+					<td style="width: 100px;">数量</td>
+					<td>最高价(万元)</td>
+					<td>最低价(万元)</td>
+					<td>均价(万元)</td>
+					<td>上次(万元)</td>
+					<td style="width: 144px;">自定义(万元)</td>
+				</tr>
+				<tr>
+					<td>普瑞思</td>
+					<td>PREX 3G LowNOx-30mg</td>
+					<td>1台</td>
+					<td><input type="radio" name="price" value="4" id="radio1"  class="inputing"/>4</td>
+					<td><input type="radio" name="price" value="3" id="radi2"   class="inputing"/>3</td>
+					<td><input type="radio" name="price" value="3.5"id="radio3" class="inputing"/>3.5</td>
+					<td><input type="radio" name="price" value="3.5" id="radio4" class="inputing"/>3.5</td>
+					<td><input type="text" class="defined"  onclick="only1()"/></td>
+					</tr>
+		    </table>
+		</div><!--锅炉-->
+		<div class="GLXX1_main3">
+			<p class="GL">辅机</p>
+			<table>
+			<tr style="background-color: #E5F6FE;">
+					<td style="width: 140px;">设备名称</td>
+					<td style="width: 80px;">数量</td>
+					<td style="width: 100px;">厂家</td>
+					<td style="width: 214px;">型号</td>
+					<td>最高价(万元)</td>
+					<td>最低价(万元)</td>
+					<td>均价(万元)</td>
+					<td>上次(万元)</td>
+					<td>自定义(万元)</td>	
+			</tr>
+			<tr>
+					<td>低氮燃气燃烧器</td>
+					<td>1台</td>
+					<td>利雅路</td>
+					<td>RS200/E BLU DN50</td>
+					<td><input type="radio" name="price1" id="radio5" class="inputing"/>4</td>
+					<td><input type="radio" name="price1"id="radio6" class="inputing"/>3</td>
+					<td><input type="radio" name="price1"id="radio7" class="inputing"/>3.5</td>
+					<td><input type="radio" name="price1"id="radio8" class="inputing"/>3.5</td>
+					<td><input type="text" class="defined" onclick="only2()" /></td>
+			</tr>
+			<tr>
+					<td>低氮燃气燃烧器</td>
+					<td>1台</td>
+					<td>利雅路</td>
+					<td>RS200/E BLU DN50</td>
+					<td><input type="radio" name="price2"id="radio9" class="inputing"/>4</td>
+					<td><input type="radio" name="price2"id="radio10" class="inputing"/>3</td>
+					<td><input type="radio" name="price2"id="radio11" class="inputing"/>3.5</td>
+					<td><input type="radio" name="price2"id="radio12" class="inputing"/>3.5</td>
+					<td><input type="text" class="defined" onclick="only3()"/></td>
+			</tr>
+			</table>
+		</div><!--辅机-->
+		<div class="GLXX1_main4">
+			<p class="GL" style="width: 666px;">请选择报价方案中其他项的价格，如果本次方案不需要某一项，可以取消前面的勾选</p>
+			<table>
+				<tr style="background-color: #E5F6FE;">
+						<td style="width: 160px;">名称</td>
+						<td style="width: 324px;">规格型号</td>
+						<td>最高价(万元)</td>
+						<td>最低价(万元)</td>
+						<td>均价(万元)</td>
+						<td>上次(万元)</td>
+						<td style="width: 144px;">自定义(万元)</td>
+					</tr>
+					<tr>
+						<td><input type="radio" value="设备运费"  class="checkbox" style="position: relative;top: 2px;"/>设备运费</td>
+						<td>含旧锅炉拆除、新锅炉及辅机机位、高层部分外网改造</td>
+						<td><input type="radio" name="price3"id="radio13" class="inputing"/>4</td>
+						<td><input type="radio" name="price3"id="radio14" class="inputing"/>3</td>
+						<td><input type="radio" name="price3"id="radio15" class="inputing"/>3.5</td>
+						<td><input type="radio" name="price3"id="radio16" class="inputing"/>3.5</td>
+						<td><input type="text" class="defined" onclick="only4()"/></td>
+					</tr>
+						<tr>
+						<td><input type="radio" value="安装方"  class="checkbox" style="position: relative;top:2px;left: -8px;"/>安装方</td>
+						<td>含旧锅炉拆除、新锅炉及辅机机位</td>
+						<td><input type="radio" name="price4"id="radio17" class="inputing"/>4</td>
+						<td><input type="radio" name="price4"id="radio18" class="inputing"/>3</td>
+						<td><input type="radio" name="price4"id="radio19" class="inputing"/>3.5</td>
+						<td><input type="radio" name="price4"id="radio20" class="inputing"/>3.5</td>
+						<td><input type="text" class="defined" onclick="only5()"/></td>
+					</tr>
+			</table>
+		</div><!--其他项-->
+		<div class="footer">
+			<input type="button" value="下一步" class="next" />
+			
+		</div><!--下一步-->
+	</body>
+</html>

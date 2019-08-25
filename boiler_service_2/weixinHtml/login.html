@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/query.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="person-wrap">
+            <div class="login-top-wrap">
+                <div class="login-top flex">
+                    <img src="images/bg-login.png" alt="">
+                    <div>
+                        <p>小元服务师傅</p>
+                        <span>专业壁挂炉售后服务</span>
+                    </div>
+                </div>
+            </div>
+            <div class="login-form">
+                <form>
+                    <div class="form-item">
+                        <div class="form-input flex">
+                            <input id="input-tel" placeholder="请输入手机号" type="text">
+                            <img id="input-close" src="images/input-close.png" alt="">
+                        </div>
+                        <div class="form-input flex">
+                            <input id="input-code" placeholder="请输入短信验证码" type="text">
+                            <button type="button" class="code" id="code" disabled="disabled">获取验证码</button>
+                        </div>
+                    </div>
+                    <div class="from-btn flex">
+                        <button type="button" class="code" id="btn-login">登录</button>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $(function () {
+        $("#input-close").hide();
+        $("#input-close").on("click",function () {
+            $("#input-tel").val("");
+            $(this).hide();
+        });
+        $('#input-tel').bind('input propertychange', function() {
+            var val = $(this).val();
+            if (val == "") {
+                $("#input-close").hide();
+                $("#code").attr("disabled","disabled");
+                $("#code").removeClass("active-code");
+            } else {
+                $("#input-close").show();
+                $("#code").removeAttr("disabled");
+                $("#code").addClass("active-code");
+            }
+        });
+
+        $('#input-code').bind('input propertychange', function() {
+            var val = $(this).val();
+            if (val == "") {
+                $("#btn-login").removeClass("active-login");
+            } else {
+                $("#btn-login").addClass("active-login");
+            }
+        });
+
+
+
+        //获取验证码
+        var num = 60;
+        var timer = null;
+        $("#code").on("click",function (e) {
+            e.preventDefault();
+            var _this = $(this);
+            //获取成功执行以下函数
+            timer = setInterval(function () {
+                num --;
+                _this.text("("+num+"s)重新获取");
+                _this.attr("disabled","disabled").removeClass("active-code");
+                if (num == 0) {
+                    _this.text("获取验证码");
+                    _this.removeAttr("disabled"); 
+                    clearInterval(timer);
+                    num = 60; 
+                }
+            },1000);
+        })
+
+    })
+</script>
+
+</html>

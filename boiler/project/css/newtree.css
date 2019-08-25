@@ -1,0 +1,20 @@
+.ztree li a
+{
+    height: 30px !important;
+}
+.ztree *
+{
+    font-size: 16px !important;
+}
+.add
+{
+    margin-left: 20px !important;
+}
+.edit,.remove
+{
+    margin-left: 10px !important;
+}
+#treeDemo_1_a .remove
+{
+    display: none !important;
+}

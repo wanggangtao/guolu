@@ -1,0 +1,156 @@
+.nav{
+	width: 1440px;
+	height: 80px;
+	margin: 0 auto;
+	background-color:#04A6FE;
+	font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #474747
+}
+.img1{
+	width: 142px;
+	height: 80px;
+	padding-left: 120px;
+	padding-top: 23px;
+}
+.index1{
+	width: 114px;
+	height:80px;
+	position: relative;
+	top: -80px;
+	left: 322px;
+	
+	padding: 0 26px 0 20px;
+	margin-top:-24px;
+	
+}
+.index2{
+	width: 114px;
+	height:80px;
+	position: relative;
+	top: -160px;
+	left: 482px;
+	padding: 0 26px 0 20px;
+	
+	
+}
+.index3{
+	width: 97px;
+	height:80px;
+	
+	position: relative;
+	top: -240px;
+	left: 642px;
+	padding: 0 34px 0 29px;
+}
+
+#index1_unchecked,#index2_unchecked,#index3_unchecked{
+	width: 32px;
+	height: 32px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	visibility: visible;
+}
+#index1_checked,#index2_checked,#index3_checked{
+	width: 32px;
+	height: 32px;
+	position:relative ;
+	top: -56px;
+	visibility: hidden;
+}
+.p0{
+	width: 82px;
+	height: 28px;
+	line-height: 28px;
+	position: relative;
+	top: -106px;
+	left: 37px;
+}
+.nav a{
+	display: inline-block;
+	width:154px;
+	height: 80px;
+	text-decoration: none;
+	color: black;
+}
+.index1 a:hover{
+	color: white;
+	padding-left:10px ;
+	
+	background-color:rgba(13, 75, 108, 0.15);
+	cursor: default;
+}
+.index2 a:hover{
+	color: white;
+	padding-left:20px ;
+	
+	background-color:rgba(13, 75, 108, 0.15);
+	cursor: default;
+}
+.index3 a:hover{
+	color: white;
+	padding-left:20px ;
+	background-color:rgba(13, 75, 108, 0.15);
+	cursor: default;
+}
+.location{
+	width: 1440px;
+	height: 104px;
+	background-color:#EEEEEE;
+	margin: 0 auto;
+}
+.location1{
+	width: 272px;
+	height: 40px;
+	background-color: #e2e2e2;
+	border: 1px solid  #e2e2e2;
+	border-radius: 38px;
+	position: relative;
+	top: 32px;
+	left: 120px;
+  }
+.location1 p{
+	width: 232px;
+	height: 19px;
+	text-align: center;
+	color:#9B9B9B ;
+	font-family: MicrosoftYaHei;
+    font-size: 14px;
+    letter-spacing: 2.8px;
+    padding-left: 20px;
+    padding-right: 20px;
+	padding-top: 8px;
+}
+.location1 span{
+	color: #04A6FE;
+}
+.title_r{
+	width: 131px;
+	height: 80px;
+	line-height: 80px;
+	position: relative;
+	top:-336px ;
+	left: 1085px;
+	color: white;
+	ont-family: PingFangSC-Regular;
+font-size: 16px;
+color: #FFFFFF;
+}
+.img2{
+	width: 32px;
+	height: 32px;
+	position: relative;
+	top: -416px;
+	left: 1236px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+.img3{
+	width: 32px;
+	height: 32px;
+	position: relative;
+	top: -496px;
+	left: 1288px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}

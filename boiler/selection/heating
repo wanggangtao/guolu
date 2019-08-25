@@ -1,0 +1,105 @@
+array (
+  'burner' => 
+  array (
+  ),
+  'hdys' => 
+  array (
+    0 => 
+    array (
+      'id' => '4',
+      'version' => 'SN-1-BL-T(M)',
+      'vender' => '32',
+      'outwater' => 1,
+      'proid' => '24',
+      'weight' => 0,
+    ),
+    1 => 
+    array (
+      'id' => '27',
+      'version' => 'SN-1-BL-DA',
+      'vender' => '32',
+      'outwater' => 1,
+      'proid' => '136',
+      'weight' => 0,
+    ),
+    'count' => 1,
+    'outwater' => 0.90000000000000002,
+    'name' => '全自动软水机',
+  ),
+  'water_box' => 
+  array (
+    0 => 
+    array (
+      'id' => '16',
+      'version' => 'T905-2',
+      'nominal_capacity' => 0.5,
+      'available_capacity' => 0.63,
+      'length' => 1200,
+      'width' => 700,
+      'height' => 900,
+      'weight' => 164.40000000000001,
+      'proid' => '135',
+    ),
+    1 => 
+    array (
+      'id' => '15',
+      'version' => 'T905-1',
+      'nominal_capacity' => 0.5,
+      'available_capacity' => 0.60999999999999999,
+      'length' => 900,
+      'width' => 900,
+      'height' => 900,
+      'weight' => 156.30000000000001,
+      'proid' => '134',
+    ),
+    'count' => 1,
+    'name' => '膨胀水箱',
+    'capacity' => 0.5,
+  ),
+  'pipeline_pump' => 
+  array (
+    'count' => 2,
+    'name' => '锅炉循环泵',
+    'lift' => 64.400000000000006,
+    'flow' => 25.710000000000001,
+  ),
+  'heating_pump' => 
+  array (
+    0 => 
+    array (
+    ),
+  ),
+  'water_pump' => 
+  array (
+    0 => 
+    array (
+    ),
+  ),
+  'dirt_separater' => 
+  array (
+    0 => 
+    array (
+      'id' => '9',
+      'version' => 'DN100,PN1.6',
+      'diameter' => 100,
+      'proid' => '104',
+      'count' => 1,
+      'DN' => 100,
+      'name' => '除污器',
+    ),
+  ),
+  'board' => 
+  array (
+    0 => 
+    array (
+    ),
+  ),
+  'hot_water_box' => 
+  array (
+    0 => 
+    array (
+    ),
+  ),
+  'html' => '<h2>辅机选型中间参数值：</h2><br/><p>分区最高楼层：9</p><h3>输入的数据：</h3><p>锅炉id:11</p><p>锅炉额定功率:300</p><p>锅炉数量:2</p><p>锅炉接口管径:50</p><p>锅炉热水流量:26</p><p>锅炉出水温度:85</p><p>锅炉进水温度:65</p><p>锅炉用途（0,采暖 1,热水）:0</p><p>锅炉应用形式:2:常压锅炉+常压系统</p><h3>计算出的数据（id后数据为空说明数据库中没有相应的设备）：</h3><p>音诺伟森锅炉不需要燃烧器</p><b>根据锅炉总功率:300 * 2 = 600/700 获取全自动软水机</b><br/><p>全自动软水机id:4</p><p>全自动软水机出水量:1</p><br/><p>全自动软水机id:27</p><p>全自动软水机出水量:1</p><br/><b>根据锅炉功率对应的公称容积:0.5 获取膨胀水箱</b><br/><p>水箱id:16</p><p>水箱公称容积:0.5</p><br/><p>水箱id:15</p><p>水箱公称容积:0.5</p><br/><b>锅炉循环泵:</b><br/><p>流量:25.71</p><p>扬程:27 - 0 *1.2+32 = 64.4</p><p>额定供热量:600kw</p><b>除污器 DN:100</b><br/><b>除污器 id:9</b><br/>',
+  'sigh' => '21a2ac6423eb6e0a75e51d71d40910ba',
+)

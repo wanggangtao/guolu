@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main_two.css">
+    <link rel="stylesheet" href="css/newlayui.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+     <script type="text/javascript" src="js/myprogram.js"></script>
+</head>
+<body class="body_1">
+   
+<div class="indexTop">
+    <div class="indexTop_1">
+        <div class="indexTop_logo">
+             <div></div>
+            <p>西安元聚环保设备有限公司</p>
+        </div>
+        
+        <a href="logon.html"><img src="images/backlogon.png" class="indexTop_4"><span class="indexTop_6">退出登录</span></a>
+    </div>
+</div>
+   <div class="homePage">
+   	 <div class="homePage_cont cont1">
+   	    <img src="images/product.png">
+   </div>
+    <div class="homePage_cont cont2">
+   	    <img src="images/boiler.png">
+   </div>
+    <div class="homePage_cont cont3">
+   	   <img src="images/project.png">
+   </div>
+    <div class="homePage_cont cont4">
+   	    <img src="images/setting.png">
+   </div>
+   </div>					
+    
+     <script>
+        $(function () {
+            $('.cont1').hover(function () {
+                $(this).find('img').attr('src','images/product_slip.png');
+            },function () {
+                $(this).find('img').attr('src','images/product.png');
+            })
+             $('.cont2').hover(function () {
+                $(this).find('img').attr('src','images/boiler_slip.png');
+            },function () {
+                $(this).find('img').attr('src','images/boiler.png');
+            })
+              $('.cont3').hover(function () {
+                $(this).find('img').attr('src','images/project_slip.png');
+            },function () {
+                $(this).find('img').attr('src','images/project.png');
+            })
+               $('.cont4').hover(function () {
+                $(this).find('img').attr('src','images/setting_slip.png');
+            },function () {
+                $(this).find('img').attr('src','images/setting.png');
+            })
+
+
+        })
+    </script>
+        
+      
+</body>
+</html>

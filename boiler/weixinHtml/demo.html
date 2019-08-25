@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>个人信息-注册</title>
+    <link rel="stylesheet" href="weui/css/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/query.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" id="test" />
+
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="weui/js/jquery-weui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $(function () {
+        function setCities() {
+            //此处手写几个层级关联关系数据源，具体的数据源根据开发环境指定
+            var provinces = [{
+                INDEXS: "010",
+                NAME: "北京",
+                PARENTID: "CN"
+            }, {
+                INDEXS: "120",
+                NAME: "山东",
+                PARENTID: "CN"
+            }];
+            var cities = [{
+                    INDEXS: "120183",
+                    NAME: "东营市",
+                    PARENTID: "120"
+                }, {
+                    INDEXS: "120179",
+                    NAME: "济南市",
+                    PARENTID: "120"
+                },
+                {
+                    INDEXS: "01043",
+                    NAME: "北京市",
+                    PARENTID: "010"
+                }
+            ];
+            var districts = [{
+                    INDEXS: "010415",
+                    NAME: "朝阳区",
+                    PARENTID: "01043"
+                }, {
+                    INDEXS: "010423",
+                    NAME: "昌平区",
+                    PARENTID: "01043"
+                },
+                {
+                    INDEXS: "1201657",
+                    NAME: "东营区东城",
+                    PARENTID: "120183"
+                }, {
+                    INDEXS: "1000380",
+                    NAME: "东营区西城",
+                    PARENTID: "120183"
+                },
+                {
+                    INDEXS: "1201625",
+                    NAME: "槐荫区",
+                    PARENTID: "120179"
+                }, {
+                    INDEXS: "1201627",
+                    NAME: "历城区",
+                    PARENTID: "120179"
+                }
+            ];
+
+            //根据数据源进行数据关联绑定
+            city_selects = [];
+            $.each(provinces, function (i) {
+                var level1 = {
+                    label: provinces[i].NAME,
+                    value: provinces[i].INDEXS,
+                    children: []
+                };
+                $.each(cities, function (j) {
+                    if (provinces[i].INDEXS == cities[j].PARENTID) {
+                        var level2 = {
+                            label: cities[j].NAME,
+                            value: cities[j].INDEXS,
+                            children: []
+                        };
+                        $.each(districts, function (x) {
+                            if (cities[j].INDEXS == districts[x].PARENTID) {
+                                var level3 = {
+                                    label: districts[x].NAME,
+                                    value: districts[x].INDEXS
+                                };
+                                level2.children.push(level3);
+                            }
+                        });
+                        level1.children.push(level2);
+                    }
+                });
+                city_selects.push(level1);
+            });
+            return city_selects;
+        }
+        $('#test').on('click', function () {
+            weui.picker(setCities(), {
+                //此处编写各种属性和事件
+                onConfirm: function (result) {
+                    console.log(result);
+                }
+            });
+        });
+    });
+</script>
+
+</html>

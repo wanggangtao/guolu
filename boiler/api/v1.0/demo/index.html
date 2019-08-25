@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>接口列表</title>
+	<link href="css/index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div style="margin: 0 auto;width:80%;overflow:hidden;"><p style="font-size:28px;font-weight:bold;text-align:center;">锅炉项目用户接口一览表</p></div>
+<div align="center" style="margin-bottom: 10px">
+
+	<p>相关说明:接口安全校验方式:</p>
+
+	<p>sign = md5(method+timestamp+source+secret)</p>
+
+	<p>每次接口需要穿参数:method,timestamp,source,sign</p>
+	<p>secret是不需要传: android:  boiler_android</p>
+	<p>  ios    : boiler_ios</p>
+</div>
+<table class="altrowstable" id="alternatecolor">
+	<tr>
+		<th class="n1">接口编号</th>
+		<th class="n2">接口名字</th>
+		<th class="n3">查看Demo</th>
+		<th class="n4">下载文档</th>
+	<tr class="top">
+		<th class="title" colspan = "4">注册登陆相关接口</th>
+	</tr>
+	<tr>
+		<td class="n1">1</td>
+		<td class="n2"><a href="login.html" target="_blank">登陆接口</a></td>
+		<td class="n3"><a href="login.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">2</td>
+		<td class="n2"><a href="get_my_info.html" target="_blank">获取我的信息</a></td>
+		<td class="n3"><a href="get_my_info.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">3</td>
+		<td class="n2"><a href="reset_pwd.html" target="_blank">重置密码</a></td>
+		<td class="n3"><a href="reset_pwd.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">4</td>
+		<td class="n2"><a href="headpic_upload.html" target="_blank">头像上传</a></td>
+		<td class="n3"><a href="headpic_upload.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">5</td>
+		<td class="n2"><a href="headpic_update.html" target="_blank">更新头像</a></td>
+		<td class="n3"><a href="headpic_update.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">6</td>
+		<td class="n2"><a href="get_newest_version.html" target="_blank">获取app最新版本</a></td>
+		<td class="n3"><a href="get_newest_version.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">7</td>
+		<td class="n2"><a href="register.html" target="_blank">注册接口</a></td>
+		<td class="n3"><a href="register.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">8</td>
+		<td class="n2"><a href="get_iosreview.html" target="_blank">获取提审信息</a></td>
+		<td class="n3"><a href="get_iosreview.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">9</td>
+		<td class="n2"><a href="update_iosreview.html" target="_blank">更新提审信息</a></td>
+		<td class="n3"><a href="update_iosreview.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<!--<tr>-->
+		<!--<td class="n1">2</td>-->
+		<!--<td class="n2"><a href="register.html" target="_blank">注册接口</a></td>-->
+		<!--<td class="n3"><a href="register.html" target="_blank">查看Demo</a></td>-->
+		<!--<td class="n4"><a href="#" target="_blank">下载文档</a></td>-->
+	<!--</tr>-->
+	<!--<tr>-->
+		<!--<td class="n1">3</td>-->
+		<!--<td class="n2"><a href="reset_password.html" target="_blank">忘记密码接口</a></td>-->
+		<!--<td class="n3"><a href="reset_password.html" target="_blank">查看Demo</a></td>-->
+		<!--<td class="n4"><a href="#" target="_blank">下载文档</a></td>-->
+	<!--</tr>-->
+
+	<!--<tr>-->
+		<!--<td class="n1">5</td>-->
+		<!--<td class="n2"><a href="supplement_information.html" target="_blank">完善信息</a></td>-->
+		<!--<td class="n3"><a href="supplement_information.html" target="_blank">查看Demo</a></td>-->
+		<!--<td class="n4"><a href="#" target="_blank">下载文档</a></td>-->
+	<!--</tr>-->
+	<tr class="top">
+		<th class="title" colspan = "4">公共接口</th>
+	</tr>
+	<tr>
+		<td class="n1">30</td>
+		<td class="n2"><a href="pic_upload.html" target="_blank">图片上传接口</a></td>
+		<td class="n3"><a href="pic_upload.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">31</td>
+		<td class="n2"><a href="jpush.html" target="_blank">消息推送</a></td>
+		<td class="n3"><a href="jpush.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+    <tr class="top">
+        <th class="title" colspan = "4">站内信</th>
+    </tr>
+    <tr>
+        <td class="n1">40</td>
+        <td class="n2"><a href="get_message_num.html" target="_blank">站内信数量</a></td>
+        <td class="n3"><a href="get_message_num.html" target="_blank">查看Demo</a></td>
+        <td class="n4"><a href="#" target="_blank">下载文档</a></td>
+    </tr>
+    <tr>
+        <td class="n1">41</td>
+        <td class="n2"><a href="get_message_list.html" target="_blank">站内信列表</a></td>
+        <td class="n3"><a href="get_message_list.html" target="_blank">查看Demo</a></td>
+        <td class="n4"><a href="#" target="_blank">下载文档</a></td>
+    </tr>
+    <tr>
+        <td class="n1">42</td>
+        <td class="n2"><a href="get_message_info.html" target="_blank">站内信详情</a></td>
+        <td class="n3"><a href="get_message_info.html" target="_blank">查看Demo</a></td>
+        <td class="n4"><a href="#" target="_blank">下载文档</a></td>
+    </tr>
+	<tr class="top">
+		<th class="title" colspan = "4">项目相关</th>
+	</tr>
+	<tr>
+		<td class="n1">100</td>
+		<td class="n2"><a href="get_my_project_num.html" target="_blank">获取我的项目数</a></td>
+		<td class="n3"><a href="get_my_project_num.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+	<tr>
+		<td class="n1">101</td>
+		<td class="n2"><a href="get_my_project.html" target="_blank">获取我的项目</a></td>
+		<td class="n3"><a href="get_my_project.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+	<tr>
+		<td class="n1">102</td>
+		<td class="n2"><a href="get_visit_record.html" target="_blank">获取项目拜访记录</a></td>
+		<td class="n3"><a href="get_visit_record.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">103</td>
+		<td class="n2"><a href="get_survey_record.html" target="_blank">获取项目考察记录</a></td>
+		<td class="n3"><a href="get_survey_record.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+	<tr>
+		<td class="n1">104</td>
+		<td class="n2"><a href="project_stage_one.html" target="_blank">项目第一阶段保存</a></td>
+		<td class="n3"><a href="project_stage_one.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">105</td>
+		<td class="n2"><a href="get_project_one.html" target="_blank">获取第一阶段信息</a></td>
+		<td class="n3"><a href="get_project_one.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+	<tr>
+		<td class="n1">106</td>
+		<td class="n2"><a href="project_stage_one_submit.html" target="_blank">第一阶段提交</a></td>
+		<td class="n3"><a href="project_stage_one_submit.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+	<tr>
+		<td class="n1">108</td>
+		<td class="n2"><a href="project_stage_two.html" target="_blank">项目第二阶段保存</a></td>
+		<td class="n3"><a href="project_stage_two.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">109</td>
+		<td class="n2"><a href="get_project_two.html" target="_blank">获取第二阶段信息</a></td>
+		<td class="n3"><a href="get_project_two.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+	<tr>
+		<td class="n1">110</td>
+		<td class="n2"><a href="project_stage_two_submit.html" target="_blank">第二阶段提交</a></td>
+		<td class="n3"><a href="project_stage_two_submit.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+
+
+	<tr>
+		<td class="n1">112</td>
+		<td class="n2"><a href="project_stage_three.html" target="_blank">项目第三阶段保存</a></td>
+		<td class="n3"><a href="project_stage_three.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">113</td>
+		<td class="n2"><a href="get_project_three.html" target="_blank">获取第三阶段信息</a></td>
+		<td class="n3"><a href="get_project_three.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+	<tr>
+		<td class="n1">114</td>
+		<td class="n2"><a href="project_stage_three_submit.html" target="_blank">第三阶段提交</a></td>
+		<td class="n3"><a href="project_stage_three_submit.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+	<tr>
+		<td class="n1">115</td>
+		<td class="n2"><a href="project_stage_four.html" target="_blank">项目第四阶段保存</a></td>
+		<td class="n3"><a href="project_stage_four.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">116</td>
+		<td class="n2"><a href="get_project_four.html" target="_blank">获取第四阶段信息</a></td>
+		<td class="n3"><a href="get_project_four.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+	<tr>
+		<td class="n1">117</td>
+		<td class="n2"><a href="project_stage_four_submit.html" target="_blank">第四阶段提交</a></td>
+		<td class="n3"><a href="project_stage_four_submit.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+	<tr>
+		<td class="n1">119</td>
+		<td class="n2"><a href="project_stage_five.html" target="_blank">项目第五阶段保存</a></td>
+		<td class="n3"><a href="project_stage_five.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">120</td>
+		<td class="n2"><a href="get_project_five.html" target="_blank">获取第五阶段信息</a></td>
+		<td class="n3"><a href="get_project_five.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">121</td>
+		<td class="n2"><a href="get_project_pic.html" target="_blank">获取图库列表</a></td>
+		<td class="n3"><a href="get_project_pic.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">122</td>
+		<td class="n2"><a href="project_add_pic.html" target="_blank">添加图片</a></td>
+		<td class="n3"><a href="project_add_pic.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">123</td>
+		<td class="n2"><a href="project_del_pic.html" target="_blank">删除图片</a></td>
+		<td class="n3"><a href="project_del_pic.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">124</td>
+		<td class="n2"><a href="project_visitlog_list.html" target="_blank">拜访记录列表</a></td>
+		<td class="n3"><a href="project_visitlog_list.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">125</td>
+		<td class="n2"><a href="project_visitlog_add.html" target="_blank">拜访记录添加</a></td>
+		<td class="n3"><a href="project_visitlog_add.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">126</td>
+		<td class="n2"><a href="project_visitlog_del.html" target="_blank">拜访记录删除</a></td>
+		<td class="n3"><a href="project_visitlog_del.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">127</td>
+		<td class="n2"><a href="project_visitlog_edit.html" target="_blank">拜访记录修改</a></td>
+		<td class="n3"><a href="project_visitlog_edit.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">128</td>
+		<td class="n2"><a href="project_visitlog_info.html" target="_blank">拜访记录详情</a></td>
+		<td class="n3"><a href="project_visitlog_info.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">129</td>
+		<td class="n2"><a href="project_inspectlog_list.html" target="_blank">考察记录列表</a></td>
+		<td class="n3"><a href="project_inspectlog_list.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">130</td>
+		<td class="n2"><a href="project_inspectlog_add.html" target="_blank">考察记录添加</a></td>
+		<td class="n3"><a href="project_inspectlog_add.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">131</td>
+		<td class="n2"><a href="project_inspectlog_info.html" target="_blank">考察记录详情</a></td>
+		<td class="n3"><a href="project_inspectlog_info.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">132</td>
+		<td class="n2"><a href="get_type_data.html" target="_blank">获取建筑类型和项目类型数据</a></td>
+		<td class="n3"><a href="get_type_data.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">133</td>
+		<td class="n2"><a href="project_stage_review.html" target="_blank">项目阶段审核</a></td>
+		<td class="n3"><a href="project_stage_review.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+    <tr>
+        <td class="n1">134</td>
+        <td class="n2"><a href="project_stop.html" target="_blank">项目终止提交</a></td>
+        <td class="n3"><a href="project_stop.html" target="_blank">查看Demo</a></td>
+        <td class="n4"><a href="#" target="_blank">下载文档</a></td>
+    </tr>
+    <tr>
+        <td class="n1">135</td>
+        <td class="n2"><a href="project_stop_save.html" target="_blank">项目终止保存</a></td>
+        <td class="n3"><a href="project_stop_save.html" target="_blank">查看Demo</a></td>
+        <td class="n4"><a href="#" target="_blank">下载文档</a></td>
+    </tr>
+	<tr>
+		<td class="n1">136</td>
+		<td class="n2"><a href="get_review_project.html" target="_blank">获取审批项目</a></td>
+		<td class="n3"><a href="get_review_project.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">137</td>
+		<td class="n2"><a href="get_select_project.html" target="_blank">获取查询项目</a></td>
+		<td class="n3"><a href="get_select_project.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">138</td>
+		<td class="n2"><a href="get_record_update.html" target="_blank">获取修改记录列表</a></td>
+		<td class="n3"><a href="get_record_update.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">139</td>
+		<td class="n2"><a href="get_record_one_info.html" target="_blank">获取一阶段修改记录详情</a></td>
+		<td class="n3"><a href="get_record_one_info.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">140</td>
+		<td class="n2"><a href="get_record_two_info.html" target="_blank">获取二阶段修改记录详情</a></td>
+		<td class="n3"><a href="get_record_two_info.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">141</td>
+		<td class="n2"><a href="get_record_three_info.html" target="_blank">获取三阶段修改记录详情</a></td>
+		<td class="n3"><a href="get_record_three_info.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">142</td>
+		<td class="n2"><a href="get_record_four_info.html" target="_blank">获取四阶段修改记录详情</a></td>
+		<td class="n3"><a href="get_record_four_info.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">143</td>
+		<td class="n2"><a href="get_record_five_info.html" target="_blank">获取五阶段修改记录详情</a></td>
+		<td class="n3"><a href="get_record_five_info.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">144</td>
+		<td class="n2"><a href="project_visitlog_comment.html" target="_blank">评论拜访记录</a></td>
+		<td class="n3"><a href="project_visitlog_comment.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">145</td>
+		<td class="n2"><a href="get_project_info.html" target="_blank">获取项目基本信息</a></td>
+		<td class="n3"><a href="get_project_info.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">146</td>
+		<td class="n2"><a href="project_setting_getuser.html" target="_blank">项目设置-获取人员列表</a></td>
+		<td class="n3"><a href="project_setting_getuser.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+	<tr>
+		<td class="n1">147</td>
+		<td class="n2"><a href="project_setting_user.html" target="_blank">项目设置-更改人员</a></td>
+		<td class="n3"><a href="project_setting_user.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">148</td>
+		<td class="n2"><a href="project_setting_bonus.html" target="_blank">项目设置-提成比例</a></td>
+		<td class="n3"><a href="project_setting_bonus.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">149</td>
+		<td class="n2"><a href="project_setting_notice.html" target="_blank">项目设置-提醒设置</a></td>
+		<td class="n3"><a href="project_setting_notice.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">150</td>
+		<td class="n2"><a href="project_setting_export.html" target="_blank">项目设置-导出设置</a></td>
+		<td class="n3"><a href="project_setting_export.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">151</td>
+		<td class="n2"><a href="project_summarize.html" target="_blank">项目沉淀保存</a></td>
+		<td class="n3"><a href="project_summarize.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">152</td>
+		<td class="n2"><a href="get_same_project_num.html" target="_blank">获取各个字段相似项目数量</a></td>
+		<td class="n3"><a href="get_same_project_num.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">153</td>
+		<td class="n2"><a href="get_same_project_list.html" target="_blank">获取相似项目列表</a></td>
+		<td class="n3"><a href="get_same_project_list.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">154</td>
+		<td class="n2"><a href="same_project_del.html" target="_blank">移除相似项目</a></td>
+		<td class="n3"><a href="same_project_del.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">155</td>
+		<td class="n2"><a href="project_delete.html" target="_blank">删除项目</a></td>
+		<td class="n3"><a href="project_delete.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">156</td>
+		<td class="n2"><a href="get_project_advice.html" target="_blank">获取项目建议列表</a></td>
+		<td class="n3"><a href="get_project_advice.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">157</td>
+		<td class="n2"><a href="project_advice_add.html" target="_blank">添加项目建议</a></td>
+		<td class="n3"><a href="project_advice_add.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">158</td>
+		<td class="n2"><a href="project_same_check.html" target="_blank">相似项目检查</a></td>
+		<td class="n3"><a href="project_same_check.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">159</td>
+		<td class="n2"><a href="get_project_select.html" target="_blank">获取选型方案</a></td>
+		<td class="n3"><a href="get_project_select.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+
+
+
+
+	<tr class="top">
+		<th class="title" colspan = "4">聊天相关接口</th>
+	</tr>
+
+	<tr>
+		<td class="n1">200</td>
+		<td class="n2"><a href="room_msg_add.html" target="_blank">添加新消息</a></td>
+		<td class="n3"><a href="room_msg_add.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">201</td>
+		<td class="n2"><a href="room_chat_list.html" target="_blank">返回聊天列表</a></td>
+		<td class="n3"><a href="room_chat_list.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">201</td>
+		<td class="n2"><a href="room_chat_list_member.html" target="_blank">返回聊天列表(总经理)</a></td>
+		<td class="n3"><a href="room_chat_list_member.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">202</td>
+		<td class="n2"><a href="room_last_msgs.html" target="_blank">返回最新消息</a></td>
+		<td class="n3"><a href="room_last_msgs.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">211</td>
+		<td class="n2"><a href="get_room_Byuid.html" target="_blank">根据用户id获取项目群</a></td>
+		<td class="n3"><a href="get_room_Byuid.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">203</td>
+		<td class="n2"><a href="room_msg_list.html" target="_blank">返回消息列表</a></td>
+		<td class="n3"><a href="room_msg_list.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">204</td>
+		<td class="n2"><a href="room_msg_query.html" target="_blank">查询消息列表</a></td>
+		<td class="n3"><a href="room_msg_query.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">205</td>
+		<td class="n2"><a href="room_msg_resource.html" target="_blank">查询图片视频列表</a></td>
+		<td class="n3"><a href="room_msg_resource.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">206</td>
+		<td class="n2"><a href="get_room_id.html" target="_blank">获取群聊</a></td>
+		<td class="n3"><a href="get_room_id.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">207</td>
+		<td class="n2"><a href="chartfile_upload.html" target="_blank">图片上传压缩接口</a></td>
+		<td class="n3"><a href="chartfile_upload.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">208</td>
+		<td class="n2"><a href="chat_get_project.html" target="_blank">获取待审核项目(总经理)</a></td>
+		<td class="n3"><a href="chat_get_project.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">208</td>
+		<td class="n2"><a href="chat_get_review.html" target="_blank">获取待审核项目</a></td>
+		<td class="n3"><a href="chat_get_review.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">209</td>
+		<td class="n2"><a href="add_chat_config.html" target="_blank">增加群成员</a></td>
+		<td class="n3"><a href="add_chat_config.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">210</td>
+		<td class="n2"><a href="get_sale_member.html" target="_blank">获取本部门人员</a></td>
+		<td class="n3"><a href="get_sale_member.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">211</td>
+		<td class="n2"><a href="get_revise_result.html" target="_blank">获取修改的属性名</a></td>
+		<td class="n3"><a href="get_revise_result.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr>
+		<td class="n1">212</td>
+		<td class="n2"><a href="get_room_info.html" target="_blank">获取群信息</a></td>
+		<td class="n3"><a href="get_room_info.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+	<tr class="top">
+		<th class="title" colspan = "4">前台售后服务</th>
+	</tr>
+
+	<tr>
+		<td class="n1">1</td>
+		<td class="n2"><a href="get_aftersales.html" target="_blank">获取数据</a></td>
+		<td class="n3"><a href="get_aftersales.html" target="_blank">查看Demo</a></td>
+		<td class="n4"><a href="#" target="_blank">下载文档</a></td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>接口125:添加拜访记录</title>
+    <script type="text/javascript" src="js/jquery.1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/func.common.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js">//$.md5()</script>
+    <script type="text/javascript" src="js/jquery.base64.js">//$.base64.encode()</script>
+    <script src="js/c.js" type="text/javascript"></script>
+    <script src="js/urchin.js" type="text/javascript"></script>
+    <link href="css/s.css" type="text/css" rel="stylesheet">
+    <link href="css/base.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        $(function(){
+            $('#btn').click(function(){
+                var method = $('input[name="method"]').val();
+                var timestamp = $('input[name="timestamp"]').val();
+                var source = $('#source').val();
+                var secret = "boiler_android";
+                if(source==3)
+                    secret = "boiler_ios";
+                var sign = $.md5(method+timestamp+source+secret);
+
+                var projectid = $('input[name="projectid"]').val();
+                var visitway = $('#visitway').val();
+                var content  = $('input[name="content"]').val();
+                var effect  = $('input[name="effect"]').val();
+                var plan  = $('input[name="plan"]').val();
+                var positionstr  = $('input[name="positionstr"]').val();
+                var tel  = $('input[name="tel"]').val();
+                var target  = $('input[name="target"]').val();
+
+                $('#sign').val(sign);
+                $.ajax({
+                    type         : 'POST',
+                    data         : {
+                        method :method,
+                        timestamp :timestamp,
+                        source   : source,
+                        sign   : sign,
+                        projectid   : projectid,
+                        visitway:visitway,
+                        content:content,
+                        effect   : effect,
+                        plan:plan,
+                        positionstr:positionstr,
+                        tel   : tel,
+                        target:target
+                    },
+                    url : "../api.php",
+                    beforeSend :  function(data){
+                        $('#Canvas').html('<p>请求处理中...</p>');
+                    },
+                    success :     function(data){
+                        Process(data);
+                    },
+                    error :       function(request, errtext, e){
+                        $('#Canvas').html('<p><b>发生错误</b></p><p>'+request.status+'<br/>'+errtext+'</p>');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="head"><p>接口125：添加拜访记录</p></div>
+<div id="content">
+    <div id="left">
+        <div class ="message"><p>接口返回：</p></div>
+        <div id="Canvas" class="Canvas"></div>
+    </div>
+    <div id="right">
+        <div class ="message"><p>请求数据：</p></div>
+        <form>
+            <p>
+                <span>method:</span>
+                <input type="text" class="input-text"  name="method" value="project_visitlog_add"/>
+            </p>
+            <p>
+                <span>projectid:</span>
+                <input type="text" class="input-text"  name="projectid"/>
+            </p>
+            <p>
+                <span>visitway(拜访方式)：</span>
+                <select id="visitway" class="select" name="visitway">
+                    <option value="1">电话拜访</option>
+                    <option value="2">上门拜访</option>
+                </select>
+            </p>
+            <p>
+                <span>target(拜访对象):</span>
+                <input type="text" class="input-text"  name="target"/>
+            </p>
+            <p>
+                <span>tel(联系方式):</span>
+                <input type="text" class="input-text"  name="tel"/>
+            </p>
+            <p>
+                <span>positionstr(职位):</span>
+                <input type="text" class="input-text"  name="positionstr"/>
+            </p>
+            <p>
+                <span>content(拜访内容):</span>
+                <input type="text" class="input-text"  name="content"/>
+            </p>
+            <p>
+                <span>effect(拜访效果):</span>
+                <input type="text" class="input-text"  name="effect"/>
+            </p>
+            <p>
+                <span>plan(下步计划):</span>
+                <input type="text" class="input-text"  name="plan"/>
+            </p>
+            <p>
+                <span>timestamp:</span>
+                <input type="text" class="input-text"  name="timestamp" value="11111111"/>
+            </p>
+            <p>
+                <span>来源：</span>
+                <select id="source" class="select">
+                    <option value="2">android</option>
+                    <option value="3">ios</option>
+                </select>
+            </p>
+            <p><span>校验码：</span><input type="text" class="input-text" id="sign" readonly/></p>
+            <p><button class="button success small" id="btn" type="button">发送请求</button></p>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

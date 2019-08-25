@@ -1,0 +1,127 @@
+.GLXX1_main1{
+	width: 1440px;
+	height:120px;
+	margin: 0 auto;
+
+}
+.p2{
+	width: 192px;
+	height: 22px;
+	padding-top: 34px;
+	font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #686868;
+	position: relative;
+	left: 120px;
+}
+#sttime,#endtime{
+	width: 145px;
+	height: 54px;
+	border: 1px solid #DDE3E8;
+	border-radius: 6px;
+}
+#sttime,#endtime,.p3{
+	float: left;
+	position: relative;
+	left: 120px;
+}
+.p3{
+	width: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 18px;
+}
+#search{
+	width: 120px ;
+	height: 40px;
+	position: relative;
+	left: 240px;
+	top: 5px;
+	text-align: center;
+	color: white;
+	background: #04A6FE;
+	box-shadow: 0 6px 24px 0 rgba(10,122,182,0.30);
+	border-radius: 6px;
+	font-family: PingFangSC-Regular;
+	font-size: 20px;
+	letter-spacing: 0.93px;
+	outline: none;
+}
+
+.GLXX1_main2,.GLXX1_main3,.GLXX1_main4{
+	width: 1440px;
+	margin: 0 auto;
+	font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #474747;
+	position: relative;
+	top: 30px;
+}
+.GLXX1_main2 table,.GLXX1_main3 table,.GLXX1_main4 table{
+	width: 1200px;
+	position: relative;
+	left: 120px;
+}
+.GL{
+	width: 36px;
+	height:25px;
+	position: relative;
+	left: 120px;
+	font-family: PingFangSC-Medium;
+	font-size: 18px;
+	color: #04A6FE;
+}
+.GLXX1_main2 tr,.GLXX1_main2 td{
+	width: 142px;
+	height: 48px;
+	text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 16px;
+	border:1px solid #ddd;
+
+}
+.defined{
+	width: 100px;
+	height: 36px;
+	border: 1px solid #DDE3E8;
+	border-radius: 6px;
+	outline: none;
+}
+.GLXX1_main3 tr,.GLXX1_main3 td{
+	width: 130px;
+	height:48px;
+	text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 16px;
+	border:1px solid #ddd;
+
+}
+
+.GLXX1_main4 tr,.GLXX1_main4 td{
+	width: 140px;
+	height: 35px;
+	text-align: center;
+	border:1px solid #ddd;
+
+}
+.footer{
+	width: 1440px;
+	margin: 0 auto 99px auto !important;
+	display: flex !important;
+	justify-content: space-around !important;
+	padding-top: 90px !important;
+}
+.next{
+	width: 346px;
+	height: 60px;
+	color: white;
+	background: #04A6FE;
+	box-shadow: 0 6px 24px 0 rgba(10,122,182,0.30);
+	border-radius: 6px;
+	position: relative;
+	left: 547px;
+	top: 94px;
+	font-family: PingFangSC-Regular;
+	font-size: 24px;
+	letter-spacing: 0.93px;
+}

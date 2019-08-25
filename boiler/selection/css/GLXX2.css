@@ -1,0 +1,135 @@
+.GLXX2_main1{
+	width: 1440px;
+	height: 120px;
+	margin: 0 auto;
+	font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #474747;
+	margin-top: 30px;
+	margin-left: 100px;
+}
+.first{
+	width: 162px;
+    height: 25px;
+    position: relative;
+	left: 80px;
+	font-family: PingFangSC-Medium;
+    font-size: 18px;
+    color: #04A6FE;
+	bottom: 10px;
+}
+.GLXX2_main1 ul{
+	width: 1200px;
+	position: relative;
+	left: 80px;
+}
+.GLXX2_main2 ul{
+	width: 1200px;
+	position: relative;
+	left: 80px;
+}
+.GLXX2_main1 li,.GLXX2_main2 li{
+	float: left;
+	list-style: none;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	background-color:#e2e2e2;
+	border-radius: 6px;
+     margin-right: 60px;
+	text-align: center;
+	cursor: default;
+}
+.GLXX2_main1 a{
+	display: block;
+	width: 120px;
+	height: 40px;
+}
+.GLXX2_main1 li a:hover{
+	background-color: #04A6FE;
+	color: white;
+    border-radius: 6px;
+    border:1px solid #04A6FE;
+}
+.GLXX2_main2{
+	width: 1440px;
+	height: 175px;
+	margin: 0 auto;
+	font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #474747;
+	margin-top: 30px;
+	margin-left: 100px;
+}
+.GLXX2_main2 li{
+	float: left;
+	list-style: none;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	background-color:  #e2e2e2;
+	border-radius: 10px;
+	margin-right: 60px;
+	margin-bottom: 39px;
+	text-align: center;
+	cursor: default;
+}
+.GLXX2_main2 a{
+	display: block;
+	width: 120px;
+	height: 40px;
+}
+.GLXX2_main2 li a:hover{
+	background-color: #04A6FE;
+	color: white;
+    border-radius: 6px;
+    border:1px solid #04A6FE;
+    }
+ .GLXX2_main3{
+ 	width: 1440px;
+ 	margin: 0 auto;
+ }
+  .framing{
+    	width: 1200px;
+    	height: 329px;
+    	position: relative;
+    	left: 120px;
+    	border: 1px solid #DDE3E8;
+        border-radius: 6px;
+
+    }
+.GLXX2_main4{
+	width: 1440px;
+	height: 200px;
+	margin: 0 auto;
+}
+.last{
+	width: 346px;
+	height: 60px;
+	background-color: #00BFFF;
+	background: #04A6FE;
+    box-shadow: 0 6px 24px 0 rgba(10,122,182,0.30);
+    border-radius: 6px;
+	color: white;
+	font-family: PingFangSC-Regular;
+    font-size: 24px;
+    letter-spacing: 0.93px;
+    position: relative;
+    top: 90px;
+    left: 500px;
+}
+.last_step{
+	width: 346px;
+	height: 60px;
+	color: white;
+	background: #04A6FE;
+	box-shadow: 0 6px 24px 0 rgba(10,122,182,0.30);
+	border-radius: 6px;
+	position: relative;
+	left: 15%;
+	top: 94px;
+	font-family: PingFangSC-Regular;
+	font-size: 24px;
+	letter-spacing: 0.93px;
+	margin-right: 4px;
+}

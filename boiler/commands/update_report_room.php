@@ -1,0 +1,1 @@
+<?php/** * Created by PhpStorm. * User: ftx * Date: 2019/6/4 * Time: 11:28 AM */require('../init.php');$user_list = User::getInfoByRole(1);foreach ($user_list as $item){    $roomId = Chat_room::getRoomByUId($item['id']);    if (empty($roomId)){        Chat_room::AddRoomByUid($item['id']);    }}

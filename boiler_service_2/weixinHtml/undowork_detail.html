@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="weui/css/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <script src="js/rem.js" async="async"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<style>
+    html,
+    body {
+        background: rgba(243, 243, 243, 1);
+    }
+
+    .top-tab {
+        display: flex;
+        position: sticky;
+        top: 0px;
+        height: .8rem;
+        background: rgba(255, 255, 255, 1);
+        font-size: .32rem;
+        font-weight: 600;
+        color: rgba(60, 60, 60, 1);
+        line-height: .8rem;
+    }
+
+    .top-tab p {
+        flex: 1;
+        align-self: center;
+    }
+
+    .top-tab p img {
+        width: .2rem;
+        height: .3rem;
+        margin: 0 0 0 6%;
+    }
+
+    .wrap {
+        background-color: white;
+        border-radius: 0.12rem;
+        padding: 5% 4% 6% 4%;
+        margin: 2% 2% 2% 2%;
+        font-size: 0.28rem;
+    }
+
+    body :nth-child(4) img {
+        float: right;
+        width: .4rem;
+        height: .4rem;
+    }
+
+
+
+
+    .wrap .info {
+
+        display: flex;
+        align-items: center;
+    }
+
+    .wrap .info img {
+        width: .64rem;
+        height: .8rem;
+        margin: 0 .3rem 0 0;
+    }
+
+    .wrap .info .problem {
+
+        height: 0.40rem;
+        font-size: 0.24rem;
+        font-weight: 400;
+        color: rgba(34, 34, 44, 1);
+        line-height: 0.4rem;
+    }
+
+    .wrap .info .order-time {
+
+        height: 0.33rem;
+        font-size: 0.24rem;
+        font-weight: 400;
+        color: rgba(159, 159, 159, 1);
+        line-height: 0.33rem;
+    }
+
+
+    .wrap .title {
+        display: flex;
+        font-size: .28rem;
+        font-weight: 500;
+        color: rgba(34, 34, 44, 1);
+        line-height: .4rem;
+        align-items: center;
+        margin: 0 0 .3rem 0;
+    }
+
+    .wrap .title img {
+        width: .44rem;
+        height: .44rem;
+        margin: 0 1% 0 0;
+    }
+
+    .wrap .content .row {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 0 0 .3rem 0;
+    }
+
+    .wrap .content .row :first-child {
+        margin: 0 .4rem 0 0;
+        width: 17%;
+        color: rgba(159, 159, 159, 1);
+    }
+
+    .wrap .content .row :last-child {
+        width: 75%;
+        height: auto;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
+
+
+
+
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 0.4rem .6rem 0 .5rem;
+    }
+
+    .btn-group button {
+        margin-left: 0.2rem;
+        padding: 0 0.2rem 0 0.2rem;
+        height: 0.60rem;
+        border-radius: 0.32rem;
+        border: 1px solid rgba(153, 153, 153, 1);
+        color: rgba(153, 153, 153, 1);
+        background-color: rgba(243, 243, 243, 1);
+        line-height: 0.6rem;
+        font-size: .3rem;
+    }
+
+    .btn-group :nth-child(2) button {
+
+        border: 1px solid rgba(153, 153, 153, 1);
+        color: white;
+        background: linear-gradient(136deg, rgba(2, 175, 243, 1) 0%, rgba(3, 166, 254, 1) 100%);
+        box-shadow: 0px 2px 16px 0px rgba(4, 166, 254, 0.2);
+
+    }
+</style>
+
+<body>
+    <div id="vue-content">
+    <div class="top-tab">
+        <p><a href="#" onClick="javascript :history.back(-1);"><img src="images/icon-bark.png"></a></p>
+        <p style="text-align: center">订单详情</p>
+        <p></p>
+    </div>
+
+    <div class="wrap">
+        <div class="info">
+            <img src="images/repair_complete.png" alt="图片">
+            <div>
+                <p>维修完成<br>此次维修服务已确认完成，感谢您！</p>
+            </div>
+        </div>
+    </div>
+    <!-- 订单信息 -->
+    
+
+        <div class="wrap">
+            <div class="title">
+                <img src="images/order_info.png" alt="">
+                <span>订单信息</span>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <div>订单号&emsp;</div>
+                    <div> {{order_num}}</div>
+                </div>
+                <div class="row">
+                    <div>产品品牌</div>
+                    <div>因诺维森</div>
+                </div>
+                <div class="row">
+                    <div>产品型号</div>
+                    <div>LNhibBHKO2368000987</div>
+                </div>
+                <div></div>
+                <div class="row">
+                    <div>联系人&emsp;</div>
+                    <div>张三</div>
+                </div>
+                <div class="row">
+                    <div>联系电话</div>
+                    <div>13653201526</div>
+                </div>
+                <div></div>
+                <div class="row">
+                    <div>联系地址</div>
+                    <div>西安市雁塔区金辉环球广场B座1209</div>
+                </div>
+                <div class="row">
+                    <div>服务类型</div>
+                    <div>故障报修</div>
+                </div>
+                <div class="row">
+                    <div>故障详情</div>
+                    <div>壁挂机漏水了</div>
+                </div>
+                <div class="row">
+                    <div>下单时间</div>
+                    <div> 15:23:38</div>
+                </div>
+            </div>
+        </div>
+        <!-- 工程师信息 -->
+        <div class="wrap">
+            <div class="title">
+                <img src="images/order_info.png" alt="">
+                <span>工程师信息</span>
+            </div>
+            <div class="content">
+                <p><span style="margin: 0 .4rem 0 0;
+                color: rgba(159, 159, 159, 1);">工程师&emsp;</span>张三<span style="margin: 0 .4rem 0 0;
+                color: rgba(159, 159, 159, 1);">&emsp;工号</span>123<a href="tel:13366668888"><img
+                            src="images/icon-tell.png"></a></p>
+            </div>
+        </div>
+        
+        <div class="btn0group">
+
+        </div>
+        <p class="btn-group"> <button type="submit">狠心取消订单</button><a href="#" onClick="javascript :history.back(-1);"><button>算了再想想吧</button></a></p>
+        
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="weui/js/jquery-weui.min.js"></script>
+<script>
+    new Vue({
+        el: '#vue-content',
+        data: {
+            order_num: 'Vue123123!'
+        }
+    })
+</script>
+<script>
+
+
+</script>
+
+
+</html>

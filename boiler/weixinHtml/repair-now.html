@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>一键报修</title>
+    <link rel="stylesheet" href="weui/css/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/query.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="person-wrap">
+            <div class="person-top">
+                <div class="person-tip flex" style="margin-top: 0;">
+                    <img src="images/person-tip.png" alt="">
+                    <span>温馨提示：* 为必填项。</span>
+                </div>
+            </div>
+            <div class="person-form">
+                <form>
+                    <div class="form-item">
+                        <div class="form-item-title flex">
+                            <img src="images/person-star.png" alt="">
+                            <span>联系电话</span>
+                            <span class="repair-item-tip">（上门维修时您的联系电话）</span>
+                        </div>
+                        <div class="form-input flex">
+                            <input placeholder="请输入手机号" value="15678789900" type="text">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="form-item-title flex">
+                            <img src="images/person-star.png" alt="">
+                            <span>地址：陕西省西安市雁塔区金辉世界城A区4号楼2单元1209 </span>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="form-item-tip flex">
+                            <img src="images/person-tip.png" alt="">
+                            <span>注：如果地址有误，请联系客服 400-966-5890</span>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="form-item-title flex">
+                            <img src="images/person-star.png" alt="">
+                            <span>产品故障</span>
+                        </div>
+                        <div class="form-input flex">
+                            <textarea placeholder="请描述产品故障" ></textarea>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="form-item-title flex">
+                            <img style="opacity: 0" src="images/person-star.png" alt="">
+                            <span>上传图片</span>
+                            <span class="repair-item-tip">（最多上传3张图片）</span>
+                        </div>
+                        <div class="form-input-upload flex">
+                            <div class="upload flex" >
+                                <div class="upload-item upload-first"  >
+                                    <label id="label" for="file">
+                                        <img src="images/btn-upload.png" alt="">
+                                    </label>
+                                    <input id="file" multiple type="file"
+                                           accept="image/*"
+                                           style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="from-submit">
+                        <input id="submit" type="submit" value="一键下单">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="weui/js/jquery-weui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $(function () {
+        var upload_W = $(".upload-item").width() - 13;
+        console.log(upload_W);
+        $(".upload-item").height(upload_W);
+        var imgArr = [];
+        var tmpl = '<div class="upload-item" style="height: '+upload_W+'px"><img src="#url#" alt=""><div class="image_close"></img><img src="images/input-close.png"><div></div>'
+        var $uploaderInput = $("#file"); //上传按钮+
+        var $uploaderFiles = $(".upload-first");    //图片列表
+        $uploaderInput.on("change", function (e) {
+
+            var num =$(".upload").find('.upload-item').length;
+
+            if(num >3){
+                alert("最多上传3张图片");
+                return false;
+            }
+
+            var src,url = window.URL || window.webkitURL || window.mozURL,files = e.target.files;
+            //var file = files[0];
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                imgArr.push(file);
+                if (url) {
+                    src = url.createObjectURL(file);
+                } else {
+                    src = e.target.result;
+                }
+                $uploaderFiles.before($(tmpl.replace('#url#', src)));
+            }
+
+        })
+
+
+        $("body").on("click",".image_close", function () {
+            var index = $(this).parent().index();
+            $(this).parent().remove();
+            imgArr.splice(index,1);
+            console.log(index,imgArr);    
+        })
+
+        $("#submit").on("click",function (e) {
+            e.preventDefault();
+            window.location.href = "order-success.html";
+        })
+    })
+</script>
+
+</html>

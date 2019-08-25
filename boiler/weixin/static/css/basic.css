@@ -1,0 +1,176 @@
+/*
+ * @Author: huangdan 
+ * @Date: 2019-01-04 09:32:08 
+ * @Last Modified by: huangdan-hdwebll@163.com
+ * @Last Modified time: 2019-01-08 15:15:49
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    font-family: 'sans-serif', "Microsoft YaHei", "微软雅黑", "Tahoma", "Helvetica";
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+ 
+a {
+    text-decoration: none;
+}
+ 
+a:hover,
+a:focus {
+    outline: none;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+
+:before,
+:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+}
+
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+    -webkit-appearance: button;  
+    text-transform: none;
+    outline: none;
+}
+
+input::-webkit-inner-spin-button {/*解决input的type="number"在部分手机端会出现一个小按钮*/
+    -webkit-appearance: none;/*去除系统默认appearance的样式,常用于IOS下移除原生样式*/
+}
+
+input::-webkit-outer-spin-button {/*解决input的type="number"在部分手机端会出现一个小按钮*/
+    -webkit-appearance: none;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+select {
+    margin: 0;
+    outline: 0;
+}
+
+button,
+input[type=button],
+input[type=checkbox],
+input[type=reset],
+input[type=submit],
+label {
+    cursor: pointer;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.clearfix:after,
+.clearfix:before {   /*清除浮动*/
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.tac {
+    text-align: center;
+}
+
+.tal {
+    text-align: left;
+}
+
+.tar {
+    text-align: right;
+}
+
+.bgf0ecec {
+    background-color: #f0ecec;
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.flex {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.color-pub {
+    color: #5D7AB7 !important;
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>接口104:项目第一阶段保存</title>
+    <script type="text/javascript" src="js/jquery.1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/func.common.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js">//$.md5()</script>
+    <script type="text/javascript" src="js/jquery.base64.js">//$.base64.encode()</script>
+    <script src="js/c.js" type="text/javascript"></script>
+    <script src="js/urchin.js" type="text/javascript"></script>
+    <link href="css/s.css" type="text/css" rel="stylesheet">
+    <link href="css/base.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        $(function(){
+            $('#btn').click(function(){
+                var method = $('input[name="method"]').val();
+                var uid = $('input[name="uid"]').val();
+                var id = $('#id').val();
+                var project_id = $('#project_id').val();
+                var project_name = $('#project_name').val();
+                var project_detail = $('#project_detail').val();
+                var project_lat = $('#project_lat').val();
+                var project_long = $('#project_long').val();
+                var project_type = $('#project_type').val();
+                var project_partya_desc = $('#project_partya_desc').val();
+                var project_partya_address = $('#project_partya_address').val();
+                var project_partya = $('#project_partya').val();
+                var project_linkman = $('#project_linkman').val();
+                var project_linktel = $('#project_linktel').val();
+                var project_history = $('#project_history').val();
+                var project_history_attr1 = $('#project_history_attr1').val();
+                var project_history_attr2 = $('#project_history_attr2').val();
+                var project_linkposition = $('#project_linkposition').val();
+                var project_brand = $('#project_brand').val();
+                // var project_xinghao = $('#project_xinghao').val();
+                var project_build_type = $('#project_build_type').val();
+                var project_isnew = $('#project_isnew').val();
+                var project_pre_buildtime = $('#project_pre_buildtime').val();
+                var project_competitive_brand = $('#project_competitive_brand').val();
+                var project_competitive_desc = $('#project_competitive_desc').val();
+                var project_desc = $('#project_desc').val();
+                var project_boiler_num = $('#project_boiler_num').val();
+                var project_boiler_tonnage = $('#project_boiler_tonnage').val();
+                var project_partya_pic = $('#project_partya_pic').val();
+                var all_guolu_tonnage = $('#all_guolu_tonnage').val();
+                var all_guolu_num = $('#all_guolu_num').val();
+                var project_wallboiler_num = $('#project_wallboiler_num').val();
+                var timestamp = $('input[name="timestamp"]').val();
+                var source = $('#source').val();
+                var secret = "boiler_android";
+                if(source==3)
+                {
+                    secret = "boiler_ios";
+                }
+                var sign = $.md5(method+timestamp+source+secret);
+                $('#sign').val(sign);
+
+                $.ajax({
+                    type         : 'POST',
+                    data         : {
+                        method :method,
+                        uid   : uid,
+                        id : id,
+                        project_id :project_id,
+                        project_name : project_name,
+                        project_detail  : project_detail,
+                        project_lat  : project_lat,
+                        project_long  : project_long,
+                        project_type  : project_type,
+                        project_partya  : project_partya,
+                        project_history:project_history,
+                        project_history_attr1:project_history_attr1,
+                        project_history_attr2:project_history_attr2,
+                        project_partya_address  : project_partya_address,
+                        project_partya_desc  : project_partya_desc,
+                        project_partya_pic  : project_partya_pic,
+                        project_linkman  : project_linkman,
+                        project_linktel : project_linktel,
+                        project_linkposition  : project_linkposition,
+                        project_brand  : project_brand,
+                        // project_xinghao  : project_xinghao,
+                        project_build_type  : project_build_type,
+                        project_isnew  : project_isnew,
+                        project_pre_buildtime  : project_pre_buildtime,
+                        project_competitive_brand  : project_competitive_brand,
+                        project_competitive_desc  : project_competitive_desc,
+                        project_desc  : project_desc,
+                        project_boiler_tonnage : project_boiler_tonnage,
+                        project_boiler_num  : project_boiler_num,
+                        project_wallboiler_num : project_wallboiler_num,
+                        all_guolu_tonnage : all_guolu_tonnage,
+                        all_guolu_num : all_guolu_num,
+                        timestamp :timestamp,
+                        source   : source,
+                        sign   : sign
+                    },
+                    url : "../api.php",
+                    beforeSend :  function(data){
+                        $('#Canvas').html('<p>请求处理中...</p>');
+                    },
+                    success :     function(data){
+                        Process(data);
+                    },
+                    error :       function(request, errtext, e){
+                        $('#Canvas').html('<p><b>发生错误</b></p><p>'+request.status+'<br/>'+errtext+'</p>');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="head"><p>接口104:项目第一阶段保存</p></div>
+<div id="content">
+    <div id="left">
+        <div class ="message"><p>接口返回：</p></div>
+        <div id="Canvas" class="Canvas"></div>
+    </div>
+    <div id="right">
+        <div class ="message"><p>请求数据：</p></div>
+        <form>
+            <p>
+                <span>method:</span>
+                <input type="text" class="input-text"  name="method" id="method" value="project_stage_one"/>
+            </p>
+            <p>
+                <span>uid:</span>
+                <input type="text" class="input-text"  name="uid" id="uid"/>
+            </p>
+            <p>
+                <span>id:(阶段id，首次保存传0）</span>
+                <input type="text" class="input-text"  name="id" id="id"/>
+            </p>
+            <p>
+                <span>project_id:(阶段id，首次保存传0）</span>
+                <input type="text" class="input-text"  name="project_id" id="project_id"/>
+            </p>
+
+            <p>
+                <span>project_name:(项目名称）</span>
+                <input type="text" class="input-text"  name="project_name" id="project_name"/>
+            </p>
+            <p>
+                <span>project_detail:(详细地址）</span>
+                <input type="text" class="input-text"  name="project_detail" id="project_detail"/>
+            </p>
+
+            <p>
+                <span>project_lat:(纬度）</span>
+                <input type="text" class="input-text"  name="project_lat" id="project_lat"/>
+            </p>
+
+            <p>
+                <span>project_long:(精度）</span>
+                <input type="text" class="input-text"  name="project_long" id="project_long"/>
+            </p>
+
+            <p>
+                <span>project_type:(项目类型）</span>
+                <input type="text" class="input-text"  name="project_type" id="project_type" value="1"/>
+            </p>
+
+            <p>
+                <span>project_partya:(甲方单位）</span>
+                <input type="text" class="input-text"  name="project_partya" id="project_partya"/>
+            </p>
+
+            <p>
+                <span>project_partya_address:(甲方单位地址）</span>
+                <input type="text" class="input-text"  name="project_partya_address" id="project_partya_address"/>
+            </p>
+
+            <p>
+                <span>project_partya_desc:(甲方描述）</span>
+                <input type="text" class="input-text"  name="project_partya_desc" id="project_partya_desc"/>
+            </p>
+
+            <p>
+                <span>project_partya_pic:(甲方组织架构图）</span>
+                <input type="text" class="input-text"  name="project_partya_pic" id="project_partya_pic"/>
+            </p>
+
+            <p>
+                <span>project_linkman:(联系人）</span>
+                <input type="text" class="input-text"  name="project_linkman" id="project_linkman"/>
+            </p>
+
+            <p>
+                <span>project_linktel:(联系人电话）</span>
+                <input type="text" class="input-text"  name="project_linkman" id="project_linktel"/>
+            </p>
+            <p>
+                <span>project_linkposition:(联系人职位）</span>
+                <input type="text" class="input-text"  name="project_linkposition" id="project_linkposition"/>
+            </p>
+
+            <p>
+                <span>project_brand:(拟用锅炉品牌）</span>
+                <input type="text" class="input-text"  name="project_brand" id="project_brand"/>
+            </p>
+
+            <p>
+                <span>project_xinghao:(原锅炉型号）</span>
+                <input type="text" class="input-text"  name="project_xinghao" id="project_xinghao"/>
+            </p>
+
+            <!--<p>-->
+                <!--<span>project_history :(原锅炉型号）</span>-->
+                <!--<input type="text" class="input-text"  name="project_history" id="project_history"/>-->
+            <!--</p>-->
+
+            <p>
+                <span>project_history_attr1:(锅炉功率）</span>
+                <input type="text" class="input-text"  name="project_history_attr1" id="project_history_attr1"/>
+            </p>
+            <p>
+                <span>project_history_attr2:(锅炉数量）</span>
+                <input type="text" class="input-text"  name="project_history_attr2" id="project_history_attr2"/>
+            </p>
+            <p>
+                <span>project_build_type:(建筑类型）</span>
+                <input type="text" class="input-text"  name="project_build_type" id="project_build_type" value="1"/>
+            </p>
+
+            <p>
+                <span>新建锅炉：</span>
+                <select id="project_isnew" class="select">
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </p>
+            <p>
+                <span>project_pre_buildtime:(项目拟开工日期）</span>
+                <input type="text" class="input-text"  name="project_pre_buildtime" id="project_pre_buildtime"/>
+            </p>
+
+            <p>
+                <span>project_competitive_brand:(竞争品牌）</span>
+                <input type="text" class="input-text"  name="project_competitive_brand" id="project_competitive_brand"/>
+            </p>
+
+            <p>
+                <span>project_competitive_desc:(竞争品牌描述）</span>
+                <input type="text" class="input-text"  name="project_competitive_desc" id="project_competitive_desc"/>
+            </p>
+
+            <p>
+                <span>project_desc:(备注）</span>
+                <input type="text" class="input-text"  name="project_desc" id="project_desc"/>
+            </p>
+
+            <p>
+                <span>project_wallboiler_num:(锅炉总数量,壁挂炉的时候用）</span>
+                <input type="text" class="input-text"  name="project_wallboiler_num" id="project_wallboiler_num" value="0"/>
+            </p>
+
+            <p>
+                <span>all_guolu_tonnage:(锅炉吨位）</span>
+                <input type="text" class="input-text"  name="all_guolu_tonnage" id="all_guolu_tonnage"/>
+            </p>
+
+            <p>
+                <span>all_guolu_num:(台数）</span>
+                <input type="text" class="input-text"  name="all_guolu_num" id="all_guolu_num"/>
+            </p>
+
+            注意:all_guolu_tonnage和all_guolu_num结合使用。例如有两组(10吨,10台),(20吨，20台),那么all_guolu_tonnage值为10||20,all_guolu_num的值为10||20
+
+
+
+            <p>
+                <span>timestamp:</span>
+                <input type="text" class="input-text"  name="timestamp" value="11111111" id="timestamp"/>
+            </p>
+
+            <p>
+                <span>来源：</span>
+                <select id="source" class="select">
+                    <option value="2">android</option>
+                    <option value="3">ios</option>
+                </select>
+            </p>
+            <p><span>校验码：</span><input type="text" class="input-text" id="sign" readonly/></p>
+            <p><button class="button success small" id="btn" type="button">发送请求</button></p>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

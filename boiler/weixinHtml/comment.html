@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>评价</title>
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="weui/css/weui.min.css" />
+
+    <script src="js/rem.js" async="async"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<style>
+    a:link,
+    a:visited {
+        text-decoration: none;
+        /*超链接无下划线*/
+    }
+
+    html,
+    body {
+        background: rgba(243, 243, 243, 1);
+    }
+
+    .top-tab {
+        display: flex;
+        position: sticky;
+        top: 0px;
+        height: .8rem;
+        background: rgba(255, 255, 255, 1);
+        font-size: .32rem;
+        font-weight: 600;
+        color: rgba(60, 60, 60, 1);
+        line-height: .8rem;
+    }
+
+    .top-tab p {
+        flex: 1;
+        align-self: center;
+    }
+
+    .top-tab p img {
+
+        height: .3rem;
+        margin: 0 0 0 6%;
+    }
+
+    .bottom-tab {
+        display: flex;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        height: .8rem;
+        background: rgba(255, 255, 255, 1);
+        font-size: .32rem;
+        font-weight: 600;
+        color: rgba(60, 60, 60, 1);
+        line-height: .8rem;
+    }
+
+    .bottom-tab .p1 {
+        flex: 5;
+        padding: 0 .5rem 0 0;
+        font-weight: 400;
+        color: rgba(34, 34, 44, 1);
+
+    }
+
+    .bottom-tab .p2 {
+        flex: 1;
+        text-align: center;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 600;
+        background: linear-gradient(136deg, rgba(2, 175, 243, 1) 0%, rgba(3, 166, 254, 1) 100%);
+    }
+
+
+
+    .wrap {
+        background-color: white;
+        border-radius: 0.12rem;
+        padding: 5% 4% 6% 4%;
+        margin: 2% 2% 2% 2%;
+        font-size: 0.28rem;
+    }
+
+    .flex-wrap {
+        display: flex;
+
+        flex-direction: column
+    }
+
+
+
+
+
+
+
+
+
+
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 0.4rem .6rem 0 .5rem;
+    }
+
+    .btn-group button {
+        margin-left: 0.2rem;
+        padding: 0 0.2rem 0 0.2rem;
+        height: 0.60rem;
+        border-radius: 0.32rem;
+        border: 1px solid rgba(153, 153, 153, 1);
+        color: rgba(153, 153, 153, 1);
+        background-color: rgba(243, 243, 243, 1);
+        line-height: 0.6rem;
+        font-size: .3rem;
+    }
+
+    .btn-group :last-child {
+
+        border: 1px solid rgba(153, 153, 153, 1);
+        color: white;
+        background: linear-gradient(136deg, rgba(2, 175, 243, 1) 0%, rgba(3, 166, 254, 1) 100%);
+        box-shadow: 0px 2px 16px 0px rgba(4, 166, 254, 0.2);
+
+    }
+
+
+
+    .cancell {
+        background-color: white;
+        border-radius: 0.12rem;
+        padding: 3% 0 6% 3%;
+        margin: 2% 2% 2% 2%;
+        font-size: 0.28rem;
+    }
+
+    .cancell .sel {
+        height: .4rem;
+        width: 100%;
+        margin: 0 0 7% 0;
+
+    }
+
+    .cancell .sel label {
+        display: flex;
+        align-items: center;
+    }
+
+    .c-check {
+        opacity: 0;
+    }
+
+    .check-img {
+        display: inline-block;
+        height: .4rem;
+        width: .4rem;
+        background: url("images/c-unchecked.png");
+        background-size: 0.4rem;
+    }
+
+    .c-check:checked+label .check-img {
+        background: url("images/c-checked.png");
+        background-size: 0.4rem;
+    }
+
+
+    .weui-textarea {
+
+        background: rgba(247, 247, 247, 1);
+        border-radius: .08rem;
+    }
+
+    .comment-title {
+
+        font-size: .28rem;
+        font-weight: 400;
+        color: rgba(60, 60, 60, 1);
+
+    }
+
+    .weui-cells_checkbox .weui-check:checked+.weui-icon-checked:before {
+        content: '\EA06';
+        color: rgba(3, 166, 254, 1);
+    }
+
+    textarea:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        padding: .2rem 0 0 .2rem;
+        font-size: .27rem
+    }
+
+    textarea::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        padding: .2rem 0 0 .2rem;
+        font-size: .27rem
+    }
+
+    textarea::-webkit-input-placeholder {
+        padding: .2rem 0 0 .2rem;
+        font-size: .27rem
+    }
+
+    textarea:-ms-input-placeholder {
+        padding: .2rem 0 0 .2rem;
+        font-size: .27rem
+    }
+
+    .weui-toast {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5000;
+        width: 2rem;
+        min-height: 1rem;
+        top: 50%;
+        left: 50%;
+        margin-left: -3.8em;
+        background: hsla(0, 0%, 7%, .7);
+
+        border-radius: 5px;
+        color: #fff;
+    }
+    .uploader__input-box {
+    float: left;
+    position: relative;
+    margin-right: 9px;
+    margin-bottom: 9px;
+    width: 77px;
+    height: 77px;
+}
+</style>
+
+<body>
+    <div class="top-tab">
+        <p><a href="#" onClick="javascript :history.back(-1);"><img src="images/icon-bark.png"></a></p>
+        <p style="text-align: center">评价</p>
+        <p></p>
+    </div>
+
+    <div class="wrap">
+        <div class="page">
+            <!-- 图片预览 -->
+            <div class="page__bd">
+                <div class="weui-gallery" id="gallery">
+                    <span class="weui-gallery__img" id="galleryImg"></span>
+                    <div class="weui-gallery__opr">
+                        <a href="javascript:" class="weui-gallery__del">
+                            <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="weui-cells__title comment-title">评价</div>
+                <div class="weui-cells weui-cells_form">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <textarea class="weui-textarea" placeholder="分享你的购买心得" rows="4" maxlength="140"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- 图片上传 -->
+                <div class="weui-cells weui-cells_form">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <div class="weui-uploader">
+                                <div class="weui-uploader__hd">
+                                    <p class="weui-uploader__title comment-title">照片上传</p>
+                                    <div class="weui-uploader__info"></div>
+                                </div>
+                                <div class="weui-uploader__bd">
+                                    <ul class="weui-uploader__files" id="uploaderFiles">
+                                    </ul>
+                                    <div class="uploader__input-box">
+                                        <input id="uploaderInput" class="weui-uploader__input" type="file"
+                                            accept="image/*" multiple />
+                                            <img src="images/btn-upload.png" alt="" style="width: 75px;height:75px" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <!-- <i class="weui-icon-success-no-circle weui-icon_toast"></i> -->
+            <p class="weui-toast__content" style="margin: 0"></p>
+        </div>
+    </div>
+
+
+    <div class="bottom-tab">
+        <div class="p1">
+            <div class="weui-cells_checkbox">
+                <label class="weui-cell weui-check__label" for="anonymous" style="width: 50%;padding: 0 15px">
+                    <div class="weui-cell__hd" style="display: flex;align-items: center">
+                        <input type="checkbox" class="weui-check" name="checkbox1" id="anonymous">
+                        <i class="weui-icon-checked"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p>匿名</p>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="p2">
+            <p id="comment" style="color: white">评&nbsp;价</p>
+        </div>
+    </div>
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="weui/js/jquery-weui.min.js"></script>
+<script type="text/javascript">
+    console.log(location.search.substr(1));
+    var id = location.search.substr(1)
+    document.body.addEventListener('touchmove', function (e) {
+        e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+    }, { passive: false }); //passive 参数不能省略，用来兼容ios和android
+
+
+    $(function () {
+        var tmpl = '<li class="weui-uploader__file" style="background-image:url(#url#)"></li>',
+            $gallery = $("#gallery"), $galleryImg = $("#galleryImg"),
+            $uploaderInput = $("#uploaderInput"),
+            $uploaderFiles = $("#uploaderFiles"),
+            imgurl;
+           
+
+        $uploaderInput.on("change", function (e) {
+            var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+            for (var i = 0, len = files.length; i < len; ++i) {
+                var file = files[i];
+                if (url) {
+                    src = url.createObjectURL(file);
+                } else {
+                    src = e.target.result;
+                }
+                $uploaderFiles.append($(tmpl.replace('#url#', src)));
+            }
+            var formData = new FormData();
+            formData.append('file', $('#uploaderInput')[0].files[0]);  //添加图片信息的参数
+            var i = formData.entries();
+            console.log(i.next());
+            console.log(i.next());
+            //图片上传
+            $.ajax({
+                url: 'http://boiler.xazhima.com/weixin/picture_upload_do.php?act=picture_upload',
+                type: 'POST',
+                cache: false, //上传文件不需要缓存
+                data: formData,
+                processData: false, // 告诉jQuery不要去处理发送的数据
+                contentType: false, // 告诉jQuery不要去设置Content-Type请求头
+                success: function (res) {
+                    var data = JSON.parse(res)
+                    if (data.code == 1) {
+                        imgurl = data.msg
+                        console.log(imgurl);
+                    } else {
+                        console.log(data)
+                    }
+                },
+                error: function (data) {
+                    console.log("上传失败");
+                }
+            });
+            $uploaderFiles.on("click", "li", function () {
+                $galleryImg.attr("style", this.getAttribute("style"));
+                $gallery.fadeIn(100);
+            });
+            $gallery.on("click", function () {
+                $gallery.fadeOut(100);
+            });
+            $(".weui-gallery__del").click(function () {
+                $uploaderFiles.find("li").eq(0).remove();
+            });
+        });
+        $("#comment").click(function () {
+            console.log(id);
+            console.log($('.weui-textarea').val());
+            if ($('.weui-textarea').val()) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://boiler.xazhima.com/weixin/review_do.php',//数据进行添加到数据库
+                    data: {
+                        act: 'review',
+                        content: $('.weui-textarea').val(),//文本域
+                        id: id,
+                        picture: imgurl,
+                    },
+
+                    success: function (res) {
+                        console.log(res);
+                        toast('评价成功')
+                        setTimeout(function () {
+                            history.back(-1)
+                        }, 700)
+                    },
+                    error: function (res) {
+                        toast('评价失败')
+                        console.log(res);
+                    }
+                })
+            } else {
+                toast('请填写评价内容')
+            }
+        });
+        var $toast = $('#toast');
+
+        function toast(msg) {
+            $toast.find('p')
+            console.log($toast.find('p').text(msg));
+            if ($toast.css('display') != 'none') return;
+            $toast.fadeIn(100);
+            setTimeout(function () {
+                $toast.fadeOut(100);
+            }, 1000);
+        }
+    })
+</script>
+
+<script type="text/javascript" class="toast js_show">
+    // toast
+
+
+    // loading
+    $(function () {
+        var $loadingToast = $('#loadingToast');
+        $('#showLoadingToast').on('click', function () {
+            if ($loadingToast.css('display') != 'none') return;
+
+            $loadingToast.fadeIn(100);
+            setTimeout(function () {
+                $loadingToast.fadeOut(100);
+            }, 2000);
+        });
+    });
+</script>
+
+
+</html>

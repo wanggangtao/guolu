@@ -1,0 +1,39 @@
+.scheme{
+	width: 1440px;
+	margin: 0 auto;
+	top: 30px;
+}
+.scheme table{
+	position: relative;
+	margin-left: 1%;
+	margin-top: 30px;
+	border-collapse: collapse;
+	border-color: grey;
+	/*top: 30px;*/
+}
+.pagelist div{
+	width: 70%;
+	position: relative;
+	margin-left: 15%;
+	/*top: 30px;*/
+}
+.scheme tr,.scheme td{
+	width: 200px;
+	height:50px;
+	text-align: center;
+	font-family: PingFangSC-Regular;
+   font-size: 16px;
+   color: #474747;
+	border-right: 2px solid #fff;
+}
+.title{
+	background-color: #E5F6FE;
+	width: 48px;
+	border-right: solid 2px white;
+	font-family: PingFangSC-Regular;
+   font-size: 16px;
+   color: #474747;
+}
+.double{
+	background: #E5F6FE;
+}

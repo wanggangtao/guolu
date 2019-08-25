@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>支付详情</title>
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="weui/css/weui.min.css" />
+
+    <script src="js/rem.js" async="async"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+</head>
+
+<style>
+    html,
+    body {
+        background: rgba(243, 243, 243, 1);
+    }
+
+    .top-tab {
+        display: flex;
+        position: sticky;
+        top: 0px;
+        height: .8rem;
+        background: rgba(255, 255, 255, 1);
+        font-size: .32rem;
+        font-weight: 600;
+        color: rgba(60, 60, 60, 1);
+        line-height: .8rem;
+    }
+
+    .top-tab p {
+        flex: 1;
+        align-self: center;
+    }
+
+    .top-tab p img {
+        width: .2rem;
+        height: .3rem;
+        margin: 0 0 0 6%;
+    }
+
+    .bottom-tab {
+        display: flex;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        height: .8rem;
+        background: rgba(255, 255, 255, 1);
+        font-size: .32rem;
+        font-weight: 600;
+        color: rgba(60, 60, 60, 1);
+        line-height: .8rem;
+    }
+
+    .bottom-tab .p1 {
+        flex: 5;
+        text-align: right;
+        padding: 0 .5rem 0 0;
+        font-weight: 400;
+        color: rgba(34, 34, 44, 1);
+    }
+
+    .bottom-tab .p2 {
+        flex: 1;
+        text-align: center;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 600;
+        background: linear-gradient(136deg, rgba(2, 175, 243, 1) 0%, rgba(3, 166, 254, 1) 100%);
+    }
+
+
+
+    .wrap {
+        background-color: white;
+        border-radius: 0.12rem;
+        padding: 5% 4% 6% 4%;
+        margin: 2% 2% 2% 2%;
+        font-size: 0.28rem;
+    }
+
+    .flex-wrap {
+        display: flex;
+
+        flex-direction: column
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .cancell {
+        background-color: white;
+        border-radius: 0.12rem;
+        padding: 3% 0 6% 3%;
+        margin: 2% 2% 2% 2%;
+        font-size: 0.28rem;
+    }
+
+    .pay-card .cancell {
+        margin: 0;
+        padding: 0;
+    }
+
+    .cancell .sel {
+        height: .4rem;
+        width: 100%;
+        margin: 0 0 7% 0;
+
+    }
+
+    .cancell .sel label {
+        display: flex;
+        align-items: center;
+    }
+
+    .c-check {
+        opacity: 0;
+    }
+
+    .check-img {
+        display: inline-block;
+        height: .4rem;
+        width: .4rem;
+        background: url("images/c-unchecked.png");
+        background-size: 0.4rem;
+    }
+
+    .c-check:checked+label .check-img {
+        background: url("images/c-checked.png");
+        background-size: 0.4rem;
+    }
+
+    .pay-card div:nth-of-type(1) {
+        align-self: center;
+
+        height: .45rem;
+        font-size: .32rem;
+        font-weight: 500;
+        color: rgba(60, 60, 60, 1);
+        line-height: .45rem;
+        margin: .6rem 0 .2rem 0;
+    }
+
+    .pay-card div:nth-of-type(2) {
+        align-self: center;
+        height: .77rem;
+        font-size: .44rem;
+        font-family: DINAlternate-Bold;
+        font-weight: bold;
+        color: rgba(60, 60, 60, 1);
+        line-height: .51rem;
+    }
+
+    /* 按钮样式定义 */
+    .swich {
+        width: .52rem;
+        height: .32rem;
+    }
+
+    .weui-switch-cp__box:after,
+    .weui-switch:after {
+        width: .3rem;
+        height: .3rem;
+        border-radius: .15rem;
+        box-shadow: none;
+    }
+
+    .weui-switch-cp__box:before,
+    .weui-switch:before {
+        width: .5rem;
+        height: .3rem;
+        border-radius: .15rem;
+    }
+
+    .weui-switch-cp__input:checked~.weui-switch-cp__box:after,
+    .weui-switch:checked:after {
+        -webkit-transform: translateX(.2rem);
+        transform: translateX(.2rem);
+    }
+
+    .weui-switch-cp__input:checked~.weui-switch-cp__box,
+    .weui-switch:checked {
+        border-color: #04A6FE;
+        background-color: #04A6FE;
+    }
+</style>
+
+<body>
+    <div class="top-tab">
+        <p><a href="#" onClick="javascript :history.back(-1);"><img src="images/icon-bark.png"></a></p>
+        <p style="text-align: center">支付详情</p>
+        <p></p>
+    </div>
+
+    <div class="wrap flex-wrap pay-card">
+        <div>支付金额</div>
+        <div class="pay-money">￥469.00</div>
+        <p>选择支付方式</p>
+        <div class="cancell">
+            <form methond="get" action="">
+                <p class="sel"><input type="radio" name="radio" value="1" id="radio1" class="c-check"
+                        checked="checked"><label for="radio1"><i class="check-img"></i>&nbsp; 微信支付</label></p>
+                <p class="sel"><input type="radio" name="radio" value="2" id="radio2" class="c-check"><label
+                        for="radio2"><i class="check-img"> </i> &nbsp; 其它</label></p>
+            </form>
+        </div>
+
+    </div>
+    <div class="wrap">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">抵用券</div>
+
+            <div class="weui-cell__ft">
+                <a href="javascript:;" id="showIOSActionSheet"><img src="images/arr-item.png" alt=""
+                        style="height: 0.27rem"></a>
+            </div>
+        </div>
+
+        <div class="weui-cell weui-cell_switch">
+            <div class="weui-cell__bd">朋友代付</div>
+            <div class="weui-cell__ft">
+                <label for="switchCP" class="weui-switch-cp">
+                    <input id="switchCP" class="weui-switch-cp__input" type="checkbox" checked="checked">
+                    <div class="weui-switch-cp__box swich"></div>
+                </label>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="page">
+
+
+        <!--BEGIN actionSheet-->
+
+        <div>
+            <div class="weui-mask" id="iosMask" style="display: none"></div>
+            <div class="weui-actionsheet" id="iosActionsheet">
+                <div class="weui-actionsheet__title">
+                    <p class="weui-actionsheet__title-text">选择优惠券</p>
+                </div>
+                <div class="weui-actionsheet__menu">
+                    <div class="weui-actionsheet__cell">优惠券1</div>
+                    <div class="weui-actionsheet__cell">优惠券2</div>
+                    <div class="weui-actionsheet__cell">优惠券3</div>
+                    <div class="weui-actionsheet__cell">优惠券4</div>
+                </div>
+                <div class="weui-actionsheet__action">
+                    <div class="weui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+                </div>
+            </div>
+        </div>
+        <!--END actionSheet-->
+        <div class="page__ft">
+            <a href="javascript:home()"><img src="" /></a>
+        </div>
+    </div>
+
+    <div class="bottom-tab">
+        <p class="p1">合计金额：¥465.00</p>
+        <p class="p2"> <a href="pay_success.html" style="color: white">确&nbsp;定</a></p>
+    </div>
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="weui/js/jquery-weui.min.js"></script>
+<script type="text/javascript">
+    // ios
+    $(function () {
+        var $iosActionsheet = $('#iosActionsheet');
+        var $iosMask = $('#iosMask');
+        console.log($iosMask);
+
+        function hideActionSheet() {
+            $iosActionsheet.removeClass('weui-actionsheet_toggle');
+            $iosMask.fadeOut(200);
+            console.log($iosMask);
+        }
+
+        $iosMask.on('click', hideActionSheet);
+        $('#iosActionsheetCancel').on('click', hideActionSheet);
+        $("#showIOSActionSheet").on("click", function () {
+            $iosActionsheet.addClass('weui-actionsheet_toggle');
+            $iosMask.fadeIn(200);
+        });
+    });
+
+</script>
+<script>
+
+</script>
+<script>
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <title>个人信息-注册</title>
+        <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+        <link rel="stylesheet" href="weui/css/weuix.css" />
+        <link rel="stylesheet" href="css/basic.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/query.css" />
+        <link rel="stylesheet" href="css/swiper.min.css" />
+        <!-- <script src="js/query.js"></script> -->
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="person-wrap">
+                <div class="person-top">
+                    <div class="person-title">注册</div>
+                    <div class="person-tip flex">
+                        <img src="images/person-tip.png" alt="" />
+                        <span>温馨提示：* 为必填项。</span>
+                    </div>
+                </div>
+                <div class="person-form">
+                    <div class="form-title flex">
+                        <p></p>
+                        <span>注册</span>
+                    </div>
+                    <form>
+                        <div class="form-item">
+                            <div class="form-item-title flex">
+                                <img src="images/person-star.png" alt="" />
+                                <span>产品条码</span>
+                            </div>
+                            <div class="form-input flex">
+                                <input
+                                    placeholder="请输入产品条码"
+                                    type="text"
+                                    id="barCode"
+                                />
+                                <img src="images/arrow-right.png" alt="" />
+                            </div>
+                            <div id="form-box">
+                                <p class="form-box-item">000111</p>      
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <div class="form-item-title flex">
+                                <img src="images/person-star.png" alt="" />
+                                <span>地址</span>
+                            </div>
+                            <div class="form-input flex">
+                                <input
+                                    id="city-picker"
+                                    placeholder="请选择省/市/区"
+                                    type="text"
+                                    readonly="readonly"
+                                />
+                                <img src="images/arrow-right.png" alt="" />
+                            </div>
+                            <div class="form-input flex" id="box">
+                                <input
+                                    id="area-picker"
+                                    placeholder="请选择小区"
+                                    type="text"
+                                    readonly="readonly"
+                                />
+                                <img src="images/arrow-right.png" alt="" />
+                            </div>
+                            <div class="form-input flex">
+                                <textarea
+                                    name=""
+                                    placeholder="请输入详细地址"
+                                    id=""
+                                ></textarea>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <div class="form-item-title flex">
+                                <img src="images/person-star.png" alt="" />
+                                <span>姓名</span>
+                            </div>
+                            <div class="form-input flex">
+                                <input
+                                    placeholder="请输入您的姓名"
+                                    type="text"
+                                />
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <div class="form-item-title flex">
+                                <img src="images/person-star.png" alt="" />
+                                <span>电话</span>
+                            </div>
+                            <div class="form-input flex">
+                                <input
+                                    id="input-tel"
+                                    placeholder="请输入您的联系方式"
+                                    type="text"
+                                />
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <div class="form-item-title flex">
+                                <img src="images/person-star.png" alt="" />
+                                <span>短信验证码</span>
+                            </div>
+                            <div class="form-input-wrap flex">
+                                <div class="form-input flex" style="width: 100px;">
+                                    <input
+                                        placeholder="请输入短信验证码"
+                                        type="text"
+                                    />
+                                </div>
+                                <button id="code" disabled="disabled">
+                                    获取验证码
+                                </button>
+                            </div>
+                        </div>
+                        <div class="from-submit">
+                            <input type="submit" value="注册" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $(function() {
+            $("#input-tel").bind("input propertychange", function() {
+                var val = $(this).val();
+                if (val == "") {
+                    $("#code").attr("disabled", "disabled");
+                    $("#code").removeClass("active");
+                } else {
+                    $("#code").removeAttr("disabled");
+                    $("#code").addClass("active");
+                }
+            });
+            //获取验证码
+            var num = 60;
+            var timer = null;
+            $("#code").on("click", function(e) {
+                e.preventDefault();
+                var _this = $(this);
+                //获取成功执行以下函数
+                timer = setInterval(function() {
+                    num--;
+                    _this.text("(" + num + "s)重新获取");
+                    _this.attr("disabled", "disabled").removeClass("active");
+                    if (num == 0) {
+                        _this.text("获取验证码");
+                        _this.removeAttr("disabled");
+                        clearInterval(timer);
+                        num = 60;
+                    }
+                }, 1000);
+            });
+
+            $("#city-picker").cityPicker({
+                title: "选择省市区/县",
+                onChange: function(picker, values, displayValues) {
+                    $("#box").empty();
+                    $("#box").html("<input type='text' id='area-picker' placeholder='请选择小区' value=''/><img src='images/arrow-right.png' />");
+                    $("#area-picker").picker({
+                        title: "请选择小区",
+                        cols: [
+                            {
+                                textAlign: 'center',
+                                values: ['金辉世界城7777','7778744']
+                            }
+                        ],
+                        onChange: function(p, v, dv) {
+                            console.log(v);
+                        },
+                        onClose: function(p, v, d) {
+                            console.log("close");
+                        }   
+                            
+                    });
+                    console.log(values, displayValues);
+                }
+            });
+            $("#area-picker").picker({
+                title: "请选择小区",
+                cols: [
+                    {
+                        textAlign: 'center',
+                        values: ['金辉世界城','紫郡长安','曲江千林郡','中海凯旋门','长丰园小区','其他']
+                    }
+                ],
+                onChange: function(p, v, dv) {
+                    console.log(v);
+                },
+                onClose: function(p, v, d) {
+                    console.log("close");
+                }   
+                    
+            });
+
+            // 条码
+            $("#barCode").bind("input propertychange", function() {
+                var val = $(this).val();
+                if (val == "") {
+                    $("#form-box").hide();
+                } else {
+                    $("#form-box").show();
+                }
+            });
+
+            $("body").on("click", "#form-box p",function () {
+                var text = $(this).text();
+                if (text == "暂无结果") {
+                    $("#form-box").hide();
+                    $("#barCode").val("");
+                } else {
+                    $("#form-box").hide();
+                    $("#barCode").val(text);
+                }
+            })
+
+        });
+    </script>
+    <script src="weui/js/jquery-weui.min.js"></script>
+    <script src="weui/js/picker.city.js"></script>
+    <script src="js/swiper.min.js"></script>
+</html>

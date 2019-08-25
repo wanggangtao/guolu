@@ -1,0 +1,1 @@
+由于在写接口时候，都是ajax,且方式都是“POST”,所以在本地调试的时候，review_do.php文件"act"的接收方式改为GET

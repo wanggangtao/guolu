@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>我的预约</title>
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="weui/css/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/query.js"></script>
+    <script src="js/rem.js" async="async"></script>
+</head>
+<style>
+    
+</style>
+
+<body>
+    <div class="cancell-confirm">
+        <div class="close-mask"><img src="images/hd-close.png" alt=""></div>
+        <p>确定要删除该订单吗？</p>
+        <div class="btn-group"><button class="assess" style="margin: 0">确定</button></div>
+    </div>
+    <div class="mask">
+    </div>
+    <!-- 提示框 -->
+    <div id="toast" style="display: none;">
+            <div class="weui-mask_transparent"></div>
+            <div class="weui-toast">
+                <!-- <i class="weui-icon-success-no-circle weui-icon_toast"></i> -->
+                <p class="weui-toast__content" style="margin: 0"></p>
+            </div>
+        </div>
+        <!-- TAB表 -->
+    <div class="wrapper">
+        <div class="weui-tab">
+            <div class="weui-navbar">
+                <a class="weui-navbar__item weui-bar__item--on" href="#tab0">
+                    全部
+                </a>
+                <a class="weui-navbar__item" href="#tab1">
+                    已下单
+                </a>
+                <a class="weui-navbar__item" href="#tab2">
+                    已接单
+                </a>
+                <a class="weui-navbar__item" href="#tab3">
+                    待支付
+                </a>
+                <a class="weui-navbar__item" href="#tab4">
+                    已完工
+                </a>
+            </div>
+            <div class="weui-tab__bd" id="order-lists">
+                <div id="tab0" class="weui-tab__bd-item weui-tab__bd-item--active">
+
+                </div>
+                <div id="tab1" class="weui-tab__bd-item">
+
+                </div>
+                <div id="tab2" class="weui-tab__bd-item">
+
+                </div>
+                <div id="tab3" class="weui-tab__bd-item">
+
+                </div>
+                <div id="tab4" class="weui-tab__bd-item">
+
+                </div>
+
+            </div>
+
+        </div>
+
+</body>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="weui/js/jquery-weui.min.js"></script>
+<script>
+    $(window).ready(function () {
+        //定义变量
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+
+
+
+        var uid = getQueryString('id')
+        var flag = getQueryString('flag')
+        console.log(uid);  //获取用户标识ID
+        
+
+        var del_id;
+
+        
+
+
+        $.ajax({
+            type: 'POST',
+            url: 'http://boiler.xazhima.com/api/v1.0/api_weixin_user_all.php',
+            data: {
+                uid: uid,
+            },
+            success: function (res) {
+                console.log(res);
+                if (res.length == 1) {
+                    console.log('数据拿取为空');
+                    console.log(res);
+
+                } else {
+                    data = JSON.parse(res)
+                    console.log(data);
+                    for (let idx = 0; idx < 5; idx++) {
+                        getData(data.data, idx);
+                    }
+                }
+
+            }
+        })
+        // 获取数据
+        function getData(data, idx) {
+            let $idd = $("#tab" + idx)
+            var data
+            if (idx != 0) {
+
+                switch (idx) {
+                    case 1:
+                        DB = data.filter(i => {
+                            return i.child_status == '11' || i.child_status == '12' || i.child_status == '21'
+                        });
+                        break;
+                    case 2:
+                        DB = data.filter(i => {
+                            return i.child_status == '22'
+                        });
+                        break;
+                    case 3:
+                        DB = data.filter(i => {
+                            return i.child_status == '23'
+                        });
+                        break;
+                    case 4:
+                        DB = data.filter(i => {
+                            return i.child_status == '32' || i.child_status == '33'
+                        });
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                DB = data;
+            }
+
+            for (let i = 0; i < DB.length; i++) {
+
+                var state;
+                let $dayDiv = `<div class="order-card">
+                        <div>
+                            <p>订单号：${DB[i].pay_num}</p>
+                            <p></p>
+                        </div>
+                        <div class="info">
+                            <img src="http://boiler.xazhima.com${DB[i].picture_url}" alt="图片" >
+                            <div class="some-info" >
+                                <p> ${DB[i].service_type}</p><p style="font-size:.24rem">下单时间：${DB[i].addtime}</p>
+                                
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            
+                            
+                           <a href="order_detail.html?${DB[i].id}" class="order-detail"><button>订单详情</button></a>
+                           
+                           </div>
+                    </div>`;
+
+                $idd.append($dayDiv)
+                if (DB[i].child_status == '23') {
+
+                    $idd.children()[i].children[0].children[1].innerHTML = '待支付'
+                    $idd.children().eq(i).find('.btn-group').prepend(
+                            `<a href="../weixin/order_gopay.php?id=${DB[i].id}"><button class="blue-btn">去付款</button></a>`
+                        )
+                }
+                if (DB[i].child_status == '32' || DB[i].child_status == '33') {
+
+                    $idd.children()[i].children[0].children[1].innerHTML = '已完工'
+                    if (DB[i].user_evaluation=='-1') {
+                        $idd.children().eq(i).find('.btn-group').prepend(
+                            `<a href="comment.html?${DB[i].id}" ><button class="blue-btn">去评价</button></a>`)  
+                    }
+                    //判断评价状态
+                }
+                if (DB[i].child_status == '11' || DB[i].child_status == '12' || DB[i].child_status == '21') {
+
+                    $idd.children()[i].children[0].children[1].innerHTML = '已下单'
+                    $idd.children().eq(i).find('.btn-group').append(
+                            `<a href="cancell_order.html?${DB[i].id}"><button class="btn-cancell">取消订单</button></a>`
+                        )
+                }
+                if (DB[i].child_status == '22') {
+
+                    $idd.children()[i].children[0].children[1].innerHTML = '已接单'
+
+                }
+                if (DB[i].child_status == '31') {
+
+                    $idd.children()[i].children[0].children[1].innerHTML = '已取消'
+                    $idd.children().eq(i).find('.btn-group').append(
+                            `<button class="btn-del" data-delflag="${DB[i].id}">删除订单</button>`
+                        )
+                    
+                }
+
+            }
+        }
+        //删除订单触发按钮
+        $('#tab0').on('click', '.btn-del', function () {
+            del_id = $(this)[0].dataset.delflag
+            $(".mask").show()
+            $(".cancell-confirm").css('display', 'flex');
+        })
+
+        $(".close-mask").click(
+            function () {
+
+                $(".mask").hide()
+                $(".cancell-confirm").hide()
+            }
+        )
+        //删除订单
+        $('.cancell-confirm .btn-group button').click(function () {
+            console.log(del_id);
+            $.ajax({
+                type: 'POST',
+                url: 'http://boiler.xazhima.com/weixin/review_do.php',
+                data: {
+                    act: 'del',
+                    id: del_id
+                },
+                success: function (res) {
+                    console.log(res)
+                    $(".mask").hide()
+                    $(".cancell-confirm").hide()
+                    toast('删除成功')
+                        setTimeout(function () {
+                            location.reload();
+                        }, 700)
+                }
+            })
+        })
+        var $toast = $('#toast');
+
+        function toast(msg) {
+            console.log('asdasdasd');
+            $toast.find('p')
+            console.log($toast.find('p').text(msg));
+            if ($toast.css('display') != 'none') return;
+            $toast.fadeIn(100);
+            setTimeout(function () {
+                $toast.fadeOut(100);
+            }, 1000);
+        }
+
+
+    });
+
+</script>
+
+</html>

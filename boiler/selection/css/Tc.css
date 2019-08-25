@@ -1,0 +1,257 @@
+
+#TC1{
+	width: 800px;
+	height: 320px;
+	margin: 0 auto;
+	display: none;
+	
+}
+#TC1_main1{
+	width: 800px;
+	height: 62px;
+	position: relative;
+}
+#line{
+	width:752px ;
+	height: 1px;
+	background: #DDE3E8;
+	margin: 0 auto;
+}
+#all{
+	height: 62px;
+	line-height: 62px;
+	position: relative;
+	left: 24px;
+	
+}
+#all span{
+	margin-left: 10px;
+	font-family: PingFangSC-Medium;
+font-size: 20px;
+color: #474747;
+}
+#delete{
+	float: right;
+	position: relative;
+	top: -44px;
+	left: -24px;
+}
+#company{
+	width: 800px;
+	min-height: 80px;
+	height: 80px;
+	font-family: PingFangSC-Regular;
+font-size: 16px;
+color: #474747;
+}
+#company1,#company2,#company3,#company4,#company5,#company6{
+	float: left;
+	width: 160px;
+	height: 22px;
+	padding-top: 23px;
+    padding-bottom: 23px;
+   padding-right: 50px;
+   position: relative;
+left: 24px;
+}
+
+
+.firstDivForm{
+    width:800px;
+    min-height:600px;
+    height:600px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color:#474747;
+}
+
+.user_table_div {
+    display: block;
+    float: inherit;
+}
+
+.user_table_tb
+{
+	width: 900px;
+	height:auto;
+	border-collapse: collapse;
+	margin-bottom: 10px;
+	background: #fff;
+	margin-top: 30px;
+}
+
+.user_table_tb tr
+{
+	border: 1px solid #ddd;
+
+}
+
+.user_table_tb tr td
+{
+	text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #474747;
+	border-right: 1px solid #ddd;
+}
+
+.user_table_tr
+{
+	background: #E5F6FE !important;
+	border-bottom: none !important;
+	font-weight: bold;
+}
+
+
+#company .tablelist table{
+	border:1px solid #e4e4e3;
+	width:100%;
+	border-collapse:collapse;
+}
+
+#company .XXhistory tr td
+{
+	text-align: center;
+	height:72px;
+	font-size: 16px;
+	color: #474747;
+	border-right: 1px solid #ddd;
+
+
+}
+
+
+
+
+
+
+
+#company span{
+	margin-left: 10px;
+}
+#confirm1,#cancel1{
+	width: 120px;
+	height: 40px;
+	border: 1px solid #04A6FE;
+border-radius: 6px;
+font-family: PingFangSC-Regular;
+font-size: 20px;
+color: #00A4FF;
+background-color: white;
+outline: none;
+}
+#confirm1{
+	position: relative;
+	left: 230px;
+	top: 25px;
+}
+#cancel1{
+	position: relative;
+	left: 350px;
+	top: 25px;
+}
+#TC2{
+	width: 500px;
+	height: 320px;
+	margin: 0 auto;
+	display: none;
+	
+}
+#TC2 p{
+	width: 260px;
+	height: 56px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: PingFangSC-Medium;
+font-size: 20px;
+color: #474747;
+	padding-top: 91px;
+}
+#TC2_2{
+	width: 500px;
+	height: 320px;
+	margin: 0 auto;
+	display: none;
+
+}
+#TC2_2 p{
+	width: 260px;
+	height: 56px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: PingFangSC-Medium;
+	font-size: 20px;
+	color: #474747;
+	padding-top: 91px;
+}
+#confirm2,#cancel2{
+	width: 120px;
+	height: 40px;
+	border: 1px solid #04A6FE;
+border-radius: 6px;
+font-family: PingFangSC-Regular;
+font-size: 20px;
+color: #00A4FF;
+	background-color: white;
+	outline: none;
+}
+#confirm2{
+	position: relative;
+	left: 100px;
+	top: 93px;
+}
+#cancel2{
+	position: relative;
+	left: 160px;
+	top: 93px;
+}
+
+#TC3{
+	width: 500px;
+	height: 320px;
+	margin: 0 auto;
+	display: none;
+
+}
+#TC3 img{
+	position: relative;
+	left: 444px;
+	top: 12px;
+}
+#text1{
+	width: 250px;
+	height: 28px;
+	padding-left: 77px;
+	font-family: PingFangSC-Medium;
+font-size: 20px;
+color: #474747;
+}
+#text2{
+	width: 330px;
+	height: 22px;
+	padding-left: 77px;
+	font-family: PingFangSC-Regular;
+font-size: 16px;
+color: #474747;
+}
+.name1{
+	font-family: PingFangSC-Regular;
+font-size: 16px;
+color: #92969C;
+}
+
+#confirm3{
+	width: 120px;
+	height: 40px;
+	background: #04A6FE;
+border-radius: 6px;
+font-family: PingFangSC-Regular;
+font-size: 20px;
+color: #FFFFFF;
+position: relative;
+left: 190px;
+top: 40px;
+outline: none;
+}
+
+

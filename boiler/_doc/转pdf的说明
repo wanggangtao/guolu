@@ -1,0 +1,6 @@
+
+开启openoffice:
+
+
+先切换到’/opt/openoffice4/program/’目录下
+./soffice -headless -accept="socket,host=127.0.0.1,port=8100;urp;" -nofirststartwizard &

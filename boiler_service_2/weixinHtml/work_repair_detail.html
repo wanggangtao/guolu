@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>工单详情</title>
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="weui/css/weui.min.css" />
+
+    <script src="js/rem.js" async="async"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<style>
+    a:link,
+    a:visited {
+        text-decoration: none;
+        /*超链接无下划线*/
+    }
+
+    html,
+    body {
+        background: rgba(243, 243, 243, 1);
+    }
+
+    .top-tab {
+        display: flex;
+        position: sticky;
+        top: 0px;
+        height: .8rem;
+        background: rgba(255, 255, 255, 1);
+        font-size: .32rem;
+        font-weight: 600;
+        color: rgba(60, 60, 60, 1);
+        line-height: .8rem;
+        z-index: 9000;
+    }
+
+    .top-tab p {
+        flex: 1;
+        align-self: center;
+    }
+
+    .top-tab p img {
+        width: .2rem;
+        height: .3rem;
+        margin: 0 0 0 6%;
+    }
+
+    .bottom-tab {
+        display: flex;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        height: .8rem;
+        background: rgba(255, 255, 255, 1);
+        font-size: .32rem;
+        font-weight: 600;
+        color: rgba(60, 60, 60, 1);
+        line-height: .8rem;
+        z-index: 9000;
+    }
+
+    .bottom-tab .p1 {
+        flex: 5;
+        padding: 0 .5rem 0 0;
+        font-weight: 400;
+        color: rgba(34, 34, 44, 1);
+
+    }
+
+    .bottom-tab .p2 {
+        flex: 1;
+        text-align: center;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 600;
+        background: linear-gradient(136deg, rgba(2, 175, 243, 1) 0%, rgba(3, 166, 254, 1) 100%);
+    }
+
+
+
+    .wrap {
+        background-color: white;
+        border-radius: 0.12rem;
+        padding: 5% .3rem 6% .3rem;
+        margin: 2% .2rem 1.1rem .2rem;
+        font-size: 0.28rem;
+    }
+
+    .flex-wrap {
+        display: flex;
+        flex-direction: column
+    }
+
+
+
+
+
+    .row {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 0 0 .3rem 0;
+    }
+
+
+
+
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 0.4rem .6rem 0 .5rem;
+    }
+
+    .btn-group button {
+        margin-left: 0.2rem;
+        padding: 0 0.2rem 0 0.2rem;
+        height: 0.60rem;
+        border-radius: 0.32rem;
+        border: 1px solid rgba(153, 153, 153, 1);
+        color: rgba(153, 153, 153, 1);
+        background-color: rgba(243, 243, 243, 1);
+        line-height: 0.6rem;
+        font-size: .3rem;
+    }
+
+    .btn-group :last-child {
+
+        border: 1px solid rgba(153, 153, 153, 1);
+        color: white;
+        background: linear-gradient(136deg, rgba(2, 175, 243, 1) 0%, rgba(3, 166, 254, 1) 100%);
+        box-shadow: 0px 2px 16px 0px rgba(4, 166, 254, 0.2);
+
+    }
+
+
+    .cancell {
+        background-color: white;
+        border-radius: 0.12rem;
+        padding: 3% 0 6% 3%;
+        margin: 2% 2% 2% 2%;
+        font-size: 0.28rem;
+    }
+
+    .cancell .sel {
+        height: .4rem;
+        width: 100%;
+        margin: 0 0 7% 0;
+
+    }
+
+    .cancell .sel label {
+        display: flex;
+        align-items: center;
+    }
+
+    .c-check {
+        opacity: 0;
+    }
+
+    .check-img {
+        display: inline-block;
+        height: .4rem;
+        width: .4rem;
+        background: url("images/c-unchecked.png");
+        background-size: 0.4rem;
+    }
+
+    .c-check:checked+label .check-img {
+        background: url("images/c-checked.png");
+        background-size: 0.4rem;
+    }
+
+
+    .weui-textarea {
+
+        background: rgba(247, 247, 247, 1);
+        border-radius: .08rem;
+    }
+
+    .comment-title {
+
+        width: 23%;
+
+        font-weight: 600;
+        color: rgba(60, 60, 60, 1);
+        line-height: .40rem;
+        font-size: .28rem;
+        margin: .2rem 0 .2rem 0;
+
+    }
+
+
+
+    /* 后划线 */
+    .cells {
+        position: relative;
+        padding: .4rem 0;
+        background-color: #fff;
+        line-height: 1.47058824;
+        overflow: hidden;
+        font-size: .28rem;
+        font-weight: 400;
+        color: rgba(60, 60, 60, 1);
+
+
+    }
+
+    .cells:after {
+        bottom: 0;
+        border-bottom: 1px solid #e5e5e5;
+        -webkit-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+        -webkit-transform: scaleY(.5);
+        transform: scaleY(.5);
+    }
+
+    .cells:after {
+        content: " ";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 1px;
+        color: #e5e5e5;
+        z-index: 2;
+    }
+
+    .lj input {
+        width: 94%;
+        height: .80rem;
+        background: rgba(247, 247, 247, 1);
+        border-radius: .08rem;
+        border: none;
+    }
+
+    .weui-actionsheet__menu {
+
+        max-height: 5rem;
+        overflow: scroll;
+    }
+
+    textarea:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        padding: .2rem 0 0 .2rem;
+        font-size: .27rem
+    }
+
+    textarea::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        padding: .2rem 0 0 .2rem;
+        font-size: .27rem
+    }
+
+    textarea::-webkit-input-placeholder {
+        padding: .2rem 0 0 .2rem;
+        font-size: .27rem
+    }
+
+    textarea:-ms-input-placeholder {
+        padding: .2rem 0 0 .2rem;
+        font-size: .27rem
+    }
+    .uploader__input-box {
+    float: left;
+    position: relative;
+    margin-right: 9px;
+    margin-bottom: 9px;
+    width: 77px;
+    height: 77px;
+}
+.weui-toast {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5000;
+        width: 2rem;
+        min-height: 1rem;
+        top: 50%;
+        left: 50%;
+        margin-left: -3.8em;
+        background: hsla(0, 0%, 7%, .7);
+        border-radius: 5px;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="top-tab">
+        <p><a href="#" onClick="javascript :history.back(-1);"><img src="images/icon-bark.png"></a></p>
+        <p style="text-align: center">工单详情</p>
+        <p></p>
+    </div>
+
+    <div class="wrap">
+        <div class="page">
+            <!-- 图片预览 -->
+            <div class="page__bd">
+                <div class="weui-gallery" id="gallery">
+                    <span class="weui-gallery__img" id="galleryImg"></span>
+                    <div class="weui-gallery__opr">
+                        <a href="javascript:" class="weui-gallery__del">
+                            <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+                        </a>
+                    </div>
+                </div>
+                <form action="" method="post">
+
+
+
+                    <div class="cells">
+                        <p class="comment-title" style="display: inline-block">解决途径</p>
+                        <input type="radio" checked="checked" name="method" id="method1" value="1" />
+                        <label for="method1">上门处理</label>&nbsp;
+                        <input type="radio" name="method" id="method2" value="2" />
+                        <label for="method2">电话处理</label>
+                    </div>
+                    <div class="cells">
+                        <div class="comment-title">维修情况</div>
+                        <div class="weui-cells weui-cells_form">
+
+                            <div class="weui-cell__bd">
+                                <textarea class="weui-textarea" placeholder=" 维修详情" rows="4" maxlength="140"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- 配件 -->
+                    <div class="cells lj">
+                        <div class="repair-fixings">
+                            <div class="repair-single">
+                                <div>
+                                    <div class="comment-title">使用配件</div>
+                                    <div style="display: flex;justify-content: space-between">
+                                        <a href="javascript:;" class="showIOSActionSheet" data-repair="1" style="width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;">
+                                            <input type="text" value='' disabled='true'>
+                                            <img src="images/arr-item.png" alt="" style="height: 0.27rem"></a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="comment-title">配件数量</p>
+                                    <p style="    width: 100%;
+                           display: flex;
+                           justify-content: space-between;
+                           align-items: center;"><input type="text" name="" id="" class="fixing-num" disabled="true"
+                                            data-id="0"> <span>个</span> </p>
+                                </div>
+                                <div>
+                                    <p class="comment-title" style="display: inline-block">配件金额</p> &emsp;<span
+                                        style="color: red" class="each-price"></span>元
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 新增按钮 -->
+                        <div class="comment-title">
+                            <p id="add">新增</p>
+                        </div>
+                    </div>
+
+                    <!-- 图片上传 -->
+                    <div class="cells">
+                        <div class="weui-cell__bd">
+                            <div class="weui-uploader">
+                                <div class="weui-uploader__hd">
+                                    <p class="weui-uploader__title comment-title">照片上传</p>
+                                    <div class="weui-uploader__info"></div>
+                                </div>
+                                <div class="weui-uploader__bd">
+                                    <ul class="weui-uploader__files" id="uploaderFiles">
+                                    </ul>
+                                    <div class="uploader__input-box">
+                                        <input id="uploaderInput" class="weui-uploader__input" type="file"
+                                            accept="image/*" multiple />
+                                            <img src="images/btn-upload.png" alt="" style="width: 75px;height:75px" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cells">
+                        <p class="comment-title" style="display: inline-block">解决途径：</p>
+                        <div style="display: inline-flex; width:70%;flex-direction: column">
+                            <p style="margin: 0 0 .1rem 0"><input type="radio" checked="checked" name="period" value="1"
+                                    id="period1" />
+                                <label for="period1">保质期内（不收取维修费）</label> <br></p>
+                            <p><input type="radio" name="period" value="2" id="period2" />
+                                <label for="period2">过保（收取维修费）</label> </p>
+
+                        </div>
+                    </div>
+
+                    <div class="cells class=" comment-title"">
+                        <p class="comment-title">上门费用：</p>
+                        <div class="lj">
+                            <a href="javascript:;" id="showIOSActionSheet2" style="    width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;">
+                                <input type="text" value='' disabled='true'> <span style="color: black">元</span></a>
+                        </div>
+                    </div>
+                    <div class="cells ">
+                        <span class="comment-title">支付方式</span> ：
+                        <input type="radio" checked="checked" name="pay" id="pay1" value="1" />
+                        <label for="pay1">微信支付</label>&nbsp;
+
+                    </div>
+
+                    <div style="margin: .2rem 0 0 0">
+                        <div style="text-align: right">应收:<span style="color:red">上门费 ¥ </span> <span
+                                class="hand-money">50.00</span> <span>，配件费¥</span> <span
+                                class="fixings-money">300.00</span>
+                        </div>
+                        <div style="text-align: right">实收:<span style="color:red">上门费 ¥</span><span
+                                class="received-money">200.00</span>
+                            <span>保质期内不受维修费</span>
+                        </div>
+
+                        <div></div>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" style="display: none;">
+            <div class="weui-mask_transparent"></div>
+            <div class="weui-toast">
+                <!-- <i class="weui-icon-success-no-circle weui-icon_toast"></i> -->
+                <p class="weui-toast__content" style="margin: 0"></p>
+            </div>
+    </div>
+
+    <div class="bottom-tab">
+        <div class="p1">
+
+        </div>
+        <div class="p2" id="submit">提&nbsp;交</div>
+    </div>
+
+
+    <!--BEGIN actionSheet-->
+
+    <div>
+        <div class="weui-mask" id="iosMask" style="display: none"></div>
+        <div class="weui-actionsheet" id="iosActionsheet">
+            <div class="weui-actionsheet__title">
+                <p class="weui-actionsheet__title-text">选择零件</p>
+            </div>
+            <div class="weui-actionsheet__menu fixings">
+
+            </div>
+            <div class="weui-actionsheet__action">
+                <div class="weui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+            </div>
+        </div>
+    </div>
+    <!--END actionSheet-->
+    <!--BEGIN actionSheet-->
+    <div>
+
+        <div class="weui-actionsheet" id="iosActionsheet2">
+            <div class="weui-actionsheet__title">
+                <p class="weui-actionsheet__title-text">选择费用</p>
+            </div>
+            <div class="weui-actionsheet__menu server-fee">
+
+
+
+            </div>
+            <div class="weui-actionsheet__action">
+                <div class="weui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="weui/js/jquery-weui.min.js"></script>
+
+
+<script type="text/javascript">
+    //路由获取
+    function getQueryString(name) {
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return unescape(r[2]);
+        }
+        return null;
+    }
+    var id = getQueryString('id')
+    var flag = getQueryString('flag')
+    console.log(id);
+
+    var $fixings
+
+    var fixingsIdx = 0
+    var sumMoney = 0
+    var moneyArry = [] //零件信息价格数组
+    var parts = [] //零件信息（name零件名，num：零件的数量，price：零件的单价）
+
+    var
+        resove_style = 1,  //解决方式
+        content, //修理内容
+        pay_style = 1, //支付方式
+        hand_money = 50,//手工费/服务费
+        period = 1,//保质期
+        picture = "",//图片的路径
+        nowIndex;
+
+
+    $(function () {
+
+
+        //处理方式选择
+        $("input[name='method']").click(function () {
+            if ($(this).prop("checked")) {
+                resove_style = $(this).val();
+                console.log(resove_style);
+            }
+        });
+        //保修选择
+        $("input[name='period']").click(function () {
+            if ($(this).prop("checked")) {
+                period = $(this).val();
+                sum(moneyArry)
+                console.log(period);
+            }
+        });
+
+        //零件信息获取和渲染
+        $.ajax({
+            url: 'http://bs.xazhima.com/api/v1.0/api_mater_parts_info.php',
+            type: 'POST',
+            cache: false, //上传文件不需要缓存
+            data: {},
+            success: function (res) {
+                var data = JSON.parse(res).data
+                console.log(data);
+                for (let i = 0; i < data.length; i++) {
+                    $('.fixings').append(
+                        `
+                            <div class="weui-actionsheet__cell" data-price="${data[i].unit_price}" data-name="${data[i].name}"
+                            >${data[i].name}&nbsp;${data[i].unit_price}</div>
+                            `
+                    )
+                }
+                if (data.code == 200) {
+                    console.log('上传成功！');
+                } else {
+                    console.log(data)
+                }
+            },
+            error: function (data) {
+                console.log("上传失败");
+            }
+        })
+        //服务费用获取和渲染
+        $.ajax({
+            url: 'http://bs.xazhima.com/api/v1.0/api_mater_sever_fee.php',
+            type: 'POST',
+            data: {},
+            success: function (res) {
+                var data = JSON.parse(res).data
+                console.log(data);
+                console.log(typeof (data[0]));
+                for (let i = 0; i < data.length; i++) {
+                    $('.server-fee').append(
+                        `
+                        <div class="weui-actionsheet__cell">${data[i].number}</div>
+                            `
+                    )
+                }
+                if (data.code == 200) {
+                    console.log('上传成功！');
+                } else {
+                    console.log(data)
+                }
+            },
+            error: function (data) {
+                console.log("上传失败");
+            }
+        })
+
+
+        var $iosActionsheet = $('#iosActionsheet');
+        var $iosActionsheet2 = $('#iosActionsheet2');
+        var $iosMask = $('#iosMask');
+        console.log($iosMask);
+        function hideActionSheet() {
+            $iosActionsheet.removeClass('weui-actionsheet_toggle');
+            $iosActionsheet2.removeClass('weui-actionsheet_toggle');
+            $iosMask.fadeOut(200);
+            console.log($iosMask);
+        }
+        //零件选择
+        $iosMask.on('click', hideActionSheet);
+        $('#iosActionsheetCancel').on('click', hideActionSheet);
+        $(".repair-fixings").on("click", ".showIOSActionSheet", function () {
+            $iosActionsheet.addClass('weui-actionsheet_toggle');
+            console.log('打开选择框1');
+            $fixings = $(this);
+            nowIndex = $('.showIOSActionSheet').index(this);  //获取点击索引
+            console.log(nowIndex);
+            console.log($fixings);
+            console.log($fixings.children('input'));
+            $iosMask.fadeIn(200);
+        });
+
+        //零件信息添加
+        $('#iosActionsheet').on('click', '.weui-actionsheet__cell', function () {
+            console.log($(this)[0].dataset);
+            let a = JSON.parse(JSON.stringify($(this)[0].dataset))
+            a['num'] = '';
+            parts[nowIndex] = a
+            console.log('零件');
+            console.log(parts);
+
+            $fixings.children('input').val($(this).text())
+            $fixings.parent().parent().next().find('.fixing-num').attr("disabled", false);
+            $fixings.parent().parent().next().find('.fixing-num').val('')
+            $fixings.parent().parent().parent().find('.each-price').text('0')
+            moneyArry[nowIndex] = 0
+            hideActionSheet();
+        })
+        //单个金额计算
+        $(".repair-fixings").on("change", ".fixing-num", function () {
+            let id = $(this).attr('data-id')
+            parts[id].num = $(this).val()
+            let price = parts[id].price
+            let each_price = $(this).val() * parts[id].price
+            moneyArry[id] = each_price
+            console.log(moneyArry); //money计算数组
+            sum(moneyArry)
+            console.log($('.repair-fixings').children().eq(id).find('.each-price').text(each_price));
+        })
+
+
+        //上门费用选择
+        $("#showIOSActionSheet2").on("click", function () {
+            $iosActionsheet2.addClass('weui-actionsheet_toggle');
+            console.log('打开选择框2');
+            $('#iosActionsheet2 .weui-actionsheet__cell').click(function () {
+                $('#showIOSActionSheet2 input').val($(this).html())
+                hand_money = $(this).text()
+                $('.hand-money').text(hand_money)
+                console.log(hand_money);
+                sum(moneyArry)
+                hideActionSheet();
+            })
+            $iosMask.fadeIn(200);
+        });
+
+
+
+
+
+        var tmpl = '<li class="weui-uploader__file" style="background-image:url(#url#)"></li>',
+            $gallery = $("#gallery"), $galleryImg = $("#galleryImg"),
+            $uploaderInput = $("#uploaderInput"),
+            $uploaderFiles = $("#uploaderFiles")
+            ;
+
+
+        $uploaderInput.on("change", function (e) {
+            var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+            for (var i = 0, len = files.length; i < len; ++i) {
+                var file = files[i];
+                if (url) {
+                    src = url.createObjectURL(file);
+                } else {
+                    src = e.target.result;
+                }
+                $uploaderFiles.append($(tmpl.replace('#url#', src)));
+            }
+            var formData = new FormData();
+            formData.append('file', $('#uploaderInput')[0].files[0]);  //添加图片信息的参数
+            //图片上传
+            $.ajax({
+                url: 'http://bs.xazhima.com/weixin/picture_upload_do.php?act=picture_upload',
+                type: 'POST',
+                cache: false, //上传文件不需要缓存
+                data: formData,
+                processData: false, // 告诉jQuery不要去处理发送的数据
+                contentType: false, // 告诉jQuery不要去设置Content-Type请求头
+                success: function (res) {
+                    var data = JSON.parse(res)
+                    if (data.code == 1) {
+                        console.log('上传成功！');
+                        picture = data.msg
+                        console.log(picture);
+                    } else {
+                        console.log(data)
+                    }
+                },
+                error: function (data) {
+                    console.log("上传失败");
+                }
+            });
+        });
+
+        $uploaderFiles.on("click", "li", function () {
+            $galleryImg.attr("style", this.getAttribute("style"));
+            $gallery.fadeIn(100);
+        });
+        $gallery.on("click", function () {
+            $gallery.fadeOut(100);
+        });
+        $(".weui-gallery__del").click(function () {
+            $uploaderFiles.find("li").eq(0).remove();
+        });
+        $("#comment").click(function () {
+            var formData = new FormData();
+            formData.append('file', $('#uploaderInput')[0].files[0]);  //添加图片信息的参数
+            formData.append('siz', '123');
+            var i = formData.entries();
+            console.log(i.next());
+        })
+        //新增零件信息
+        $('#add').click(function () {
+
+            fixingsIdx++;
+            $('.repair-fixings').append(
+                `<div class="repair-single">
+                                <div>
+                                    <div class="comment-title">使用配件</div>
+                                    <div style="display: flex;justify-content: space-between">
+                                        <a href="javascript:;" class="showIOSActionSheet" data-repair="1" style="width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;">
+                                            <input type="text" value='' disabled='true'>
+                                            <img src="images/arr-item.png" alt="" style="height: 0.27rem"></a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="comment-title">配件数量</p>
+                                    <p style="    width: 100%;
+                           display: flex;
+                           justify-content: space-between;
+                           align-items: center;"><input type="number" name="" id="" class="fixing-num" disabled="true" data-id=${fixingsIdx}> <span>个</span> </p>
+                                </div>
+                                <div>
+                                    <p class="comment-title" style="display: inline-block">配件金额</p> &emsp;<span
+                                        style="color: red" class="each-price"></span>元
+                                </div>
+                            </div>`
+            )
+        })
+        //提交维修表单
+        $('#submit').click(function () {
+
+            // 验证用户输入数据
+            // if (validata) {
+
+            // }
+            $.ajax({
+                url: 'http://bs.xazhima.com/weixin/review_do.php',
+                type: 'POST',
+                data: {
+                    act: 'submit',
+                    id: id,
+                    resove_style: resove_style,
+                    content: $('.weui-textarea').val(),
+                    pay_style: pay_style,
+                    hand_money: hand_money,
+                    period: period,
+                    picture: picture,
+                    parts: parts,
+                    remark: 'qw'
+                },
+                success: function (res) {
+                    console.log(res);
+                    var data = JSON.parse(res)
+                    if (data.code == 1) {
+                        toast('提交成功')
+                        // setTimeout(function () {
+                        //     history.back(-1)
+                        // }, 700)
+                    } else {
+                        console.log(data)
+                    }
+                },
+                error: function (data) {
+                    console.log("ERROR");
+                }
+            });
+        })
+        //价格计算与赋值
+        function sum(arr) {
+            var s = 0;
+            for (var i = arr.length - 1; i >= 0; i--) {
+                s += arr[i];
+            }
+            $('.fixings-money').text(s)
+            console.log('entyr loop');
+            if (period == 1) {
+                $('.received-money').text(hand_money)  //保修期内
+            } else {
+                $('.received-money').text(parseInt(s)+parseInt(hand_money)) //过保
+            }
+
+            return s;
+        }
+
+
+        var $toast = $('#toast');
+
+        function toast(msg) {
+            $toast.find('p')
+            console.log($toast.find('p').text(msg));
+            if ($toast.css('display') != 'none') return;
+            $toast.fadeIn(100);
+            setTimeout(function () {
+                $toast.fadeOut(100);
+            }, 1000);
+        }
+        //验证算法
+        function validata() {
+
+        }
+
+
+
+
+
+    });
+</script>
+
+
+
+
+
+</html>
+
+<script>
+
+</script>

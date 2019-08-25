@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>我的工单</title>
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="weui/css/weui.min.css" />
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/rem.js" async="async"></script>
+    <script src="js/vue.min.js"></script>
+</head>
+
+<style>
+    html,
+    body {
+        background: rgba(243, 243, 243, 1);
+    }
+
+    .top-tab {
+        display: flex;
+        position: sticky;
+        top: 0px;
+        height: .8rem;
+        background: rgba(255, 255, 255, 1);
+        font-size: .32rem;
+        font-weight: 600;
+        color: rgba(60, 60, 60, 1);
+        line-height: .8rem;
+    }
+
+    .top-tab p {
+        flex: 1;
+        align-self: center;
+    }
+
+    .top-tab p img {
+
+        height: .3rem;
+        margin: 0 0 0 6%;
+    }
+
+    .wrap {
+        background-color: white;
+        border-radius: 0.12rem;
+        padding: 5% 4% 6% 4%;
+        margin: 2% 2% 2% 2%;
+        font-size: 0.28rem;
+    }
+
+    .flex-wrap {
+        display: flex;
+
+        flex-direction: column
+    }
+
+
+    .row {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 0 0 .3rem 0;
+    }
+
+    .row div:nth-of-type(1) {
+        margin: 0 .4rem 0 0;
+        width: 24%;
+        color: rgba(159, 159, 159, 1);
+    }
+
+    .row div:nth-of-type(2) {
+        width: 74%;
+        height: auto;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
+    .row .tel {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .row .tel img {
+        width: .4rem;
+        height: .4rem;
+    }
+
+
+    .btn-row {
+        justify-content: flex-end;
+        margin: .8rem 0 0rem 0;
+    }
+
+    .btn-row button {
+        width: 1.6rem;
+        margin-left: 0.2rem;
+        padding: 0 0.2rem 0 0.2rem;
+        height: 0.60rem;
+        border-radius: 0.32rem;
+        border: 1px solid rgba(4, 166, 254, 1);
+        color: rgba(4, 166, 254, 1);
+        background-color: white;
+        line-height: 0.6rem;
+        font-size: .26rem;
+    }
+
+    /* 遮罩 */
+    .mask {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #000;
+        z-index: 9000;
+        opacity: 0.7;
+    }
+
+    .accept-confirm {
+        display: none;
+        width: 81%;
+        height: 3rem;
+        position: fixed;
+        top: 36%;
+        left: 0;
+        z-index: 9999;
+        margin: 0 -9.5% 0 9.5%;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        border-radius: .16rem;
+    }
+
+    .resend-confirm {
+        display: none;
+        width: 81%;
+        height: 4.5rem;
+
+    }
+
+    .accept-confirm .close-mask {
+        width: .43rem;
+        height: .43rem;
+        position: absolute;
+        top: .3rem;
+        right: .3rem;
+    }
+
+    .accept-confirm .close-mask img {
+        width: .43rem;
+        height: .43rem;
+    }
+
+    .accept-confirm p {
+        position: absolute;
+        top: .8rem;
+        height: .45rem;
+        font-size: .32rem;
+        font-weight: 400;
+        color: rgba(60, 60, 60, 1);
+        line-height: .45rem;
+    }
+
+    .accept-confirm .btn-group {
+        width: 60%;
+        position: absolute;
+        bottom: .5rem;
+        display: flex;
+        padding: 0 20% 0 20%;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .accept-confirm .btn-group button {
+        width: 1.6rem;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 0.4rem .6rem 0 .5rem;
+    }
+
+    .btn-group button {
+        height: .6rem;
+        margin-left: 0.2rem;
+        padding: 0 0.2rem 0 0.2rem;
+        border-radius: 0.32rem;
+        border: 1px solid rgba(153, 153, 153, 1);
+        color: rgba(153, 153, 153, 1);
+        background-color: rgba(243, 243, 243, 1);
+        line-height: 0.6rem;
+        font-size: .3rem;
+    }
+    
+    .blue-btn{
+        
+        color: white!important;
+        background: linear-gradient(136deg, rgba(2, 175, 243, 1) 0%, rgba(3, 166, 254, 1) 100%);
+        box-shadow: 0px 2px 16px 0px rgba(4, 166, 254, 0.2);
+        border: none !important;
+    }
+    .border-blue-btn{
+        width: 2.6rem;
+        height: .72rem;
+        border:1px solid rgba(4,166,254,1)!important;
+        color:rgba(4,166,254,1)!important;
+    }
+</style>
+
+<body>
+    <div class="top-tab">
+        <p><a href="#" onClick="javascript :history.back(-1);"><img src="images/icon-bark.png"></a></p>
+        <p style="text-align: center" id="title"></p>
+        <p></p>
+    </div>
+    <div id="work-info">
+
+    </div>
+    <div class="accept-confirm" id="accept-confirm">
+
+        <p>是否确认接单？</p>
+        <div class="btn-group"  style="width: 100%"><button class="no" style="margin: 0">取消</button><button class="yes blue-btn"
+                style="margin: 0">确定</button></div>
+    </div>
+    <div class="mask"></div>
+<!-- 提示框 -->
+<div id="toast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <!-- <i class="weui-icon-success-no-circle weui-icon_toast"></i> -->
+            <p class="weui-toast__content" style="margin: 0"></p>
+        </div>
+    </div>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="weui/js/jquery-weui.min.js"></script>
+
+<script>
+    $(function () {
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+        var mid = getQueryString('mid')
+        var flag = getQueryString('flag')
+        
+        
+        switch (flag) {
+            case '1':
+                $('#title').text('待接单')
+                console.log($('#title'));
+                var url = 'work_confirm_detail.html'
+                var url_a = 'work_confirm_detail.html'
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://bs.xazhima.com/api/v1.0/api_master_waitting_accept.php',
+                    data: {
+                        master_id: mid,
+                    },
+                    success: function (res) {
+                        data = JSON.parse(res)
+                        console.log(data.data);
+                        console.log(data.data[0]);
+                        for (let i = 0; i < data.data.length; i++) {
+                            getData(data.data[i], i, url);
+                        }
+                    }
+                })
+                break;
+            case '2':
+                $('#title').text('已接单')
+                console.log('1231');
+                var url = 'work_repair_detail.html'
+                var url_a ='work_fulldetail.html'
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://bs.xazhima.com/api/v1.0/api_master_already_accept.php',
+                    data: {
+                        master_id: mid,
+                    },
+                    success: function (res) {
+                        data = JSON.parse(res)
+                        console.log(data.data);
+                        console.log(data.data[0]);
+                        for (let i = 0; i < data.data.length; i++) {
+                            getData(data.data[i], i, url);
+                        }
+                    }
+                })
+                break;
+            case '3':
+                $('#title').text('待支付')
+                var url = 'work_fulldetail.html'
+                var url_a ='work_fulldetail.html'
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://bs.xazhima.com/api/v1.0/api_master_unpay.php',
+                    data: {
+                        master_id: mid,
+                    },
+                    success: function (res) {
+                        data = JSON.parse(res)
+                        console.log(data.data);
+                        console.log(data.data[0]);
+                        for (let i = 0; i < data.data.length; i++) {
+                            getData(data.data[i], i, url);
+                        }
+                    }
+                })
+                break;
+            case '4':
+                $('#title').text('已完工')
+                var url = 'work_fulldetail.html'
+                var url_a ='work_fulldetail.html'
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://bs.xazhima.com/api/v1.0/api_master_complete.php',
+                    data: {
+                        master_id: mid,
+                    },
+                    success: function (res) {
+                        data = JSON.parse(res)
+                        console.log(data.data);
+                        console.log(data.data[0]);
+                        for (let i = 0; i < data.data.length; i++) {
+                            getData(data.data[i], i, url);
+                        }
+                    }
+                })
+                break;
+                
+
+            default:
+                break;
+        }
+        function getData(data, i, url) {
+            var $div = `<div id="work-info">
+        <div>
+            <div class="wrap">
+                <div class="row">
+                    <div>订单号&emsp;</div>
+                    <div> ${data.id}</div>
+                </div>
+                <div class="row">
+                    <div>服务类型</div>
+                    <div>${data.service_type}</div>
+                </div>
+
+                <div class="row">
+                    <div>联系人&emsp;</div>
+                    <div>${data.register_person}</div>
+                </div>
+                <div class="row">
+                    <div>联系电话</div>
+                    <div style="width: 60%">${data.linkphone}</div>
+                    <div class="tel">
+                            <a href="tel:${data.linkphone}"><img src="images/icon-tell.png"></a>
+                        </div>
+                </div>
+                
+                <div class="row">
+                    <div>联系地址</div>
+                    <div>${data.address_all}</div>
+                </div>
+                <div>
+                        <div class="row btn-row">
+          
+                                ${flag == 1 ? `<a href="#" class="work-detail" id="accept" data-id="${data.id}"><button>接单</button></a>` : ``}
+                            ${flag == 2 ? `<a href="${url}?flag=${flag}&id=${data.id}" class="work-detail"><button>维修</button></a>` : ``}
+                                ${flag == 3 ? `<a href="${url}?flag=${flag}&id=${data.id}" class="work-detail"><button>付款</button></a>` : ``}
+
+                            <a href="${url_a}?flag=${flag}&id=${data.id}" class="work-detail"><button>订单详情</button></a>
+                           </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    `
+            console.log('123123');
+            $('#work-info').append($div)
+        }
+
+        
+//接单
+    $("#work-info").on('click', '#accept',function(){
+                console.log(id=$(this)[0].dataset.id);
+                console.log(id);
+        $(".mask").show()
+        $("#accept-confirm").css('display', 'flex');
+    })
+    $(".no").click(
+        function () {
+            console.log($(this));
+            $(".mask").hide()
+            $("#accept-confirm").hide()
+            $("#resend-confirm").hide()
+        }
+    )
+    $('.yes').click(
+        function () {
+            $.ajax({
+                type: 'POST',
+                url: 'http://bs.xazhima.com/weixin/review_do.php',
+                data: {
+                    act: 'accept',
+                    id: id,
+                },
+                success: function (res) {
+                    data = JSON.parse(res)
+                    console.log(data.code);
+                    toast('接单成功')
+                        setTimeout(function () {
+                            history.back(-1)
+                        }, 700)
+                    $(".mask").hide()
+                    $("#accept-confirm").hide()
+                    $("#resend-confirm").hide()
+                    if (data.code==1) {
+                        alert(data.msg)
+                        location.reload()
+                    } else {
+
+                    }
+
+                },
+
+            })
+        }
+    )
+    var $toast = $('#toast');
+
+        function toast(msg) {
+            $toast.find('p')
+            console.log($toast.find('p').text(msg));
+            if ($toast.css('display') != 'none') return;
+            $toast.fadeIn(100);
+            setTimeout(function () {
+                $toast.fadeOut(100);
+            }, 1000);
+        }
+    })
+
+</script>
+
+
+
+</html>
+
+
+
+<script>
+
+</script>

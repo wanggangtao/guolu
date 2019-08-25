@@ -1,0 +1,96 @@
+/*
+ * @Author: huangdan 
+ * @Date: 2019-01-04 17:16:17 
+ * @Last Modified by: huangdan-hdwebll@163.com
+ * @Last Modified time: 2019-01-09 15:33:18
+ */
+
+
+ @media screen and ( max-width: 320px) {
+    /*320px显示屏样式 苹果4/4S/5C/5S黑莓Z30 */
+    .industry {
+        padding: 0 10px;
+    }
+    .industry-item {
+        padding: 12px 0;
+    }
+    .industry-item-left p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .industry-item-left span {
+        font-size: 10px;
+    }
+    .industry-item-right {
+        width: 90px;
+        height: 60px;
+        margin-left: 10px;
+    }
+    .product-detail-table {
+        font-size: 10px;
+    }
+    .login-form {
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+    
+    .login-form .form-item .form-input {
+        padding: 10px 5px;
+    }
+    
+    .login-form .form-item .form-input input {
+        font-size: 16px;
+    }
+    
+    #code {
+        font-size: 16px;
+    }
+    .personal-bottom {
+        bottom: 20px;
+        height: 30px;
+    }
+    .personal-bottom a {
+        line-height: 30px;
+    }
+    .form-input-wrap button#code {
+        font-size: 12px;
+    }
+    .from-submit {
+        margin-bottom: 80px;
+    }
+    #app .coupon_item .coupon_item_name {
+        font-size: 14px;
+    }
+    #app .coupon_item .coupon_item_title {
+        font-size: 10px;
+        color: #bbb;
+    }
+    #app .coupon_item .coupon_item_text {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    #app .coupon_item .coupon_item_right img {
+        width: 50px;
+        height: auto;
+    }
+    #app .coupon_tip_top {
+        height: 90px;
+    }
+    #app .project-detail-tab .detail-tab,#app .project-detail-swiper .detail-slide-tab .detail-tab {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+}
+
+@media screen and ( min-width: 359px) {
+    /*360px显示屏样式 索尼Z1*/
+}
+
+@media screen and ( min-width: 414px) {
+    /*414px显示屏样式 苹果6plus*/
+}
+
+@media screen and ( min-width: 479px) {
+    /*480px显示屏样式 索尼MT27i Xperia sola*/
+}

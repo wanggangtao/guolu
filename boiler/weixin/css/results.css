@@ -1,0 +1,126 @@
+.right-icon {
+  width: 0.5866666667rem;
+  height: 0.64rem;
+}
+
+.search-one {
+  padding: 14px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.search-one .search-in {
+  position: relative;
+  width: 100%;
+}
+
+.search-one .search-in .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  width: 12px;
+  height: 12px;
+  top: 50%;
+}
+
+.search-one .search-in .input-down {
+  border-radius: 3px;
+  border: 1px solid #304FCD;
+  color: #959FAC;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, sans-serif;
+  height: 34px;
+  outline: medium none;
+  width: 100%;
+  background: #F3F3F3;
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.search-one .search-in .close-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translate(0,-50%);
+  width: 26px;
+  height: 26px;
+  background: url(../img/cancel.png) no-repeat;
+  -webkit-background-size: 100% 100%; 
+  -moz-background-size: 100% 100%; 
+  background-size: 100% 100%; 
+  cursor: pointer;
+}
+
+
+.no-data {
+  display: none;
+  text-align: center;
+  font-size: 16px;
+  color: #959FAC;
+  margin-top: 0.2666666667rem;
+}
+
+.equity-fund {
+  background: #ffffff;
+}
+
+.equity-fund .shares {
+  background: #F4F6FC;
+  font-size: 14px;
+  color: #485465;
+  padding: 0.16rem 0 0.16rem 0.4rem;
+  font-family: PingFang Medium;
+}
+
+.equity-fund .ef-content {
+  padding: 0 0.4rem;
+}
+
+.equity-fund .ef-content li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.24rem 0 0.2133333333rem 0;
+  border-bottom: 1px solid #E6EAF0;
+}
+
+.equity-fund .ef-content li .li-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: PingFang Regular;
+}
+
+.equity-fund .ef-content li .li-left .ef-name {
+  color: #485465;
+  font-size: 16px;
+}
+
+.equity-fund .ef-content li .li-left .ef-num {
+  color: #304FCD;
+  font-size: 14px;
+  margin-top: 0.1333333333rem;
+}
+
+.equity-fund .ef-content li:last-child {
+  border-bottom: none;
+}
+
+.equity-fund .open {
+  border-top: 1px solid #E6EAF0;
+  text-align: center;
+  padding: 0.2666666667rem 0;
+}
+
+.equity-fund .open img {
+  width: 0.5866666667rem;
+  height: 0.5333333333rem;
+}
+
+/*# sourceMappingURL=results.css.map */

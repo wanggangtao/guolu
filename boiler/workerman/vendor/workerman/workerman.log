@@ -1,0 +1,1394 @@
+2019-03-01 10:18:51 pid:16561 Workerman[start.php] stop 
+2019-03-01 10:18:51 pid:16561 Workerman[start.php] is stopping ...
+2019-03-01 10:18:51 pid:28975 Workerman[start.php] stopping ...
+2019-03-01 10:18:51 pid:28975 Workerman[start.php] has been stopped
+2019-03-01 10:18:51 pid:16561 Workerman[start.php] stop success
+2019-03-01 10:19:00 pid:16562 Workerman[start.php] start in DEBUG mode
+2019-03-01 10:20:16 pid:16562 Workerman[start.php] stopping ...
+2019-03-01 10:20:16 pid:16562 Workerman[start.php] has been stopped
+2019-03-01 10:20:17 pid:16631 Workerman[start.php] start in DEBUG mode
+2019-03-01 10:31:32 pid:16827 Workerman[start.php] stop 
+2019-03-01 10:31:32 pid:16827 Workerman[start.php] is stopping ...
+2019-03-01 10:31:32 pid:16631 Workerman[start.php] stopping ...
+2019-03-01 10:31:32 pid:16631 Workerman[start.php] has been stopped
+2019-03-01 10:31:32 pid:16827 Workerman[start.php] stop success
+2019-03-01 10:33:06 pid:16852 Workerman[start.php] start in DAEMON mode
+2019-03-01 10:45:35 pid:17066 Workerman[start.php] reload 
+2019-03-01 10:45:35 pid:16854 Workerman[start.php] reloading
+2019-03-01 10:45:40 pid:17069 exception 'Exception' with message '$_SESSION['room_id'] not set. client_ip:1.80.246.150' in /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php:117
+Stack trace:
+#0 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"login"...')
+#1 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"login"...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #55)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#14 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#15 {main}
+2019-03-01 10:45:40 pid:17069 Worker[17069] process terminated
+2019-03-01 10:45:40 pid:16854 worker[ChatBusinessWorker:17069] exit with status 64000
+2019-03-01 10:45:43 pid:17070 exception 'Exception' with message '$_SESSION['room_id'] not set. client_ip:1.80.246.150' in /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php:117
+Stack trace:
+#0 [internal function]: Events::onMessage('7f00000108fc000...', '{"type":"login"...')
+#1 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fc000...', '{"type":"login"...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #57)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#14 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#15 {main}
+2019-03-01 10:45:43 pid:17070 Worker[17070] process terminated
+2019-03-01 10:45:43 pid:16854 worker[ChatBusinessWorker:17070] exit with status 64000
+2019-03-01 10:45:47 pid:17074 exception 'Exception' with message '$_SESSION['room_id'] not set. client_ip:1.80.246.150' in /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php:117
+Stack trace:
+#0 [internal function]: Events::onMessage('7f00000108fc000...', '{"type":"say","...')
+#1 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fc000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #59)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#14 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#15 {main}
+2019-03-01 10:45:47 pid:17074 Worker[17074] process terminated
+2019-03-01 10:45:47 pid:16854 worker[ChatBusinessWorker:17074] exit with status 64000
+2019-03-01 10:45:56 pid:17075 exception 'Exception' with message '$_SESSION['room_id'] not set. client_ip:1.80.246.150' in /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php:117
+Stack trace:
+#0 [internal function]: Events::onMessage('7f00000108fe000...', '{"type":"login"...')
+#1 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fe000...', '{"type":"login"...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #61)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#14 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#15 {main}
+2019-03-01 10:45:56 pid:17075 Worker[17075] process terminated
+2019-03-01 10:45:56 pid:16854 worker[ChatBusinessWorker:17075] exit with status 64000
+2019-03-01 10:45:59 pid:17076 exception 'Exception' with message '$_SESSION['room_id'] not set. client_ip:1.80.246.150' in /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php:117
+Stack trace:
+#0 [internal function]: Events::onMessage('7f00000108fc000...', '{"type":"say","...')
+#1 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fc000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #61)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#14 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#15 {main}
+2019-03-01 10:45:59 pid:17076 Worker[17076] process terminated
+2019-03-01 10:45:59 pid:16854 worker[ChatBusinessWorker:17076] exit with status 64000
+2019-03-01 10:46:14 pid:17090 Workerman[start.php] stop 
+2019-03-01 10:46:14 pid:17090 Workerman[start.php] is stopping ...
+2019-03-01 10:46:14 pid:16854 Workerman[start.php] stopping ...
+2019-03-01 10:46:14 pid:16854 Workerman[start.php] has been stopped
+2019-03-01 10:46:14 pid:17090 Workerman[start.php] stop success
+2019-03-01 10:46:18 pid:17091 Workerman[start.php] start in DEBUG mode
+2019-03-01 10:46:19 pid:17094 exception 'Exception' with message '$_SESSION['room_id'] not set. client_ip:1.80.246.150' in /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php:117
+Stack trace:
+#0 [internal function]: Events::onMessage('7f00000108fc000...', '{"type":"login"...')
+#1 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fc000...', '{"type":"login"...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #53)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#12 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#13 {main}
+2019-03-01 10:46:19 pid:17094 Worker[17094] process terminated
+2019-03-01 10:46:19 pid:17091 worker[ChatBusinessWorker:17094] exit with status 64000
+2019-03-01 10:46:19 pid:17105 exception 'Exception' with message '$_SESSION['room_id'] not set. client_ip:1.80.246.150' in /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php:117
+Stack trace:
+#0 [internal function]: Events::onMessage('7f00000108fd000...', '{"type":"login"...')
+#1 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fd000...', '{"type":"login"...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #52)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#14 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#15 {main}
+2019-03-01 10:46:19 pid:17105 Worker[17105] process terminated
+2019-03-01 10:46:19 pid:17091 worker[ChatBusinessWorker:17105] exit with status 64000
+2019-03-01 10:46:19 pid:17106 exception 'Exception' with message '$_SESSION['room_id'] not set. client_ip:1.80.246.150' in /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php:117
+Stack trace:
+#0 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"login"...')
+#1 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"login"...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #54)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#14 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#15 {main}
+2019-03-01 10:46:19 pid:17106 Worker[17106] process terminated
+2019-03-01 10:46:19 pid:17091 worker[ChatBusinessWorker:17106] exit with status 64000
+2019-03-01 10:47:45 pid:17091 Workerman[start.php] stopping ...
+2019-03-01 10:47:45 pid:17091 Workerman[start.php] has been stopped
+2019-03-01 10:47:48 pid:17155 Workerman[start.php] start in DEBUG mode
+2019-03-01 11:13:45 pid:17689 Workerman[start.php] stop 
+2019-03-01 11:13:45 pid:17689 Workerman[start.php] not run
+2019-03-01 11:13:51 pid:17690 Workerman[start.php] start in DEBUG mode
+2019-03-01 11:21:52 pid:17690 Workerman[start.php] stopping ...
+2019-03-01 11:21:52 pid:17690 Workerman[start.php] has been stopped
+2019-03-01 11:21:55 pid:17840 Workerman[start.php] start in DEBUG mode
+2019-03-01 11:22:44 pid:17840 Workerman[start.php] stopping ...
+2019-03-01 11:22:44 pid:17840 Workerman[start.php] has been stopped
+2019-03-01 11:23:06 pid:17878 Workerman[start.php] start in DEBUG mode
+2019-03-01 11:33:17 pid:17878 Workerman[start.php] stopping ...
+2019-03-01 11:33:17 pid:17878 Workerman[start.php] has been stopped
+2019-03-01 11:33:20 pid:18080 Workerman[start.php] start in DEBUG mode
+2019-03-01 13:45:28 pid:21540 Workerman[start.php] start in DEBUG mode
+2019-03-01 14:22:46 pid:21540 Workerman[start.php] stopping ...
+2019-03-01 14:22:46 pid:21540 Workerman[start.php] has been stopped
+2019-03-01 14:22:49 pid:22125 Workerman[start.php] start in DEBUG mode
+2019-03-01 14:44:34 pid:22125 Workerman[start.php] stopping ...
+2019-03-01 14:44:34 pid:22125 Workerman[start.php] has been stopped
+2019-03-01 14:44:36 pid:22446 Workerman[start.php] start in DEBUG mode
+2019-03-01 14:44:47 pid:22459 Worker[22459] process terminated
+2019-03-01 14:44:48 pid:22458 Worker[22458] process terminated
+2019-03-01 14:44:48 pid:22460 Worker[22460] process terminated
+2019-03-01 14:44:53 pid:22461 Worker[22461] process terminated
+2019-03-01 14:46:31 pid:22446 Workerman[start.php] stopping ...
+2019-03-01 14:46:31 pid:22446 Workerman[start.php] has been stopped
+2019-03-01 14:46:33 pid:22518 Workerman[start.php] start in DEBUG mode
+2019-03-01 14:46:45 pid:22523 Worker[22523] process terminated
+2019-03-01 14:47:25 pid:22532 Worker[22532] process terminated
+2019-03-01 14:52:15 pid:22518 Workerman[start.php] stopping ...
+2019-03-01 14:52:15 pid:22518 Workerman[start.php] has been stopped
+2019-03-01 14:52:16 pid:22644 Workerman[start.php] start in DEBUG mode
+2019-03-01 14:52:24 pid:22647 exception 'PDOException' with message 'SQL:SELECT uid FROM `boiler_chat_user_relation` WHERE relation_room_id={$room_id} and relation_user_id in ({$uidStr}) SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '} and relation_user_id in ({$uidStr})' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('SELECT uid FROM...', Array)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(196): GatewayWorker\Lib\DbConnection->query()
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(162): Events::sendGlobalForClient('1')
+#3 [internal function]: Events::onMessage('7f00000108fe000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fe000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #54)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#16 {main}
+2019-03-01 14:52:24 pid:22647 Worker[22647] process terminated
+2019-03-01 14:52:24 pid:22644 worker[ChatBusinessWorker:22647] exit with status 64000
+2019-03-01 14:53:44 pid:22644 Workerman[start.php] stopping ...
+2019-03-01 14:53:44 pid:22644 Workerman[start.php] has been stopped
+2019-03-01 14:53:49 pid:22701 Workerman[start.php] start in DEBUG mode
+2019-03-01 14:54:07 pid:22704 exception 'PDOException' with message 'SQL:SELECT uid FROM `boiler_chat_user_relation` WHERE relation_room_id=1 and relation_user_id in (2,3) SQLSTATE[42S02]: Base table or view not found: 1146 Table 'boiler.boiler_chat_user_relation' doesn't exist' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('SELECT uid FROM...', Array)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(196): GatewayWorker\Lib\DbConnection->query()
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(162): Events::sendGlobalForClient('1')
+#3 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #52)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#16 {main}
+2019-03-01 14:54:07 pid:22704 Worker[22704] process terminated
+2019-03-01 14:54:07 pid:22701 worker[ChatBusinessWorker:22704] exit with status 64000
+2019-03-01 14:54:52 pid:22701 Workerman[start.php] stopping ...
+2019-03-01 14:54:52 pid:22701 Workerman[start.php] has been stopped
+2019-03-01 14:54:53 pid:22759 Workerman[start.php] start in DEBUG mode
+2019-03-01 14:54:57 pid:22764 exception 'PDOException' with message 'SQL:SELECT relation_user_id FROM `boiler_chat_user_relation` WHERE relation_room_id=1 and relation_user_id in (3,2) SQLSTATE[42S02]: Base table or view not found: 1146 Table 'boiler.boiler_chat_user_relation' doesn't exist' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('SELECT relation...', Array)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(196): GatewayWorker\Lib\DbConnection->query()
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(162): Events::sendGlobalForClient('1')
+#3 [internal function]: Events::onMessage('7f00000108fd000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fd000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #51)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#16 {main}
+2019-03-01 14:54:57 pid:22764 Worker[22764] process terminated
+2019-03-01 14:54:57 pid:22759 worker[ChatBusinessWorker:22764] exit with status 64000
+2019-03-01 15:23:17 pid:23401 Workerman[start.php] start in DEBUG mode
+2019-03-01 15:23:17 pid:23401 Workerman[start.php] already running
+2019-03-01 15:23:24 pid:23402 Workerman[start.php] stop 
+2019-03-01 15:23:24 pid:23402 Workerman[start.php] is stopping ...
+2019-03-01 15:23:24 pid:22759 Workerman[start.php] stopping ...
+2019-03-01 15:23:24 pid:22759 Workerman[start.php] has been stopped
+2019-03-01 15:23:24 pid:23402 Workerman[start.php] stop success
+2019-03-01 15:23:26 pid:23403 Workerman[start.php] start in DEBUG mode
+2019-03-01 15:23:44 pid:23412 exception 'Exception' with message 'You can't send(array) to client, you need to convert it to a string. ' in /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Protocols/Websocket.php:236
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(344): Workerman\Protocols\Websocket::encode(Array, Object(Workerman\Connection\TcpConnection))
+#1 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Gateway.php(765): Workerman\Connection\TcpConnection->send(Array)
+#2 [internal function]: GatewayWorker\Gateway->onWorkerMessage(Object(Workerman\Connection\TcpConnection), Array)
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #49)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Gateway.php(276): Workerman\Worker->run()
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\Gateway->run()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\Gateway))
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#12 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#13 {main}
+2019-03-01 15:23:44 pid:23412 Worker[23412] process terminated
+2019-03-01 15:23:44 pid:23403 worker[ChatGateway:23412] exit with status 64000
+2019-03-01 15:25:46 pid:23403 Workerman[start.php] stopping ...
+2019-03-01 15:25:46 pid:23403 Workerman[start.php] has been stopped
+2019-03-01 15:25:47 pid:23474 Workerman[start.php] start in DEBUG mode
+2019-03-01 15:25:55 pid:23481 exception 'Exception' with message 'You can't send(array) to client, you need to convert it to a string. ' in /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Protocols/Websocket.php:236
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(344): Workerman\Protocols\Websocket::encode(Array, Object(Workerman\Connection\TcpConnection))
+#1 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Gateway.php(765): Workerman\Connection\TcpConnection->send(Array)
+#2 [internal function]: GatewayWorker\Gateway->onWorkerMessage(Object(Workerman\Connection\TcpConnection), Array)
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #50)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Gateway.php(276): Workerman\Worker->run()
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\Gateway->run()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\Gateway))
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#12 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#13 {main}
+2019-03-01 15:25:55 pid:23481 Worker[23481] process terminated
+2019-03-01 15:25:55 pid:23474 worker[ChatGateway:23481] exit with status 64000
+2019-03-01 15:31:41 pid:23474 Workerman[start.php] stopping ...
+2019-03-01 15:31:41 pid:23474 Workerman[start.php] has been stopped
+2019-03-01 15:31:43 pid:23591 Workerman[start.php] start in DEBUG mode
+2019-03-01 16:11:10 pid:23591 Workerman[start.php] stopping ...
+2019-03-01 16:11:10 pid:23591 Workerman[start.php] has been stopped
+2019-03-01 16:11:12 pid:24202 Workerman[start.php] start in DEBUG mode
+2019-03-01 16:20:44 pid:24202 Workerman[start.php] stopping ...
+2019-03-01 16:20:44 pid:24202 Workerman[start.php] has been stopped
+2019-03-01 16:20:46 pid:24354 Workerman[start.php] start in DEBUG mode
+2019-03-01 16:22:20 pid:24354 Workerman[start.php] stopping ...
+2019-03-01 16:22:20 pid:24354 Workerman[start.php] has been stopped
+2019-03-01 16:22:21 pid:24422 Workerman[start.php] start in DEBUG mode
+2019-03-01 16:25:41 pid:24422 Workerman[start.php] stopping ...
+2019-03-01 16:25:41 pid:24422 Workerman[start.php] has been stopped
+2019-03-01 16:25:42 pid:24532 Workerman[start.php] start in DEBUG mode
+2019-03-01 16:53:12 pid:24532 Workerman[start.php] stopping ...
+2019-03-01 16:53:13 pid:24532 Workerman[start.php] has been stopped
+2019-03-01 16:53:17 pid:24921 Workerman[start.php] start in DAEMON mode
+2019-03-01 17:32:50 pid:25471 Workerman[start.php] stop 
+2019-03-01 17:32:50 pid:25471 Workerman[start.php] is stopping ...
+2019-03-01 17:32:50 pid:24923 Workerman[start.php] stopping ...
+2019-03-01 17:32:50 pid:24923 Workerman[start.php] has been stopped
+2019-03-01 17:32:50 pid:25471 Workerman[start.php] stop success
+2019-03-01 17:32:53 pid:25472 Workerman[start.php] start in DEBUG mode
+2019-03-01 17:37:32 pid:25472 Workerman[start.php] stopping ...
+2019-03-01 17:37:32 pid:25472 Workerman[start.php] has been stopped
+2019-03-01 17:37:34 pid:25576 Workerman[start.php] start in DEBUG mode
+2019-03-01 17:39:00 pid:25576 Workerman[start.php] stopping ...
+2019-03-01 17:39:00 pid:25576 Workerman[start.php] has been stopped
+2019-03-01 17:39:07 pid:25614 Workerman[start.php] start in DAEMON mode
+2019-03-02 00:25:03 pid:25629 Worker[25629] process terminated
+2019-03-02 00:25:03 pid:25628 Worker[25628] process terminated
+2019-03-02 00:25:03 pid:30640 Worker[30640] process terminated
+2019-03-02 00:25:05 pid:30642 Worker[30642] process terminated
+2019-03-02 00:25:06 pid:30641 Worker[30641] process terminated
+2019-03-02 00:25:06 pid:30643 Worker[30643] process terminated
+2019-03-02 00:25:06 pid:30645 Worker[30645] process terminated
+2019-03-02 00:25:06 pid:30646 Worker[30646] process terminated
+2019-03-02 00:25:07 pid:30644 Worker[30644] process terminated
+2019-03-02 00:25:07 pid:30647 Worker[30647] process terminated
+2019-03-02 00:25:07 pid:30649 Worker[30649] process terminated
+2019-03-02 00:25:08 pid:30648 Worker[30648] process terminated
+2019-03-02 00:25:09 pid:30651 Worker[30651] process terminated
+2019-03-02 00:25:09 pid:30652 Worker[30652] process terminated
+2019-03-02 00:25:09 pid:30653 Worker[30653] process terminated
+2019-03-02 00:25:09 pid:30654 Worker[30654] process terminated
+2019-03-02 00:25:13 pid:30655 Worker[30655] process terminated
+2019-03-02 00:25:17 pid:30650 Worker[30650] process terminated
+2019-03-02 00:25:17 pid:30656 Worker[30656] process terminated
+2019-03-02 00:25:17 pid:30657 Worker[30657] process terminated
+2019-03-02 00:25:17 pid:30659 Worker[30659] process terminated
+2019-03-02 00:25:17 pid:30658 Worker[30658] process terminated
+2019-03-02 00:25:25 pid:30661 Worker[30661] process terminated
+2019-03-02 00:25:25 pid:30660 Worker[30660] process terminated
+2019-03-02 00:26:03 pid:30662 Worker[30662] process terminated
+2019-03-02 02:08:10 pid:30676 Worker[30676] process terminated
+2019-03-02 02:08:10 pid:30663 Worker[30663] process terminated
+2019-03-02 12:32:08 pid:31942 Worker[31942] process terminated
+2019-03-02 12:32:10 pid:31943 Worker[31943] process terminated
+2019-03-02 12:32:10 pid:8654 Worker[8654] process terminated
+2019-03-02 12:32:10 pid:8655 Worker[8655] process terminated
+2019-03-02 12:32:10 pid:8657 Worker[8657] process terminated
+2019-03-02 12:32:15 pid:8658 Worker[8658] process terminated
+2019-03-02 12:32:46 pid:8659 Worker[8659] process terminated
+2019-03-02 12:33:18 pid:8656 Worker[8656] process terminated
+2019-03-02 12:33:20 pid:8740 Worker[8740] process terminated
+2019-03-02 12:33:20 pid:8754 Worker[8754] process terminated
+2019-03-02 12:33:20 pid:8755 Worker[8755] process terminated
+2019-03-02 12:33:23 pid:8756 Worker[8756] process terminated
+2019-03-02 12:33:25 pid:8753 Worker[8753] process terminated
+2019-03-02 12:33:25 pid:8758 Worker[8758] process terminated
+2019-03-02 12:33:25 pid:8759 Worker[8759] process terminated
+2019-03-02 12:33:27 pid:8760 Worker[8760] process terminated
+2019-03-02 12:33:28 pid:8757 Worker[8757] process terminated
+2019-03-02 12:33:28 pid:8761 Worker[8761] process terminated
+2019-03-02 12:33:28 pid:8763 Worker[8763] process terminated
+2019-03-02 12:33:28 pid:8764 Worker[8764] process terminated
+2019-03-02 12:33:28 pid:8762 Worker[8762] process terminated
+2019-03-02 12:33:28 pid:8765 Worker[8765] process terminated
+2019-03-02 12:33:28 pid:8767 Worker[8767] process terminated
+2019-03-02 12:33:40 pid:8766 Worker[8766] process terminated
+2019-03-02 12:34:30 pid:8769 Worker[8769] process terminated
+2019-03-02 12:34:30 pid:8768 Worker[8768] process terminated
+2019-03-02 12:34:30 pid:8813 Worker[8813] process terminated
+2019-03-02 12:34:30 pid:8814 Worker[8814] process terminated
+2019-03-02 12:34:51 pid:8812 Worker[8812] process terminated
+2019-03-02 12:34:51 pid:8815 Worker[8815] process terminated
+2019-03-02 12:34:51 pid:8817 Worker[8817] process terminated
+2019-03-02 12:34:51 pid:8818 Worker[8818] process terminated
+2019-03-02 12:34:56 pid:8819 Worker[8819] process terminated
+2019-03-02 12:35:26 pid:8820 Worker[8820] process terminated
+2019-03-02 12:39:38 pid:8816 Worker[8816] process terminated
+2019-03-02 12:39:40 pid:8833 Worker[8833] process terminated
+2019-03-02 12:39:40 pid:8882 Worker[8882] process terminated
+2019-03-02 12:39:40 pid:8884 Worker[8884] process terminated
+2019-03-02 12:39:40 pid:8885 Worker[8885] process terminated
+2019-03-02 12:39:45 pid:8883 Worker[8883] process terminated
+2019-03-02 12:39:46 pid:8886 Worker[8886] process terminated
+2019-03-02 12:39:46 pid:8887 Worker[8887] process terminated
+2019-03-02 12:39:48 pid:8889 Worker[8889] process terminated
+2019-03-02 12:40:04 pid:8890 Worker[8890] process terminated
+2019-03-02 12:44:11 pid:25621 exception 'PDOException' with message 'SQL:SELECT relation_user_id FROM `boiler_chat_room_user_relation` WHERE relation_room_id=1 and relation_user_id in () SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('SELECT relation...', Array)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(211): GatewayWorker\Lib\DbConnection->query()
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(159): Events::sendGlobalForClient('1', Array)
+#3 [internal function]: Events::onMessage('7f00000108fe000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fe000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #56)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#16 {main}
+2019-03-02 12:44:11 pid:25621 Worker[25621] process terminated
+2019-03-02 12:44:11 pid:25616 worker[ChatBusinessWorker:25621] exit with status 64000
+2019-03-02 12:44:28 pid:25620 exception 'PDOException' with message 'SQL:SELECT relation_user_id FROM `boiler_chat_room_user_relation` WHERE relation_room_id=1 and relation_user_id in () SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('SELECT relation...', Array)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(211): GatewayWorker\Lib\DbConnection->query()
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(159): Events::sendGlobalForClient('1', Array)
+#3 [internal function]: Events::onMessage('7f00000108fc000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fc000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #55)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#16 {main}
+2019-03-02 12:44:28 pid:25620 Worker[25620] process terminated
+2019-03-02 12:44:28 pid:25616 worker[ChatBusinessWorker:25620] exit with status 64000
+2019-03-02 12:44:41 pid:25622 exception 'PDOException' with message 'SQL:SELECT relation_user_id FROM `boiler_chat_room_user_relation` WHERE relation_room_id=1 and relation_user_id in () SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('SELECT relation...', Array)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(211): GatewayWorker\Lib\DbConnection->query()
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(159): Events::sendGlobalForClient('1', Array)
+#3 [internal function]: Events::onMessage('7f00000108fd000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fd000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #54)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#16 {main}
+2019-03-02 12:44:41 pid:25622 Worker[25622] process terminated
+2019-03-02 12:44:41 pid:25616 worker[ChatBusinessWorker:25622] exit with status 64000
+2019-03-02 12:45:04 pid:8903 Worker[8903] process terminated
+2019-03-02 12:45:27 pid:9108 Workerman[start.php] stop 
+2019-03-02 12:45:27 pid:9108 Workerman[start.php] is stopping ...
+2019-03-02 12:45:27 pid:25616 Workerman[start.php] stopping ...
+2019-03-02 12:45:27 pid:25616 Workerman[start.php] has been stopped
+2019-03-02 12:45:27 pid:9108 Workerman[start.php] stop success
+2019-03-02 12:45:30 pid:9109 Workerman[start.php] start in DEBUG mode
+2019-03-02 12:45:35 pid:9115 exception 'PDOException' with message 'SQL:SELECT relation_user_id FROM `boiler_chat_room_user_relation` WHERE relation_room_id=1 and relation_user_id in () SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('SELECT relation...', Array)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(214): GatewayWorker\Lib\DbConnection->query()
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(159): Events::sendGlobalForClient('1', Array)
+#3 [internal function]: Events::onMessage('7f00000108fe000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fe000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #53)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#16 {main}
+2019-03-02 12:45:35 pid:9115 Worker[9115] process terminated
+2019-03-02 12:45:35 pid:9109 worker[ChatBusinessWorker:9115] exit with status 64000
+2019-03-02 12:48:00 pid:9109 Workerman[start.php] stopping ...
+2019-03-02 12:48:00 pid:9109 Workerman[start.php] has been stopped
+2019-03-02 12:48:01 pid:9208 Workerman[start.php] start in DEBUG mode
+2019-03-02 12:48:37 pid:9212 exception 'PDOException' with message 'SQL:INSERT INTO `boiler_chat_room_msg` (`msg_room_id`,`msg_uid`,`msg_content`,`msg_addtime`) VALUES (1,,'å“ˆå“ˆå“ˆ',1551502117) SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''å“ˆå“ˆå“ˆ',1551502117)' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('INSERT INTO `bo...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(146): GatewayWorker\Lib\DbConnection->query('INSERT INTO `bo...')
+#2 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"say","...')
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"say","...')
+#4 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #51)
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#14 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#15 {main}
+2019-03-02 12:48:37 pid:9212 Worker[9212] process terminated
+2019-03-02 12:48:37 pid:9208 worker[ChatBusinessWorker:9212] exit with status 64000
+2019-03-02 12:55:04 pid:9220 Worker[9220] process terminated
+2019-03-02 12:55:43 pid:9441 Worker[9441] process terminated
+2019-03-02 12:55:48 pid:9221 Worker[9221] process terminated
+2019-03-02 12:55:48 pid:9442 Worker[9442] process terminated
+2019-03-02 12:55:48 pid:9444 Worker[9444] process terminated
+2019-03-02 13:30:42 pid:9443 Worker[9443] process terminated
+2019-03-02 13:30:42 pid:9445 Worker[9445] process terminated
+2019-03-02 13:30:42 pid:10079 Worker[10079] process terminated
+2019-03-02 13:30:43 pid:10080 Worker[10080] process terminated
+2019-03-02 13:30:43 pid:10081 Worker[10081] process terminated
+2019-03-02 13:30:43 pid:10082 Worker[10082] process terminated
+2019-03-02 13:30:43 pid:10084 Worker[10084] process terminated
+2019-03-02 13:30:49 pid:10085 Worker[10085] process terminated
+2019-03-02 13:35:42 pid:9208 Workerman[start.php] stopping ...
+2019-03-02 13:35:42 pid:9208 Workerman[start.php] has been stopped
+2019-03-02 13:35:46 pid:10207 Workerman[start.php] start in DAEMON mode
+2019-03-02 14:13:20 pid:11308 Workerman[start.php] stop 
+2019-03-02 14:13:20 pid:11308 Workerman[start.php] is stopping ...
+2019-03-02 14:13:20 pid:10209 Workerman[start.php] stopping ...
+2019-03-02 14:13:20 pid:10209 Workerman[start.php] has been stopped
+2019-03-02 14:13:20 pid:11308 Workerman[start.php] stop success
+2019-03-02 14:13:23 pid:11309 Workerman[start.php] start in DEBUG mode
+2019-03-02 14:13:33 pid:11322 Worker[11322] process terminated
+2019-03-02 14:13:34 pid:11321 Worker[11321] process terminated
+2019-03-02 14:13:34 pid:11324 Worker[11324] process terminated
+2019-03-02 14:13:34 pid:11325 Worker[11325] process terminated
+2019-03-02 14:13:34 pid:11326 Worker[11326] process terminated
+2019-03-02 14:13:39 pid:11323 Worker[11323] process terminated
+2019-03-02 14:13:39 pid:11327 Worker[11327] process terminated
+2019-03-02 14:13:39 pid:11328 Worker[11328] process terminated
+2019-03-02 14:14:28 pid:11309 Workerman[start.php] stopping ...
+2019-03-02 14:14:28 pid:11309 Workerman[start.php] has been stopped
+2019-03-02 14:14:29 pid:11377 Workerman[start.php] start in DEBUG mode
+2019-03-02 14:14:43 pid:11390 Worker[11390] process terminated
+2019-03-02 14:14:44 pid:11389 Worker[11389] process terminated
+2019-03-02 14:14:44 pid:11392 Worker[11392] process terminated
+2019-03-02 14:14:44 pid:11393 Worker[11393] process terminated
+2019-03-02 14:14:49 pid:11391 Worker[11391] process terminated
+2019-03-02 14:16:18 pid:11377 Workerman[start.php] stopping ...
+2019-03-02 14:16:18 pid:11377 Workerman[start.php] has been stopped
+2019-03-02 14:16:19 pid:11480 Workerman[start.php] start in DEBUG mode
+2019-03-02 14:16:22 pid:11493 Worker[11493] process terminated
+2019-03-02 14:16:29 pid:11492 Worker[11492] process terminated
+2019-03-02 14:16:29 pid:11494 Worker[11494] process terminated
+2019-03-02 14:16:29 pid:11496 Worker[11496] process terminated
+2019-03-02 14:16:29 pid:11497 Worker[11497] process terminated
+2019-03-02 14:16:34 pid:11495 Worker[11495] process terminated
+2019-03-02 14:16:34 pid:11498 Worker[11498] process terminated
+2019-03-02 14:16:34 pid:11499 Worker[11499] process terminated
+2019-03-02 14:16:34 pid:11501 Worker[11501] process terminated
+2019-03-02 14:16:39 pid:11500 Worker[11500] process terminated
+2019-03-02 14:16:39 pid:11502 Worker[11502] process terminated
+2019-03-02 14:16:39 pid:11504 Worker[11504] process terminated
+2019-03-02 14:16:42 pid:11503 Worker[11503] process terminated
+2019-03-02 14:16:42 pid:11505 Worker[11505] process terminated
+2019-03-02 14:16:42 pid:11506 Worker[11506] process terminated
+2019-03-02 14:16:42 pid:11508 Worker[11508] process terminated
+2019-03-02 14:16:45 pid:11507 Worker[11507] process terminated
+2019-03-02 14:16:45 pid:11509 Worker[11509] process terminated
+2019-03-02 14:16:45 pid:11510 Worker[11510] process terminated
+2019-03-02 14:16:45 pid:11512 Worker[11512] process terminated
+2019-03-02 14:17:01 pid:11480 Workerman[start.php] stopping ...
+2019-03-02 14:17:01 pid:11480 Workerman[start.php] has been stopped
+2019-03-02 14:17:03 pid:11526 Workerman[start.php] start in DEBUG mode
+2019-03-02 14:17:12 pid:11539 Worker[11539] process terminated
+2019-03-02 14:17:13 pid:11538 Worker[11538] process terminated
+2019-03-02 14:17:13 pid:11540 Worker[11540] process terminated
+2019-03-02 14:17:13 pid:11542 Worker[11542] process terminated
+2019-03-02 14:17:18 pid:11543 Worker[11543] process terminated
+2019-03-02 14:18:14 pid:11541 Worker[11541] process terminated
+2019-03-02 14:18:14 pid:11544 Worker[11544] process terminated
+2019-03-02 14:18:14 pid:11588 Worker[11588] process terminated
+2019-03-02 14:18:15 pid:11587 Worker[11587] process terminated
+2019-03-02 14:18:20 pid:11589 Worker[11589] process terminated
+2019-03-02 14:18:20 pid:11590 Worker[11590] process terminated
+2019-03-02 14:18:20 pid:11592 Worker[11592] process terminated
+2019-03-02 14:18:38 pid:11591 Worker[11591] process terminated
+2019-03-02 14:18:38 pid:11593 Worker[11593] process terminated
+2019-03-02 14:18:38 pid:11595 Worker[11595] process terminated
+2019-03-02 14:18:39 pid:11596 Worker[11596] process terminated
+2019-03-02 14:19:48 pid:11526 Workerman[start.php] stopping ...
+2019-03-02 14:19:48 pid:11526 Workerman[start.php] has been stopped
+2019-03-02 14:19:49 pid:11640 Workerman[start.php] start in DEBUG mode
+2019-03-02 14:20:02 pid:11653 Worker[11653] process terminated
+2019-03-02 14:20:02 pid:11652 Worker[11652] process terminated
+2019-03-02 14:20:02 pid:11667 Worker[11667] process terminated
+2019-03-02 14:20:03 pid:11668 Worker[11668] process terminated
+2019-03-02 14:27:36 pid:11666 Worker[11666] process terminated
+2019-03-02 14:27:36 pid:11669 Worker[11669] process terminated
+2019-03-02 14:27:36 pid:11956 Worker[11956] process terminated
+2019-03-02 14:27:37 pid:11957 Worker[11957] process terminated
+2019-03-02 14:27:42 pid:11958 Worker[11958] process terminated
+2019-03-02 14:27:42 pid:11959 Worker[11959] process terminated
+2019-03-02 14:27:42 pid:11991 Worker[11991] process terminated
+2019-03-02 14:28:12 pid:11992 Worker[11992] process terminated
+2019-03-02 14:29:54 pid:12067 Workerman[start.php] start in DEBUG mode
+2019-03-02 14:29:54 pid:12067 Workerman[start.php] already running
+2019-03-02 14:29:59 pid:12068 Workerman[start.php] stop 
+2019-03-02 14:29:59 pid:12068 Workerman[start.php] is stopping ...
+2019-03-02 14:29:59 pid:11640 Workerman[start.php] stopping ...
+2019-03-02 14:29:59 pid:11640 Workerman[start.php] has been stopped
+2019-03-02 14:29:59 pid:12068 Workerman[start.php] stop success
+2019-03-02 14:30:02 pid:12111 Workerman[start.php] start in DEBUG mode
+2019-03-02 14:30:11 pid:12124 Worker[12124] process terminated
+2019-03-02 14:30:11 pid:12123 Worker[12123] process terminated
+2019-03-02 14:30:11 pid:12125 Worker[12125] process terminated
+2019-03-02 14:30:11 pid:12127 Worker[12127] process terminated
+2019-03-02 14:30:15 pid:12111 Workerman[start.php] stopping ...
+2019-03-02 14:30:15 pid:12111 Workerman[start.php] has been stopped
+2019-03-02 14:30:17 pid:12129 Workerman[start.php] start in DEBUG mode
+2019-03-03 08:48:01 pid:27250 Workerman[start.php] start in DEBUG mode
+2019-03-03 08:48:05 pid:27250 Workerman[start.php] stopping ...
+2019-03-03 08:48:05 pid:27250 Workerman[start.php] has been stopped
+2019-03-03 08:48:07 pid:27264 Workerman[start.php] start in DEBUG mode
+2019-03-03 08:48:09 pid:27264 Workerman[start.php] stopping ...
+2019-03-03 08:48:09 pid:27264 Workerman[start.php] has been stopped
+2019-03-03 08:48:12 pid:27278 Workerman[start.php] start in DAEMON mode
+2019-03-03 18:23:40 pid:27292 Worker[27292] process terminated
+2019-03-03 18:23:40 pid:27293 Worker[27293] process terminated
+2019-03-03 20:55:37 pid:2099 Worker[2099] process terminated
+2019-03-03 20:55:40 pid:2100 Worker[2100] process terminated
+2019-03-03 20:55:40 pid:3983 Worker[3983] process terminated
+2019-03-03 20:55:40 pid:3985 Worker[3985] process terminated
+2019-03-03 20:55:45 pid:3984 Worker[3984] process terminated
+2019-03-03 20:55:45 pid:3986 Worker[3986] process terminated
+2019-03-03 20:55:45 pid:3988 Worker[3988] process terminated
+2019-03-03 20:56:24 pid:27285 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551617784 where config_room_id=1 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551617784 where config_room_id=1 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(263): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(166): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108fe000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fe000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #54)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#16 {main}
+2019-03-03 20:56:24 pid:27285 Worker[27285] process terminated
+2019-03-03 20:56:24 pid:27280 worker[ChatBusinessWorker:27285] exit with status 64000
+2019-03-04 01:50:51 pid:3989 Worker[3989] process terminated
+2019-03-04 01:50:51 pid:3987 Worker[3987] process terminated
+2019-03-04 02:24:37 pid:8079 Worker[8079] process terminated
+2019-03-04 02:24:38 pid:8078 Worker[8078] process terminated
+2019-03-04 15:05:27 pid:8501 Worker[8501] process terminated
+2019-03-04 15:05:29 pid:8502 Worker[8502] process terminated
+2019-03-04 15:05:29 pid:20169 Worker[20169] process terminated
+2019-03-04 15:05:29 pid:20171 Worker[20171] process terminated
+2019-03-04 15:05:29 pid:20172 Worker[20172] process terminated
+2019-03-04 15:05:34 pid:20170 Worker[20170] process terminated
+2019-03-04 15:05:34 pid:20173 Worker[20173] process terminated
+2019-03-04 15:05:34 pid:20175 Worker[20175] process terminated
+2019-03-04 15:05:49 pid:20176 Worker[20176] process terminated
+2019-03-04 15:06:19 pid:20174 Worker[20174] process terminated
+2019-03-04 21:02:44 pid:20207 Worker[20207] process terminated
+2019-03-05 06:29:36 pid:27291 Bad request for Register service. Request info(IP:106.114.62.154, Request Buffer:GET / HTTP/1.1). See http://wiki.workerman.net/Error4 for detail
+2019-03-05 06:29:36 pid:27291 Bad request for Register service. Request info(IP:123.191.138.206, Request Buffer:GET / HTTP/1.1). See http://wiki.workerman.net/Error4 for detail
+2019-03-05 11:07:52 pid:6049 Workerman[start.php] reload 
+2019-03-05 11:07:52 pid:27280 Workerman[start.php] reloading
+2019-03-05 13:57:47 pid:6052 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551765467 where config_room_id=1 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551765467 where config_room_id=1 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(267): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(170): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108fc000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fc000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #58)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-05 13:57:47 pid:6052 Worker[6052] process terminated
+2019-03-05 13:57:47 pid:27280 worker[ChatBusinessWorker:6052] exit with status 64000
+2019-03-05 15:05:55 pid:6054 Worker[6054] process terminated
+2019-03-05 15:05:57 pid:6055 Worker[6055] process terminated
+2019-03-05 15:05:57 pid:10969 Worker[10969] process terminated
+2019-03-05 15:05:57 pid:10971 Worker[10971] process terminated
+2019-03-05 15:06:02 pid:10972 Worker[10972] process terminated
+2019-03-05 15:18:30 pid:9424 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551770310 where config_room_id=1 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551770310 where config_room_id=1 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(267): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(170): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #56)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-05 15:18:30 pid:9424 Worker[9424] process terminated
+2019-03-05 15:18:30 pid:27280 worker[ChatBusinessWorker:9424] exit with status 64000
+2019-03-05 15:18:33 pid:11258 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551770313 where config_room_id=1 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551770313 where config_room_id=1 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(267): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(170): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #57)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-05 15:18:33 pid:11258 Worker[11258] process terminated
+2019-03-05 15:18:33 pid:27280 worker[ChatBusinessWorker:11258] exit with status 64000
+2019-03-05 15:18:54 pid:11259 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551770334 where config_room_id=1 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551770334 where config_room_id=1 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(267): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(170): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #58)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-05 15:18:54 pid:11259 Worker[11259] process terminated
+2019-03-05 15:18:54 pid:27280 worker[ChatBusinessWorker:11259] exit with status 64000
+2019-03-05 15:18:58 pid:11260 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551770338 where config_room_id=1 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551770338 where config_room_id=1 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(267): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(170): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #59)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-05 15:18:58 pid:11260 Worker[11260] process terminated
+2019-03-05 15:18:58 pid:27280 worker[ChatBusinessWorker:11260] exit with status 64000
+2019-03-05 15:19:00 pid:11261 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551770340 where config_room_id=1 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551770340 where config_room_id=1 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(267): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(170): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #60)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-05 15:19:00 pid:11261 Worker[11261] process terminated
+2019-03-05 15:19:00 pid:27280 worker[ChatBusinessWorker:11261] exit with status 64000
+2019-03-05 15:19:03 pid:11262 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551770343 where config_room_id=1 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551770343 where config_room_id=1 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(267): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(170): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #61)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-05 15:19:03 pid:11262 Worker[11262] process terminated
+2019-03-05 15:19:03 pid:27280 worker[ChatBusinessWorker:11262] exit with status 64000
+2019-03-05 15:19:05 pid:11275 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551770345 where config_room_id=1 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551770345 where config_room_id=1 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(267): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(170): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #62)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-05 15:19:05 pid:11275 Worker[11275] process terminated
+2019-03-05 15:19:05 pid:27280 worker[ChatBusinessWorker:11275] exit with status 64000
+2019-03-05 15:19:07 pid:11276 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551770347 where config_room_id=1 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551770347 where config_room_id=1 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(267): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(170): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108ff000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108ff000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-05 15:19:07 pid:11276 Worker[11276] process terminated
+2019-03-05 15:19:07 pid:27280 worker[ChatBusinessWorker:11276] exit with status 64000
+2019-03-05 16:06:24 pid:10970 Worker[10970] process terminated
+2019-03-05 16:06:24 pid:10985 Worker[10985] process terminated
+2019-03-05 16:06:24 pid:12519 Worker[12519] process terminated
+2019-03-05 16:06:24 pid:12521 Worker[12521] process terminated
+2019-03-05 16:06:29 pid:12522 Worker[12522] process terminated
+2019-03-05 16:09:26 pid:12607 Workerman[start.php] stop 
+2019-03-05 16:09:26 pid:12607 Workerman[start.php] is stopping ...
+2019-03-05 16:09:26 pid:27280 Workerman[start.php] stopping ...
+2019-03-05 16:09:26 pid:27280 Workerman[start.php] has been stopped
+2019-03-05 16:09:26 pid:12607 Workerman[start.php] stop success
+2019-03-05 16:09:30 pid:12608 Workerman[start.php] start in DEBUG mode
+2019-03-05 16:22:59 pid:12608 Workerman[start.php] stopping ...
+2019-03-05 16:22:59 pid:12608 Workerman[start.php] has been stopped
+2019-03-05 16:23:01 pid:13080 Workerman[start.php] start in DEBUG mode
+2019-03-05 16:25:37 pid:13080 Workerman[start.php] stopping ...
+2019-03-05 16:25:37 pid:13080 Workerman[start.php] has been stopped
+2019-03-05 16:25:38 pid:13160 Workerman[start.php] start in DEBUG mode
+2019-03-05 16:48:10 pid:13160 Workerman[start.php] stopping ...
+2019-03-05 16:48:10 pid:13160 Workerman[start.php] has been stopped
+2019-03-05 16:48:12 pid:13575 Workerman[start.php] start in DEBUG mode
+2019-03-05 16:57:14 pid:13575 Workerman[start.php] stopping ...
+2019-03-05 16:57:14 pid:13575 Workerman[start.php] has been stopped
+2019-03-05 16:57:15 pid:13820 Workerman[start.php] start in DEBUG mode
+2019-03-05 16:58:27 pid:13820 Workerman[start.php] stopping ...
+2019-03-05 16:58:27 pid:13820 Workerman[start.php] has been stopped
+2019-03-05 16:58:28 pid:13876 Workerman[start.php] start in DEBUG mode
+2019-03-05 17:00:44 pid:13876 Workerman[start.php] stopping ...
+2019-03-05 17:00:44 pid:13876 Workerman[start.php] has been stopped
+2019-03-05 17:00:45 pid:13974 Workerman[start.php] start in DEBUG mode
+2019-03-05 17:03:56 pid:13974 Workerman[start.php] stopping ...
+2019-03-05 17:03:56 pid:13974 Workerman[start.php] has been stopped
+2019-03-05 17:03:57 pid:14125 Workerman[start.php] start in DEBUG mode
+2019-03-05 17:07:14 pid:14125 Workerman[start.php] stopping ...
+2019-03-05 17:07:14 pid:14125 Workerman[start.php] has been stopped
+2019-03-05 17:07:15 pid:14247 Workerman[start.php] start in DEBUG mode
+2019-03-05 17:07:48 pid:14247 Workerman[start.php] stopping ...
+2019-03-05 17:07:48 pid:14247 Workerman[start.php] has been stopped
+2019-03-05 17:07:49 pid:14321 Workerman[start.php] start in DEBUG mode
+2019-03-05 17:08:36 pid:14321 Workerman[start.php] stopping ...
+2019-03-05 17:08:36 pid:14321 Workerman[start.php] has been stopped
+2019-03-05 17:08:37 pid:14377 Workerman[start.php] start in DEBUG mode
+2019-03-05 17:09:28 pid:14377 Workerman[start.php] stopping ...
+2019-03-05 17:09:28 pid:14377 Workerman[start.php] has been stopped
+2019-03-05 17:09:29 pid:14463 Workerman[start.php] start in DEBUG mode
+2019-03-05 17:10:19 pid:14463 Workerman[start.php] stopping ...
+2019-03-05 17:10:19 pid:14463 Workerman[start.php] has been stopped
+2019-03-05 17:10:20 pid:14549 Workerman[start.php] start in DEBUG mode
+2019-03-05 17:12:11 pid:14553 exception 'Exception' with message '$_SESSION['room_id'] not set. client_ip:1.86.240.104' in /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php:123
+Stack trace:
+#0 [internal function]: Events::onMessage('7f00000108fc000...', '{"type":"say","...')
+#1 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fc000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #51)
+#5 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#12 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#13 {main}
+2019-03-05 17:12:11 pid:14553 Worker[14553] process terminated
+2019-03-05 17:12:11 pid:14549 worker[ChatBusinessWorker:14553] exit with status 64000
+2019-03-05 17:19:46 pid:14549 Workerman[start.php] stopping ...
+2019-03-05 17:19:46 pid:14549 Workerman[start.php] has been stopped
+2019-03-05 17:19:46 pid:14886 Workerman[start.php] start in DEBUG mode
+2019-03-05 17:31:39 pid:14886 Workerman[start.php] stopping ...
+2019-03-05 17:31:39 pid:14886 Workerman[start.php] has been stopped
+2019-03-05 17:31:40 pid:15243 Workerman[start.php] start in DEBUG mode
+2019-03-05 18:10:57 pid:15243 Workerman[start.php] stopping ...
+2019-03-05 18:10:57 pid:15243 Workerman[start.php] has been stopped
+2019-03-05 18:10:58 pid:16305 Workerman[start.php] start in DEBUG mode
+2019-03-05 18:20:32 pid:16305 Workerman[start.php] stopping ...
+2019-03-05 18:20:32 pid:16305 Workerman[start.php] has been stopped
+2019-03-05 18:20:33 pid:16501 Workerman[start.php] start in DEBUG mode
+2019-03-05 18:47:09 pid:16501 Workerman[start.php] stopping ...
+2019-03-05 18:47:09 pid:16501 Workerman[start.php] has been stopped
+2019-03-05 18:47:12 pid:16996 Workerman[start.php] start in DAEMON mode
+2019-03-05 20:25:11 pid:17011 Worker[17011] process terminated
+2019-03-06 01:12:41 pid:18311 Worker[18311] process terminated
+2019-03-06 01:12:41 pid:17010 Worker[17010] process terminated
+2019-03-06 02:19:38 pid:21965 Worker[21965] process terminated
+2019-03-06 02:19:38 pid:21966 Worker[21966] process terminated
+2019-03-06 03:12:09 pid:22794 Worker[22794] process terminated
+2019-03-06 03:12:09 pid:22793 Worker[22793] process terminated
+2019-03-06 03:33:03 pid:23596 Worker[23596] process terminated
+2019-03-06 03:33:03 pid:23595 Worker[23595] process terminated
+2019-03-06 18:10:53 pid:7154 Workerman[start.php] stop 
+2019-03-06 18:10:53 pid:7154 Workerman[start.php] is stopping ...
+2019-03-06 18:10:53 pid:16998 Workerman[start.php] stopping ...
+2019-03-06 18:10:53 pid:16998 Workerman[start.php] has been stopped
+2019-03-06 18:10:53 pid:7154 Workerman[start.php] stop success
+2019-03-06 18:10:56 pid:7155 Workerman[start.php] start in DEBUG mode
+2019-03-06 18:22:09 pid:7449 Workerman[start.php] start in DAEMON mode
+2019-03-06 18:22:09 pid:7449 Workerman[start.php] already running
+2019-03-06 18:22:14 pid:7450 Workerman[start.php] stop 
+2019-03-06 18:22:14 pid:7450 Workerman[start.php] is stopping ...
+2019-03-06 18:22:14 pid:7155 Workerman[start.php] stopping ...
+2019-03-06 18:22:14 pid:7155 Workerman[start.php] has been stopped
+2019-03-06 18:22:14 pid:7450 Workerman[start.php] stop success
+2019-03-06 18:22:21 pid:7451 Workerman[start.php] start in DAEMON mode
+2019-03-06 19:53:02 pid:7465 Worker[7465] process terminated
+2019-03-06 19:53:02 pid:7466 Worker[7466] process terminated
+2019-03-07 04:16:22 pid:8581 Worker[8581] process terminated
+2019-03-07 04:16:22 pid:8580 Worker[8580] process terminated
+2019-03-07 05:39:38 pid:15442 Worker[15442] process terminated
+2019-03-07 05:39:38 pid:15441 Worker[15441] process terminated
+2019-03-07 10:38:19 pid:20254 Workerman[start.php] stop 
+2019-03-07 10:38:19 pid:20254 Workerman[start.php] is stopping ...
+2019-03-07 10:38:19 pid:7453 Workerman[start.php] stopping ...
+2019-03-07 10:38:19 pid:7453 Workerman[start.php] has been stopped
+2019-03-07 10:38:19 pid:20254 Workerman[start.php] stop success
+2019-03-07 10:38:21 pid:20255 Workerman[start.php] start in DEBUG mode
+2019-03-07 10:38:54 pid:20258 exception 'PDOException' with message 'SQL:update boiler_chat_room(room_last_msg_id,room_last_msg_uid,room_last_msg_uname,room_last_msg_content,room_last_msg_addtime) values(1,1,'æµ‹è¯•1',ä½ å¥½,1551926334) 
+                         where room_id=1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(room_last_msg_id,room_last_msg_uid,room_last_msg_uname,room_last_msg_content,ro' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(292): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(175): Events::updateLastForRoom('1', 1, 1, '\xE6\xB5\x8B\xE8\xAF\x951', '\xE4\xBD\xA0\xE5\xA5\xBD')
+#3 [internal function]: Events::onMessage('7f00000108fe000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fe000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #53)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#16 {main}
+2019-03-07 10:38:54 pid:20258 Worker[20258] process terminated
+2019-03-07 10:38:54 pid:20255 worker[ChatBusinessWorker:20258] exit with status 64000
+2019-03-07 10:39:56 pid:20255 Workerman[start.php] stopping ...
+2019-03-07 10:39:56 pid:20255 Workerman[start.php] has been stopped
+2019-03-07 10:39:59 pid:20312 Workerman[start.php] start in DEBUG mode
+2019-03-07 10:40:06 pid:20317 exception 'PDOException' with message 'SQL:update boiler_chat_room(room_last_msg_id,room_last_msg_uid,room_last_msg_uname,room_last_msg_content,room_last_msg_addtime) values(1,1,'æµ‹è¯•1','ä½ å¥½',1551926406) 
+                         where room_id=1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(room_last_msg_id,room_last_msg_uid,room_last_msg_uname,room_last_msg_content,ro' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(292): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(175): Events::updateLastForRoom('1', 1, 1, '\xE6\xB5\x8B\xE8\xAF\x951', '\xE4\xBD\xA0\xE5\xA5\xBD')
+#3 [internal function]: Events::onMessage('7f00000108fd000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fd000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #51)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#16 {main}
+2019-03-07 10:40:06 pid:20317 Worker[20317] process terminated
+2019-03-07 10:40:06 pid:20312 worker[ChatBusinessWorker:20317] exit with status 64000
+2019-03-07 10:42:07 pid:20312 Workerman[start.php] stopping ...
+2019-03-07 10:42:07 pid:20312 Workerman[start.php] has been stopped
+2019-03-07 10:42:08 pid:20398 Workerman[start.php] start in DEBUG mode
+2019-03-07 11:04:47 pid:20398 Workerman[start.php] stopping ...
+2019-03-07 11:04:47 pid:20398 Workerman[start.php] has been stopped
+2019-03-07 11:04:50 pid:20748 Workerman[start.php] start in DAEMON mode
+2019-03-07 14:44:44 pid:24022 Workerman[start.php] reload 
+2019-03-07 14:44:44 pid:20750 Workerman[start.php] reloading
+2019-03-07 21:33:37 pid:24028 Worker[24028] process terminated
+2019-03-07 21:33:37 pid:24027 Worker[24027] process terminated
+2019-03-07 22:32:31 pid:29590 Worker[29590] process terminated
+2019-03-07 22:32:32 pid:29589 Worker[29589] process terminated
+2019-03-07 22:49:16 pid:24025 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551970156 where config_room_id=1 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551970156 where config_room_id=1 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(272): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(173): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108fe000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fe000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #57)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-07 22:49:16 pid:24025 Worker[24025] process terminated
+2019-03-07 22:49:16 pid:20750 worker[ChatBusinessWorker:24025] exit with status 64000
+2019-03-07 22:49:31 pid:30340 Worker[30340] process terminated
+2019-03-07 22:49:31 pid:30341 Worker[30341] process terminated
+2019-03-07 22:49:32 pid:24026 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1551970172 where config_room_id=2 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1551970172 where config_room_id=2 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(272): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(173): Events::updateLastForUser('2', NULL)
+#3 [internal function]: Events::onMessage('7f00000108fc000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fc000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #55)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-07 22:49:32 pid:24026 Worker[24026] process terminated
+2019-03-07 22:49:32 pid:20750 worker[ChatBusinessWorker:24026] exit with status 64000
+2019-03-08 07:50:45 pid:20761 Bad request for Register service. Request info(IP:58.248.202.62, Request Buffer:GET / HTTP/1.1). See http://wiki.workerman.net/Error4 for detail
+2019-03-08 07:50:45 pid:20761 Bad request for Register service. Request info(IP:116.113.37.123, Request Buffer:GET / HTTP/1.1). See http://wiki.workerman.net/Error4 for detail
+2019-03-08 10:41:54 pid:24023 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1552012914 where config_room_id=2 and config_uid =1 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1552012914 where config_room_id=2 and config_uid =1' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(272): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(173): Events::updateLastForUser('2', NULL)
+#3 [internal function]: Events::onMessage('7f00000108fc000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fc000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #55)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-08 10:41:54 pid:24023 Worker[24023] process terminated
+2019-03-08 10:41:54 pid:20750 worker[ChatBusinessWorker:24023] exit with status 64000
+2019-03-08 16:55:07 pid:30553 Worker[30553] process terminated
+2019-03-08 16:55:07 pid:30552 Worker[30552] process terminated
+2019-03-11 10:05:00 pid:30551 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1552269900 where config_room_id=1 and config_uid =19 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1552269900 where config_room_id=1 and config_uid =19' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(272): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(173): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108fc000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fc000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #56)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-11 10:05:00 pid:30551 Worker[30551] process terminated
+2019-03-11 10:05:00 pid:20750 worker[ChatBusinessWorker:30551] exit with status 64000
+2019-03-11 10:05:04 pid:29878 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1552269904 where config_room_id=1 and config_uid =19 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1552269904 where config_room_id=1 and config_uid =19' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(272): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(173): Events::updateLastForUser('1', NULL)
+#3 [internal function]: Events::onMessage('7f00000108fc000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fc000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #59)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-11 10:05:04 pid:29878 Worker[29878] process terminated
+2019-03-11 10:05:04 pid:20750 worker[ChatBusinessWorker:29878] exit with status 64000
+2019-03-11 10:05:35 pid:12337 Worker[12337] process terminated
+2019-03-11 11:52:46 pid:30554 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1552276366 where config_room_id=2 and config_uid =19 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1552276366 where config_room_id=2 and config_uid =19' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(272): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(173): Events::updateLastForUser('2', NULL)
+#3 [internal function]: Events::onMessage('7f00000108fd000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fd000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #56)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-11 11:52:46 pid:30554 Worker[30554] process terminated
+2019-03-11 11:52:46 pid:20750 worker[ChatBusinessWorker:30554] exit with status 64000
+2019-03-11 11:52:59 pid:31292 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1552276379 where config_room_id=2 and config_uid =19 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1552276379 where config_room_id=2 and config_uid =19' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(272): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(173): Events::updateLastForUser('2', NULL)
+#3 [internal function]: Events::onMessage('7f00000108fd000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fd000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #60)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-11 11:52:59 pid:31292 Worker[31292] process terminated
+2019-03-11 11:52:59 pid:20750 worker[ChatBusinessWorker:31292] exit with status 64000
+2019-03-11 11:53:03 pid:31293 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1552276383 where config_room_id=2 and config_uid =19 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1552276383 where config_room_id=2 and config_uid =19' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(272): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(173): Events::updateLastForUser('2', NULL)
+#3 [internal function]: Events::onMessage('7f00000108fd000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fd000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #61)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-11 11:53:03 pid:31293 Worker[31293] process terminated
+2019-03-11 11:53:03 pid:20750 worker[ChatBusinessWorker:31293] exit with status 64000
+2019-03-11 11:53:08 pid:31306 exception 'PDOException' with message 'SQL:update boiler_chat_room_msg_config set config_last_msg_id=, config_lastupdate=1552276388 where config_room_id=2 and config_uid =19 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' config_lastupdate=1552276388 where config_room_id=2 and config_uid =19' at line 1' in /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php:1766
+Stack trace:
+#0 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/Lib/DbConnection.php(1824): GatewayWorker\Lib\DbConnection->execute('update boiler_c...', NULL)
+#1 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(272): GatewayWorker\Lib\DbConnection->query('update boiler_c...')
+#2 /home/wwwroot/default/boiler/workerman/Applications/Chat/Events.php(173): Events::updateLastForUser('2', NULL)
+#3 [internal function]: Events::onMessage('7f00000108fd000...', '{"type":"say","...')
+#4 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f00000108fd000...', '{"type":"say","...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #62)
+#8 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#9 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#10 /home/wwwroot/default/boiler/workerman/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#11 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#12 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#13 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#14 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#15 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#16 /home/wwwroot/default/boiler/workerman/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#17 /home/wwwroot/default/boiler/workerman/start.php(37): Workerman\Worker::runAll()
+#18 {main}
+2019-03-11 11:53:08 pid:31306 Worker[31306] process terminated
+2019-03-11 11:53:08 pid:20750 worker[ChatBusinessWorker:31306] exit with status 64000
+2019-03-11 12:54:25 pid:20761 Bad request for Register service. Request info(IP:182.138.158.49, Request Buffer:GET / HTTP/1.1). See http://wiki.workerman.net/Error4 for detail
+2019-03-11 14:03:08 pid:12338 Worker[12338] process terminated
+2019-03-11 14:03:08 pid:29892 Worker[29892] process terminated
+2019-03-11 15:01:32 pid:462 Worker[462] process terminated
+2019-03-11 15:01:32 pid:461 Worker[461] process terminated
+2019-03-11 16:40:40 pid:1234 Worker[1234] process terminated
+2019-03-11 16:40:40 pid:1233 Worker[1233] process terminated
+2019-03-11 18:12:49 pid:2520 Worker[2520] process terminated
+2019-03-11 18:12:49 pid:2521 Worker[2521] process terminated
+2019-03-11 18:40:08 pid:3900 Worker[3900] process terminated
+2019-03-11 18:40:08 pid:3899 Worker[3899] process terminated
+2019-03-12 10:39:37 pid:4237 Worker[4237] process terminated
+2019-03-12 10:39:37 pid:4238 Worker[4238] process terminated
+2019-03-12 11:40:31 pid:16591 Worker[16591] process terminated
+2019-03-12 11:40:31 pid:16590 Worker[16590] process terminated
+2019-03-13 00:21:55 pid:20761 Bad request for Register service. Request info(IP:182.242.131.129, Request Buffer:GET / HTTP/1.1). See http://wiki.workerman.net/Error4 for detail
+2019-03-14 17:36:17 pid:20761 Bad request for Register service. Request info(IP:185.222.211.22, Request Buffer:  /*à     Cookie: mstshash=Administr). See http://wiki.workerman.net/Error4 for detail
+2019-03-16 23:46:28 pid:17363 Worker[17363] process terminated
+2019-03-16 23:46:29 pid:17362 Worker[17362] process terminated
+2019-03-16 23:46:29 pid:7864 Worker[7864] process terminated
+2019-03-16 23:46:29 pid:7866 Worker[7866] process terminated
+2019-03-16 23:46:34 pid:7867 Worker[7867] process terminated
+2019-03-17 02:38:46 pid:7868 Worker[7868] process terminated
+2019-03-17 02:38:46 pid:7865 Worker[7865] process terminated
+2019-03-17 07:09:53 pid:9993 Worker[9993] process terminated
+2019-03-17 07:09:53 pid:9994 Worker[9994] process terminated
+2019-03-17 19:14:04 pid:13492 Worker[13492] process terminated
+2019-03-17 19:15:03 pid:26377 Worker[26377] process terminated
+2019-03-18 22:47:38 pid:13491 Worker[13491] process terminated
+2019-03-18 22:47:38 pid:26390 Worker[26390] process terminated
+2019-03-18 22:47:38 pid:18842 Worker[18842] process terminated
+2019-03-18 22:47:38 pid:18843 Worker[18843] process terminated
+2019-03-18 22:47:44 pid:18844 Worker[18844] process terminated
+2019-03-18 23:15:08 pid:18841 Worker[18841] process terminated
+2019-03-18 23:16:08 pid:19243 Worker[19243] process terminated
+2019-03-19 01:02:36 pid:18845 Worker[18845] process terminated
+2019-03-19 01:02:36 pid:19256 Worker[19256] process terminated
+2019-03-19 07:55:53 pid:20732 Worker[20732] process terminated
+2019-03-19 07:55:53 pid:20733 Worker[20733] process terminated
+2019-03-19 08:18:42 pid:25974 Worker[25974] process terminated
+2019-03-19 08:18:42 pid:25975 Worker[25975] process terminated
+2019-03-20 00:10:52 pid:20761 Bad request for Register service. Request info(IP:85.93.20.134, Request Buffer:  /*à     Cookie: mstshash=Administr). See http://wiki.workerman.net/Error4 for detail
+2019-03-23 19:29:50 pid:20761 Register auth timeout (203.156.254.41). See http://wiki.workerman.net/Error4 for detail
+2019-03-25 08:58:37 pid:29654 Workerman[start.php] reload 
+2019-03-25 08:58:37 pid:20750 Workerman[start.php] reloading
+2019-03-29 14:22:05 pid:20761 Bad request for Register service. Request info(IP:185.222.211.22, Request Buffer:  /*à     Cookie: mstshash=Administr). See http://wiki.workerman.net/Error4 for detail
+2019-04-03 11:14:45 pid:20761 Register auth timeout (218.158.37.77). See http://wiki.workerman.net/Error4 for detail
+2019-04-06 16:14:04 pid:20761 Register auth timeout (47.97.23.199). See http://wiki.workerman.net/Error4 for detail
+2019-04-10 06:38:52 pid:20761 Bad request for Register service. Request info(IP:85.93.20.10, Request Buffer:  /*à     Cookie: mstshash=Administr). See http://wiki.workerman.net/Error4 for detail
+2019-04-10 06:48:55 pid:20761 Register auth timeout (47.52.210.38). See http://wiki.workerman.net/Error4 for detail
+2019-04-11 11:55:42 pid:20761 Register auth timeout (47.52.221.59). See http://wiki.workerman.net/Error4 for detail
+2019-04-11 15:00:06 pid:20761 Bad request for Register service. Request info(IP:193.106.29.74, Request Buffer:  /*à     Cookie: mstshash=Administr). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:41:49 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:41:49 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:GET / HTTP/1.0). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:41:49 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:OPTIONS / HTTP/1.0). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:41:49 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:OPTIONS / RTSP/1.0). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:41:59 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:04 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:04 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:HELP). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:04 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:  S  O ?G×÷º,îê²`~ó ý‚{¹Õ–Èw›æÄÛ<=Ûoïn  (   ). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:04 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:  i  eU§ärandom1random2random3random4   / ). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:04 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:   qjn0k¡¢). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:09 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:14 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:14 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:14 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:default). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:14 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:0„   -c„   $ ). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:19 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:19 pid:20761 Bad request for Register service. Request info(IP:58.213.153.14, Request Buffer:OPTIONS sip:nm SIP/2.0). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:24 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:29 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:34 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:39 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:44 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:49 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:54 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:42:59 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:43:04 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:43:09 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:43:14 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:43:24 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail
+2019-04-13 00:43:34 pid:20761 Register auth timeout (58.213.153.14). See http://wiki.workerman.net/Error4 for detail

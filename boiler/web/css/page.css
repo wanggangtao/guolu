@@ -1,0 +1,65 @@
+
+/*
+ * pagination 翻页
+ */
+.pagination{padding:60px 0px;text-align:center;}
+
+.pagination a{
+    margin:0px 4px;
+    line-height:32px;
+    padding:0px 13px;
+    display:inline-block;
+    background: #EEEEEE;
+    border-radius: 2px;
+    text-decoration:none;
+    font-size:14px;
+    color: #686868;
+    cursor:pointer;}
+.pagination span{
+    margin:0px 5px;
+    line-height:30px;
+    padding:0px 15px;
+    display:inline-block;
+    text-decoration:none;
+    font-size:14px;
+    color: #686868;
+    font-weight:900;}
+.pagination a.hover{
+    margin:0px 4px;
+    line-height:32px;
+    padding:0px 13px;
+    display:inline-block;
+    background: #5F85B6;
+    border-radius: 6px;
+    text-decoration:none;
+    font-size:14px;
+    color: #ffffff;
+    cursor:pointer;}
+.pagination span.total{
+    margin:0px 5px;
+    line-height:30px;
+    padding:0px 15px;
+    display:inline-block;
+    text-decoration:none;
+    font-size:14px;
+    color: #686868;
+    font-weight:400;}
+.pagination span.total b{font-weight:400;color:#EE6723;}
+.pagination span.more{
+    width:20px;height:12px;
+    margin:0px 5px;
+    padding:0px 5px;
+    display:inline-block;
+    text-decoration:none;
+    font-size:14px;
+    color: #686868;
+    font-weight:400;
+    background:url(../img/mores.png) center no-repeat;}
+
+.pagination select{
+    line-height:30px;
+    padding:0px 0px;
+    display:inline-block;
+    height:30px;}
+
+

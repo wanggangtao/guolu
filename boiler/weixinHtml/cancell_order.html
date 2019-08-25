@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>取消订单</title>
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="weui/css/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <script src="js/query.js"></script>
+    <script src="js/rem.js" async="async"></script>
+</head>
+
+<style>
+    html,
+    body {
+        background: rgba(243, 243, 243, 1);
+    }
+
+    .top-tab {
+        display: flex;
+        position: sticky;
+        top: 0px;
+        height: .8rem;
+        background: rgba(255, 255, 255, 1);
+        font-size: .32rem;
+        font-weight: 600;
+        color: rgba(60, 60, 60, 1);
+        line-height: .8rem;
+    }
+
+    .top-tab p {
+        flex: 1;
+        align-self: center;
+    }
+
+    .top-tab p img {
+
+        height: .3rem;
+        margin: 0 0 0 6%;
+    }
+
+    .cancell {
+        background-color: white;
+        border-radius: 0.12rem;
+        padding: 3% 0 6% 3%;
+        margin: 2% 2% 2% 2%;
+        font-size: 0.28rem;
+    }
+
+    .cancell .title {
+        font-size: .32rem;
+        font-weight: 500;
+        color: rgba(60, 60, 60, 1);
+        line-height: .45rem;
+    }
+
+    .cancell .sel {
+        height: .4rem;
+        width: 100%;
+        margin: 0 0 7% 0;
+
+    }
+
+    .cancell .sel label {
+        display: flex;
+        align-items: center;
+    }
+
+    .c-check {
+        opacity: 0;
+    }
+
+    .check-img {
+        display: inline-block;
+        height: .4rem;
+        width: .4rem;
+        background: url("images/c-unchecked.png");
+        background-size: 0.4rem;
+        background-repeat: no-repeat;
+    }
+
+    .c-check:checked+label .check-img {
+        background: url("images/c-checked.png");
+        background-size: 0.4rem;
+        background-repeat: no-repeat;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 0.4rem .6rem 0 .5rem;
+    }
+
+    .btn-group button {
+        width: 2.6rem;
+        margin-left: 0.2rem;
+        padding: 0 0.2rem 0 0.2rem;
+        height: 0.72rem;
+        border-radius: 0.32rem;
+        border: 1px solid rgba(153, 153, 153, 1);
+        color: rgba(153, 153, 153, 1);
+        background-color: rgba(243, 243, 243, 1);
+        line-height: 0.6rem;
+        font-size: .3rem;
+    }
+
+    .blue-btn {
+
+        color: white !important;
+        background: linear-gradient(136deg, rgba(2, 175, 243, 1) 0%, rgba(3, 166, 254, 1) 100%);
+        box-shadow: 0px 2px 16px 0px rgba(4, 166, 254, 0.2);
+        border: none !important;
+    }
+</style>
+
+<body>
+    <div class="top-tab">
+        <p><a href="#" onClick="javascript :history.back(-1);"><img src="images/icon-bark.png"></a></p>
+        <p style="text-align: center">取消订单</p>
+        <p></p>
+    </div>
+    <div class="cancell">
+        <form methond  ="get" action="">
+            <p class="title">告诉我们取消原因吧</p>
+            <p class="sel"><input type="radio" name="reason" value=" 重复下单" id="radio1" class="c-check" checked="true"><label
+                    for="radio1"><i class="check-img"></i>&nbsp; 重复下单</label></p>
+            <p class="sel"><input type="radio" name="reason" value="信息填写错误" id="radio2" class="c-check"><label
+                    for="radio2"><i class="check-img"> </i> &nbsp; 信息填写错误</label></p>
+            <p class="sel"><input type="radio" name="reason" value="我不想修了" id="radio3" class="c-check"><label
+                    for="radio3"><i class="check-img"> </i> &nbsp; 我不想修了</label></p>
+            <p class="sel"><input type="radio" name="reason" value="临时有事儿，改天再修" id="radio4" class="c-check"><label
+                    for="radio4"><i class="check-img"> </i> &nbsp; 临时有事儿，改天再修</label></p>
+            <p class="sel"><input type="radio" name="reason" value="等了好久没人联系我" id="radio5" class="c-check"><label
+                    for="radio5"><i class="check-img"> </i> &nbsp; 等了好久没人联系我</label></p>
+            <p class="sel"><input type="radio" name="reason" value="其他" id="radio6" class="c-check"><label
+                    for="radio6"><i class="check-img"> </i> &nbsp; 其他</label></p>
+        </form>
+    </div>
+
+    <p class="btn-group"> <button type="submit" id="cansell-submit">狠心取消订单</button><a href="#"
+            onClick="javascript :history.back(-1);"><button class="blue-btn">算了再想想吧</button></a></p>
+<!-- 提示框 -->
+<div id="toast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <!-- <i class="weui-icon-success-no-circle weui-icon_toast"></i> -->
+            <p class="weui-toast__content" style="margin: 0"></p>
+        </div>
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="weui/js/jquery-weui.min.js"></script>
+<script>
+    console.log(location.search.substr(1));
+    var id = location.search.substr(1)
+    var content
+    var data
+    $(function () {
+        $("input:radio").click(function () {
+            if ($(this).prop("checked")) {
+                content = $(this).val();
+            }
+        });
+        $('#cansell-submit').click(function () {
+            console.log(content);
+            console.log(id);
+            $.ajax({
+                type: 'POST',
+                url: 'http://boiler.xazhima.com/weixin/review_do.php',
+                data: {
+                    act: 'valid',
+                    order_id: id,
+                    reason: content
+                },
+                success: function (res) {
+                    console.log(res);
+                    toast('取消成功')
+                    history.back(-1);
+                },
+                error: function (res) {
+                    console.log("ERROR");
+                }
+
+            })
+        })
+
+        var $toast = $('#toast');
+
+        function toast(msg) {
+            $toast.find('p')
+            console.log($toast.find('p').text(msg));
+            if ($toast.css('display') != 'none') return;
+            $toast.fadeIn(100);
+            setTimeout(function () {
+                $toast.fadeOut(100);
+            }, 1000);
+        }
+
+    })
+
+</script>
+
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/nav.css" />
+		<link rel="stylesheet" href="css/GLXX2.css" />
+		<script type="text/javascript" src="js/nav.js" ></script>
+        <link rel="stylesheet" href="css/Tc.css" />
+        <script type="text/javascript" src="js/2.0.0/jquery.min.js" ></script>
+        <script type="text/javascript" src="js/layer.js" ></script>
+        <style>
+        	.checkbox{
+	background-image:url('images/未选中按钮.png');
+	-webkit-appearance: none;
+	background-size:16px 16px;
+	display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat:no-repeat;
+    position: relative;
+    outline: none;
+			}
+.checkbox:checked{
+    background:url('images/选中按钮.png');
+    background-repeat:no-repeat;
+}
+        </style>
+	</head>
+	<body>
+			<div class="nav">
+				<div class="img1">
+					<img src="images/mdpi/logoios.png"/>
+				</div>
+				<ul>
+					<li class="index1" onmouseenter="change1()" onmouseleave="change2()">
+				<a href="#">
+				<div id="index1_unchecked">
+					<img src="images/锅炉选型-常态.png" id="unchecked1"/>
+				</div>
+				<div id="index1_checked">
+					<img src="images/guolu_check.png" id="checked1"/>
+				</div>
+					<span class="p0" id="xuanxing">锅炉选型</span>
+				  </a >
+					</li>
+					<li class="index2" onmouseenter="change3()" onmouseleave="change4()">
+						<a href="#">
+				<div id="index2_unchecked">
+					<img src="images/选型历史-常态 .png"  id="unchecked2"/>
+				</div>
+				<div id="index2_checked">
+					<img src="images/xuanx_check.png" id="checked2"/>
+				</div>
+					<span class="p0">选型历史</span>
+				</a>
+					</li>
+					<li class="index3" onmouseenter="change5()" onmouseleave="change6()">
+						<a href="#">
+				<div id="index3_unchecked">
+					<img src="images/chapin.png" id="unchecked3"/>
+				</div>
+				<div id="index3_checked">
+					<img  src="images/chapin_check.png" id="checked3"/>
+				</div >
+					<span class="p0">方案池</span>
+				</a>
+					</li>
+				</ul>
+				<div class="title_r">
+					<p>薛渊博，欢迎您！</p>
+				</div>
+				<div class="img2">
+					<img src="images/站内信.png"/>
+				</div>
+				<div class="img3">
+					<img src="images/退出登录.png" />
+				</div>
+			</div><!--导航栏-->
+		 <div class="location">
+		 	<div class="location1">
+		 	<p>当前位置：锅炉选型<span>&gt;选型方案</span></p>
+		 	</div>
+		 </div>
+		 	
+		 <!--当地位置-->
+		 <div class="GLXX2_main1">
+			<p class="first">请选择选型方案模板</p>
+			<ul>
+				<li><a>模板1</a></li>
+				<li><a>模板2</a></li>
+				<li><a id="userDefined">自定义模板</a></li>
+			</ul>
+			<script>
+					document.getElementById("userDefined").style.backgroundColor=" #04A6FE";
+					document.getElementById("userDefined").style.borderRadius="10px";
+					document.getElementById("userDefined").style.color="white"
+				</script>
+		</div><!--方案模板1-->
+		<div class="GLXX2_main2">
+			<p class="first">请选择选型方案模板</p>
+			<ul>
+				<li class="add1"><a>企业简介</a></li>
+				<li class="add1"><a>企业资质</a></li>
+				<li class="add1"><a>工厂介绍</a></li>
+				<li class="add1"><a>工厂资质</a></li>
+				<li class="add1"><a>报价方案</a></li>
+				<li class="add1"><a>产品介绍</a></li>
+				<li class="add1"><a>产品参数</a></li>
+				<li class="add1"><a>锅炉用户名单</a></li>
+				<li class="add1"><a>康达用户名单</a></li>
+				<li class="add1"><a>售后介绍</a></li>
+				<li class="add1"><a>售后资质</a></li>
+				<li class="add1"><a>其他</a></li>
+			</ul>
+			<script>
+				$('.add1').click(function(){
+                layer.open({
+                    type: 1,
+                    title: false,
+                    shadeClose: true,
+                    shade: 0.3,
+                    area: ['850px', '380px'],
+                    content: $('#TC1')
+                });
+            });
+
+			</script>
+			
+			
+			
+			
+		</div><!--方案模板2-->
+		<div class="GLXX2_main3">
+		<div class="framing">
+		</div>
+		</div><!--富文本框-->
+		<div class="GLXX2_main4">
+			<input type="button" value="生成方案" class="last" />
+		</div>
+		<script>
+			$('.last').click(function(){
+                layer.open({
+                    type: 1,
+                    title: false,
+                    shadeClose: true,
+                    shade: 0.3,
+                    area: ['500px', '340px'],
+                
+                    content: $('#TC3')
+                });
+            });
+       </script>
+		<!--生成方案-->
+		
+		<div id="TC1">
+			<div id="TC1_main1">
+				<div id="all">
+				<input type="radio" value="全选"  class="checkbox" onclick="allchecked()" /><span>全选</span>
+				</div>
+				
+			</div>
+			<div id="line"></div>
+			<div id="company">
+				<div id="company1" >
+					<input type="radio"id="checkbox1" value="后台企业名称1"  class="checkbox"/><span>后台企业名称1</span>
+				</div>
+				<div id="company2" >
+					<input type="radio"id="checkbox2" value="后台企业名称2"  class="checkbox"/><span>后台企业名称2</span>
+				</div>
+				<div id="company3" >
+					<input type="radio"id="checkbox3" value="后台企业名称3"  class="checkbox"/><span>后台企业名称3</span>
+				</div>
+				<div id="company4">
+					<input type="radio"id="checkbox4" value="后台企业名称4"  class="checkbox"/><span>后台企业名称4</span>
+				</div>
+				<div id="company5" >
+					<input type="radio"id="checkbox5" value="后台企业名称5"  class="checkbox"/><span>后台企业名称5</span>
+				</div>
+				<div id="company6" >
+					<input type="radio"id="checkbox6" value="后台企业名称6"  class="checkbox"/><span>后台企业名称6</span>
+				</div>
+			</div>
+			<div id="buttoning1">
+				<button id="confirm1" onclick="colorChange1()">确定</button>
+				<button id="cancel1" onclick="colorChange2()">取消</button>
+			</div>
+		</div>
+		<!--弹窗1-->
+		<div id="TC2">
+			<p>
+				生成方案成功！</br>
+				如果需要打印，请去方案池。
+			</p>
+			<button id="confirm2" onclick="colorChange3()">继续选型</button>
+			<button id="cancel2" onclick="colorChange4()">去方案池</button>
+		</div>
+		
+		<!--弹窗2-->
+		<div id="TC3">
+			
+			<p id="text1">
+				请给方案取个名字。
+			</p>
+			<p id="text2">
+				注意：这个名字就是打印之后的文件名
+			</p>
+			<div class="name1">
+			<input type="text" value="请输入方案名" style="width: 346px;height: 54px;position: relative;left:77px;font-family: PingFangSC-Regular;
+            font-size: 16px;color: #92969C;"/>
+			</div>
+			<div class="buttoning2">
+			<button id="confirm3">确定</button>
+			</div>
+		</div>
+		<script>
+		$('#confirm3').click(function(){
+                layer.open({
+                    type: 1,
+                    title:false,
+                    shadeClose: true,
+                    shade: 0.3,
+                    area: ['500px', '320px'],
+                    content: $('#TC2')
+                });
+            });
+        </script>
+		<!--弹窗3-->
+		
+	</body>
+</html>
